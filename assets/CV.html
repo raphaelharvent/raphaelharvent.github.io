@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raphaël Harvent — Portfolio / CV en ligne</title>
+  <meta name="description" content="CV en ligne de Raphaël Harvent — Alternance Bachelor Systèmes Réseaux & Cybersécurité" />
+  <style>
+  :root{
+    /* Apple-like liquid glass (LIGHT) */
+    --bg0: #f6f7fb;
+    --bg1: #eef1f7;
+
+    --text: rgba(15, 18, 25, .92);
+    --muted: rgba(15, 18, 25, .66);
+    --faint: rgba(15, 18, 25, .52);
+
+    /* Hairlines + glass */
+    --hair: rgba(15, 18, 25, .10);
+    --hair2: rgba(15, 18, 25, .14);
+    --glass: rgba(255,255,255,.62);
+    --glass2: rgba(255,255,255,.72);
+
+    /* Highlights */
+    --accent: rgba(0, 122, 255, .95);  /* iOS blue */
+    --accent2: rgba(48, 209, 88, .85); /* iOS green */
+
+    /* Depth */
+    --shadow: 0 28px 80px rgba(15,18,25,.14);
+    --shadow2: 0 10px 28px rgba(15,18,25,.12);
+
+    --radius: 18px;
+    --radius2: 26px;
+    --max: 1100px;
+
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+
+    --blur: 18px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    font-family: var(--sans);
+    color: var(--text);
+    line-height: 1.55;
+
+    /* Liquid light background */
+    background:
+      radial-gradient(980px 620px at 75% -10%, rgba(0,122,255,.16), transparent 58%),
+      radial-gradient(820px 560px at 18% 10%, rgba(48,209,88,.10), transparent 60%),
+      radial-gradient(1000px 820px at 50% 120%, rgba(175, 82, 222, .10), transparent 58%),
+      linear-gradient(180deg, var(--bg0), var(--bg1));
+    min-height:100vh;
+  }
+
+  /* Subtle glass grain */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.06;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  a:hover{ color: rgba(0,122,255,.95); }
+  .container{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+
+  /* Top nav: frosted glass (light) */
+  .topbar{
+    position: sticky;
+    top:0;
+    z-index: 50;
+    backdrop-filter: blur(var(--blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+    background: rgba(255,255,255,.58);
+    border-bottom: 1px solid var(--hair);
+  }
+  .topbar-inner{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height: 64px;
+    gap: 14px;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap: 12px;
+    min-width: 220px;
+  }
+
+  /* Liquid “capsule” mark */
+  .brand-mark{
+    width: 38px; height: 38px;
+    border-radius: 14px;
+    background:
+      radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.85), transparent 60%),
+      radial-gradient(24px 24px at 70% 18%, rgba(0,122,255,.34), transparent 65%),
+      radial-gradient(26px 26px at 70% 78%, rgba(48,209,88,.22), transparent 70%),
+      linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.58));
+    border: 1px solid rgba(15,18,25,.12);
+    box-shadow: 0 18px 40px rgba(0,122,255,.10);
+  }
+
+  .brand-text{ display:flex; flex-direction:column; line-height:1.1; }
+  .brand-text strong{ font-size: 14px; letter-spacing:.6px; }
+  .brand-text span{ font-size: 12px; color: var(--muted); }
+
+  nav ul{
+    list-style:none;
+    display:flex;
+    margin:0;
+    padding:0;
+    gap: 8px;
+    align-items:center;
+  }
+
+  /* Apple-like pill nav items */
+  nav a{
+    font-size: 13px;
+    color: rgba(15,18,25,.70);
+    padding: 9px 11px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: background .18s ease, border-color .18s ease, transform .18s ease, color .18s ease;
+  }
+  nav a:hover{
+    color: var(--text);
+    background: rgba(255,255,255,.52);
+    border-color: rgba(15,18,25,.10);
+    transform: translateY(-1px);
+  }
+  nav a.active{
+    color: var(--text);
+    background:
+      radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.92), transparent 55%),
+      rgba(255,255,255,.62);
+    border-color: rgba(15,18,25,.12);
+  }
+
+  .actions{ display:flex; gap:10px; align-items:center; }
+
+  /* Buttons: glass capsules (light) */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(15,18,25,.12);
+    background:
+      radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.90), transparent 55%),
+      rgba(255,255,255,.55);
+    color: var(--text);
+    font-size: 13px;
+    cursor:pointer;
+    transition: transform .16s ease, background .16s ease, border-color .16s ease, box-shadow .16s ease;
+    user-select:none;
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+  }
+  .btn:hover{
+    background:
+      radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.95), transparent 55%),
+      rgba(255,255,255,.70);
+    border-color: rgba(15,18,25,.16);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow2);
+  }
+  .btn:active{ transform: translateY(0); box-shadow:none; }
+
+  .btn-primary{
+    border-color: rgba(0,122,255,.22);
+    background:
+      radial-gradient(22px 22px at 30% 30%, rgba(255,255,255,.92), transparent 58%),
+      linear-gradient(180deg, rgba(0,122,255,.12), rgba(255,255,255,.60));
+  }
+  .btn-primary:hover{ border-color: rgba(0,122,255,.34); }
+
+  .icon{ width: 16px; height: 16px; display:inline-block; }
+
+  /* Mobile nav */
+  .burger{ display:none; }
+  .mobile-panel{
+    display:none;
+    border-top: 1px solid var(--hair);
+    padding: 10px 0 16px;
+    backdrop-filter: blur(var(--blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+    background: rgba(255,255,255,.52);
+  }
+  .mobile-panel a{
+    display:block;
+    padding: 10px 12px;
+    border-radius: 14px;
+    color: rgba(15,18,25,.72);
+    border: 1px solid transparent;
+  }
+  .mobile-panel a:hover{
+    color: var(--text);
+    background: rgba(255,255,255,.70);
+    border-color: rgba(15,18,25,.12);
+  }
+  .mobile-panel.open{ display:block; }
+
+  /* Hero */
+  header.hero{ padding: 34px 0 18px; }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  /* Main glass card treatment (light) */
+  .card{
+    border-radius: var(--radius2);
+    border: 1px solid rgba(15,18,25,.12);
+    background:
+      radial-gradient(44px 34px at 20% 15%, rgba(255,255,255,.90), transparent 70%),
+      radial-gradient(140px 100px at 80% 0%, rgba(0,122,255,.08), transparent 62%),
+      radial-gradient(160px 120px at 80% 100%, rgba(48,209,88,.06), transparent 62%),
+      rgba(255,255,255,.52);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(var(--blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+  }
+
+  .hero-main{ padding: 26px; }
+
+  .kicker{
+    font-family: var(--mono);
+    color: rgba(0,122,255,.95);
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  h1{
+    margin:0 0 10px 0;
+    font-size: clamp(26px, 4vw, 42px);
+    line-height:1.1;
+    letter-spacing: .2px;
+  }
+
+  .subtitle{
+    margin: 0 0 18px 0;
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 62ch;
+  }
+
+  /* Chips: glossy pills (light) */
+  .chips{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 14px; }
+  .chip{
+    font-size: 12px;
+    color: rgba(15,18,25,.70);
+    border: 1px solid rgba(15,18,25,.10);
+    background:
+      radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.92), transparent 55%),
+      rgba(255,255,255,.55);
+    padding: 8px 10px;
+    border-radius: 999px;
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+  }
+
+  .hero-side{ padding: 18px; display:flex; flex-direction:column; gap: 14px; }
+
+  /* Photo frame: liquid glass (light) */
+  .photo{
+    border-radius: 22px;
+    border: 1px solid rgba(15,18,25,.12);
+    background:
+      radial-gradient(220px 180px at 30% 20%, rgba(0,122,255,.10), transparent 60%),
+      radial-gradient(240px 200px at 70% 10%, rgba(48,209,88,.07), transparent 60%),
+      rgba(255,255,255,.48);
+    overflow:hidden;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 18px 60px rgba(15,18,25,.12);
+  }
+  .photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background: linear-gradient(135deg, rgba(255,255,255,.70), transparent 42%);
+    opacity:.95;
+  }
+  .photo img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display:block;
+    filter: saturate(1.02) contrast(1.02);
+  }
+  .photo .placeholder{
+    padding: 18px;
+    text-align:center;
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 34ch;
+  }
+
+  .side-block{
+    padding: 14px;
+    border-radius: 22px;
+    border: 1px solid rgba(15,18,25,.10);
+    background:
+      radial-gradient(28px 22px at 25% 18%, rgba(255,255,255,.86), transparent 60%),
+      rgba(255,255,255,.48);
+    backdrop-filter: blur(var(--blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+  }
+
+  .side-title{
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 0 0 8px 0;
+    font-family: var(--mono);
+  }
+
+  .kv{
+    display:grid;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
+    align-items:start;
+    margin: 10px 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .kv b{ color: var(--text); font-weight:600; }
+  .kv .mono{ font-family: var(--mono); font-size: 12px; }
+
+  /* Sections */
+  main{ padding: 10px 0 48px; }
+  section{ scroll-margin-top: 84px; padding-top: 18px; }
+
+  .section-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 24px 0 12px;
+  }
+  .section-head h2{
+    margin:0;
+    font-size: 18px;
+    letter-spacing: .2px;
+  }
+  .section-head p{
+    margin:0;
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 68ch;
+  }
+
+  .grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+  /* Panels: lighter glass (light) */
+  .panel{
+    padding: 18px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(15,18,25,.10);
+    background:
+      radial-gradient(26px 22px at 20% 18%, rgba(255,255,255,.86), transparent 58%),
+      rgba(255,255,255,.48);
+    backdrop-filter: blur(var(--blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+    box-shadow: 0 12px 40px rgba(15,18,25,.10);
+  }
+
+  .list{ margin: 10px 0 0 0; padding-left: 18px; color: var(--muted); }
+  .list li{ margin: 6px 0; }
+
+  .timeline{ display:flex; flex-direction:column; gap: 12px; }
+
+  /* Timeline items: layered liquid glass (light) */
+  .item{
+    padding: 16px;
+    border-radius: 18px;
+    border: 1px solid rgba(15,18,25,.10);
+    background:
+      radial-gradient(34px 24px at 18% 18%, rgba(255,255,255,.86), transparent 62%),
+      radial-gradient(120px 90px at 90% 0%, rgba(0,122,255,.06), transparent 60%),
+      rgba(255,255,255,.46);
+    backdrop-filter: blur(var(--blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+    box-shadow: 0 14px 46px rgba(15,18,25,.10);
+  }
+
+  .item-top{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px 14px;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .item-top strong{ font-size: 14px; }
+  .item-top span{ font-size: 12px; color: var(--muted); font-family: var(--mono); }
+
+  /* Badge: glossy capsule (light) */
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,122,255,.18);
+    background:
+      radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.90), transparent 55%),
+      rgba(0,122,255,.08);
+    color: var(--text);
+    font-size: 12px;
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+  }
+
+  .cols{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .subhead{
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--faint);
+    font-family: var(--mono);
+  }
+
+  footer{
+    border-top: 1px solid rgba(15,18,25,.10);
+    padding: 18px 0 26px;
+    color: var(--muted);
+    font-size: 12px;
+    backdrop-filter: blur(var(--blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+    background: rgba(255,255,255,.42);
+  }
+  .foot-inner{ display:flex; flex-wrap:wrap; gap: 10px; align-items:center; justify-content: space-between; }
+  .sep{ opacity:.6; }
+
+  /* Responsive */
+  @media (max-width: 980px){
+    .hero-grid{ grid-template-columns: 1fr; }
+    .brand{ min-width: unset; }
+  }
+  @media (max-width: 820px){
+    nav{ display:none; }
+    .burger{ display:inline-flex; }
+    .grid-3{ grid-template-columns: 1fr; }
+    .grid-2, .cols{ grid-template-columns: 1fr; }
+  }
+
+  /* Print */
+  @media print{
+    .topbar, .actions, .burger, .mobile-panel, .btn-print{ display:none !important; }
+    body{ background:#fff; color:#000; }
+    .card, .panel, .item, .side-block{ box-shadow:none; background:#fff; border:1px solid #ddd; }
+    a{ color:#000; }
+  }
+</style>
+
+
+
+</head>
+
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar" role="banner">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="#top" aria-label="Aller en haut">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>RAPHAËL HARVENT</strong>
+            <span>Alternance — Bachelor Systèmes Réseaux & Cybersécurité</span>
+          </span>
+        </a>
+
+        <nav aria-label="Navigation principale">
+          <ul>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#experiences">Expériences</a></li>
+            <li><a href="#diplomes">Diplômes</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#interets">Centres d’intérêt</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <button class="btn burger" id="burgerBtn" aria-expanded="false" aria-controls="mobileNav">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Menu
+          </button>
+          <a class="btn btn-primary" href="#contact" title="Aller au contact">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" />
+              <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+            Me contacter
+          </a>
+          <button class="btn btn-print" onclick="window.print()" title="Imprimer / Export PDF">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 7V3h10v4" stroke="currentColor" stroke-width="2" />
+              <path d="M7 17h10v4H7z" stroke="currentColor" stroke-width="2" />
+              <path d="M6 9h12a3 3 0 0 1 3 3v3H3v-3a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="2" />
+            </svg>
+            Imprimer
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-panel" id="mobileNav" aria-label="Navigation mobile">
+        <a href="#profil">Profil</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#diplomes">Diplômes</a>
+        <a href="#competences">Compétences</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#interets">Centres d’intérêt</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div id="top"></div>
+  <header class="hero" role="heading" aria-label="En-tête">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="card hero-main">
+          <div class="kicker">Recherche alternance</div>
+          <h1>Raphaël Harvent</h1>
+          <p class="subtitle">
+            Recherche alternance <b>Bachelor Systèmes Réseaux et Cybersécurité</b>.
+            Étudiant en BTS SIO option SISR à l’AFPI de Marcq-en-Barœul.
+          </p>
+
+          <div class="chips" aria-label="Points clés">
+            <span class="chip">Support informatique N1</span>
+            <span class="chip">Windows 11 (migration / masterisation)</span>
+            <span class="chip">Windows Server (AD DS, DNS, DHCP, GPO, IIS)</span>
+            <span class="chip">Linux (Debian/Ubuntu, shell)</span>
+            <span class="chip">Réseaux & sécurité (TCP/IP, VLAN, VPN, Stormshield)</span>
+          </div>
+        </div>
+
+        <aside class="card hero-side" aria-label="Carte latérale">
+          <div class="photo" aria-label="Photo">
+            <!-- Remplacez photo-raphael.jpg par votre fichier image -->
+            <img src="./photo-raph.jpg" alt="Photo de Raphaël Harvent" onerror="this.remove(); this.parentElement.querySelector('.placeholder').style.display='block';" />
+            <div class="placeholder" style="display:none">
+              Ajoutez votre photo en plaçant une image nommée <b>photo-raphael.jpg</b> dans le même dossier que ce fichier.
+            </div>
+          </div>
+
+          <div class="side-block">
+            <p class="side-title">Contact</p>
+
+            <div class="kv">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-4.35 7-11a7 7 0 0 0-14 0c0 6.65 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div>
+                <b>Adresse</b><br/>
+                <span class="mono">29 rue de Nivelle, 59230 Saint-Amand-les-Eaux</span>
+              </div>
+            </div>
+
+            <div class="kv">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" />
+                <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+              <div>
+                <b>Email</b><br/>
+                <a class="mono" href="mailto:raphael.harvent@gmail.com">raphael.harvent@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="kv">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6.5 3.5 9.8 6.8c.6.6.7 1.5.2 2.2l-1.2 1.8c1.2 2.1 2.9 3.8 5 5l1.8-1.2c.7-.5 1.6-.4 2.2.2l3.3 3.3c.7.7.7 1.8 0 2.5-1 1-2.5 1.4-4 1.1-8.6-1.7-15.4-8.5-17.1-17.1-.3-1.5.1-3 1.1-4 .7-.7 1.8-.7 2.5 0Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div>
+                <b>Téléphone</b><br/>
+                <a class="mono" href="tel:+33627642232">06 27 64 22 32</a>
+              </div>
+            </div>
+
+            <div class="kv">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 17 3 21m18-18-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 17h4l10-10a2.8 2.8 0 0 0-4-4L7 13v4Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div>
+                <b>Permis</b><br/>
+                <span class="mono">Permis B - Véhiculé</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <!-- PROFIL -->
+    <section id="profil" aria-label="Profil">
+      <div class="section-head">
+        <h2>Profil</h2>
+        <p>Présentation synthétique telle qu’indiquée sur le CV.</p>
+      </div>
+      <div class="panel">
+        <p style="margin:0; color: var(--muted);">
+          Étudiant en BTS SIO option SISR à l’AFPI de Marcq-en-Barœul. Motivé et rigoureux, je recherche une alternance en Bachelor Cybersécurité.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section id="experiences" aria-label="Expériences">
+      <div class="section-head">
+        <h2>Expériences</h2>
+        <p>Expériences professionnelles (AKKODIS).</p>
+      </div>
+
+      <div class="timeline">
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <span class="badge">AKKODIS</span>
+              <strong style="display:block; margin-top:8px;">Technicien de proximité</strong>
+            </div>
+            <span>2024–2026</span>
+          </div>
+          <ul class="list">
+            <li>Support de proximité Informatique Niveau 1 du site de Lille</li>
+            <li>Participation au projet de migration Windows 11</li>
+            <li>Masterisation des postes informatique (Windows 11)</li>
+            <li>Projet de cartographie et inventaire du site de Lille</li>
+            <li>Participation à certaines activités réseaux (installation / configuration des salles de réunion et du matériel Visio)</li>
+            <li>Formation/Coaching d’un nouvel arrivant</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-top">
+            <div>
+              <span class="badge">AKKODIS</span>
+              <strong style="display:block; margin-top:8px;">Technicien de proximité – Stage (2 semaines)</strong>
+            </div>
+            <span>2021</span>
+          </div>
+          <ul class="list">
+            <li>Support informatique niveau 1</li>
+            <li>Résolution d’incidents sous Windows</li>
+            <li>Préparation et configuration de postes informatiques</li>
+            <li>Découverte des environnements professionnels IT</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIPLOMES -->
+    <section id="diplomes" aria-label="Diplômes">
+      <div class="section-head">
+        <h2>Diplômes</h2>
+        <p>Parcours de formation.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <p class="subhead">2026</p>
+          <p style="margin:0; color: var(--muted);">
+            BTS SIO – Option SISR - (AFPI Marcq-en-Barœul)
+          </p>
+        </div>
+        <div class="panel">
+          <p class="subhead">2024</p>
+          <p style="margin:0; color: var(--muted);">
+            Baccalauréat STI2D – Option Systèmes d’Information et Numérique (Lycée du Hainaut – Valenciennes)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences" aria-label="Compétences">
+      <div class="section-head">
+        <h2>Compétences</h2>
+        <p>Logiciels, systèmes, réseaux & sécurité, langages (tels qu’indiqués sur le CV).</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <p class="subhead">Logiciels</p>
+          <ul class="list">
+            <li>Active Directory : Gestion des PC</li>
+            <li>BMC, ServiceNow : Inventaires et ticketing</li>
+            <li>Ivanti : Télé-distribution, Maters</li>
+            <li>Suite Office</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <p class="subhead">Systèmes</p>
+          <ul class="list">
+            <li>Windows Server (AD DS, DNS, DHCP, GPO, IIS)</li>
+            <li>Linux (Debian/Ubuntu, services, shell)</li>
+            <li>Virtualisation (VMware/VirtualBox)</li>
+            <li>Sauvegardes & supervision (scripts, outils)</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <p class="subhead">Réseaux & sécurité</p>
+          <ul class="list">
+            <li>TCP/IP, VLAN, routage de base</li>
+            <li>Firewalling (Stormshield), VPN</li>
+            <li>Durcissement, mises à jour, bastionnement</li>
+            <li>Automatisation (PowerShell, Ansible)</li>
+            <li>CISCO Packet Tracer : Projet d’étude</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <p class="subhead">Langages</p>
+          <ul class="list">
+            <li>SQL : Cadre Scolaire</li>
+            <li>Bash : Cadre Scolaire</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" aria-label="Certifications">
+      <div class="section-head">
+        <h2>Certifications</h2>
+        <p>MOOC / e-learning.</p>
+      </div>
+
+      <div class="panel">
+        <ul class="list">
+          <li>MOOC « Concevez votre réseau TCP/IP » - OpenClassRooms (en cours)</li>
+          <li>MOOC « Panorama de la SSI » - SecnumAcademy (ANSSI)</li>
+          <li>MOOC « Sécurité de l’authentification » - SecnumAcademy (ANSSI)</li>
+          <li>MOOC « Sécurité sur Internet » - SecnumAcademy (ANSSI)</li>
+          <li>MOOC « Sécurité du poste de travail » - SecnumAcademy (ANSSI)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- INTERETS -->
+    <section id="interets" aria-label="Centres d’intérêt">
+      <div class="section-head">
+        <h2>Centres d’intérêt</h2>
+        <p>Activités sportives et centres d’intérêt personnels.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="panel">
+          <p class="subhead">Sports</p>
+          <ul class="list">
+            <li>Volley-ball (U21 – AAVB Saint-Amand-les-Eaux)</li>
+            <li>Handball (2012 – 2021)</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <p class="subhead">Informatique</p>
+          <ul class="list">
+            <li>Cybersécurité, programmation Python, Raspberry Pi</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <p class="subhead">Autres</p>
+          <ul class="list">
+            <li>Culture japonaise, jeux vidéo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-label="Contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Coordonnées complètes.</p>
+      </div>
+
+      <div class="panel">
+        <div class="cols">
+          <div>
+            <p class="subhead">Coordonnées</p>
+            <p style="margin:0 0 10px 0; color: var(--muted);">
+              <b style="color: var(--text); font-weight:600;">Adresse :</b>
+              29 rue de Nivelle, 59230 Saint-Amand-les-Eaux
+              <br/>
+              <b style="color: var(--text); font-weight:600;">Email :</b>
+              <a href="mailto:raphael.harvent@gmail.com">raphael.harvent@gmail.com</a>
+              <br/>
+              <b style="color: var(--text); font-weight:600;">Téléphone :</b>
+              <a href="tel:+33627642232">06 27 64 22 32</a>
+              <br/>
+              <b style="color: var(--text); font-weight:600;">Permis :</b>
+              Permis B - Véhiculé
+            </p>
+          </div>
+
+          <div>
+            <p class="subhead">Objectif</p>
+            <p style="margin:0; color: var(--muted);">
+              Recherche alternance Bachelor Systèmes Réseaux et Cybersécurité.
+            </p>
+            <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:10px;">
+              <a class="btn btn-primary" href="mailto:raphael.harvent@gmail.com">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" />
+                  <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                Envoyer un email
+              </a>
+              <a class="btn" href="tel:+33627642232">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6.5 3.5 9.8 6.8c.6.6.7 1.5.2 2.2l-1.2 1.8c1.2 2.1 2.9 3.8 5 5l1.8-1.2c.7-.5 1.6-.4 2.2.2l3.3 3.3c.7.7.7 1.8 0 2.5-1 1-2.5 1.4-4 1.1-8.6-1.7-15.4-8.5-17.1-17.1-.3-1.5.1-3 1.1-4 .7-.7 1.8-.7 2.5 0Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Appeler
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="foot-inner">
+        <div>
+          <span style="font-family:var(--mono);">© <span id="year"></span> Raphaël Harvent</span>
+          <span class="sep"> · </span>
+          <span>CV en ligne</span>
+        </div>
+        <div style="color: var(--faint); font-family: var(--mono);">
+          Navigation fluide · Design lisible · One-page
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    burgerBtn?.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      burgerBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Fermer le menu mobile au clic sur un lien
+    mobileNav?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Active link on scroll (desktop)
+    const navLinks = Array.from(document.querySelectorAll('nav a'));
+    const sections = Array.from(document.querySelectorAll('main section'));
+
+    const setActive = () => {
+      const y = window.scrollY + 90; // offset
+      let current = sections[0]?.id || '';
+      for (const s of sections) {
+        if (s.offsetTop <= y) current = s.id;
+      }
+      navLinks.forEach(l => {
+        const href = l.getAttribute('href') || '';
+        l.classList.toggle('active', href === '#' + current);
+      });
+    };
+
+    window.addEventListener('scroll', () => requestAnimationFrame(setActive), { passive: true });
+    setActive();
+
+    // Année footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
