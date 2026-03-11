@@ -22,7 +22,7 @@
     "name": "Raphaël Harvent",
     "jobTitle": "Étudiant BTS SIO SISR",
     "url": "https://raphaelharvent.github.io",
-    "sameAs": ["https://www.linkedin.com/in/rapha%C3%ABl-harvent-a4008a304/","https://github.com/RAGUN023"]
+    "sameAs": ["https://www.linkedin.com/in/rapha%C3%ABl-harvent-a4008a304/","https://github.com/raphaelharvent"]
   }
   </script>
   <style>
@@ -316,6 +316,10 @@
       transform: translateY(0);
     }
 
+    /* ── VEILLE TABS OVERRIDE ── */
+    .tab-pane { display: none !important; }
+    .tab-pane.tab-active { display: block !important; }
+
     /* ── VEILLE ── */
     .veille-tabs .nav-link {
       font-family: var(--font-display);
@@ -479,7 +483,7 @@
           </div>
         </div>
         <div class="col-lg-5 text-center">
-          <img src="assets/portrait.jpg" class="hero-photo img-fluid" alt="Portrait de Raphaël Harvent" width="320">
+          <img src="assets/photo-raph.jpg" class="hero-photo img-fluid" alt="Portrait de Raphaël Harvent" width="320">
         </div>
       </div>
     </div>
@@ -511,7 +515,7 @@
             <a href="https://www.linkedin.com/in/rapha%C3%ABl-harvent-a4008a304/" target="_blank" rel="noopener" class="me-3">
               <i class="bi bi-linkedin"></i> LinkedIn
             </a>
-            <a href="https://github.com/RAGUN023" target="_blank" rel="noopener">
+            <a href="https://github.com/raphaelharvent" target="_blank" rel="noopener">
               <i class="bi bi-github"></i> GitHub
             </a>
           </li>
@@ -651,7 +655,7 @@
               <span class="badge text-bg-secondary mb-2" style="width:fit-content;">Linux · VMware</span>
               <h3 class="h5">Virtualisation – VMs Linux</h3>
               <p class="flex-grow-1 small">Création et administration de VMs Debian/Ubuntu : configuration réseau, déploiement de services (SSH, Apache/Nginx), gestion des snapshots et des sauvegardes.</p>
-              <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+              <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
                 <i class="bi bi-github me-1"></i> Voir le code
               </a>
             </div>
@@ -665,7 +669,7 @@
               <span class="badge text-bg-primary mb-2" style="width:fit-content;">Windows Server · AD</span>
               <h3 class="h5">Services – Windows Server</h3>
               <p class="flex-grow-1 small">Mise en place d'un environnement AD DS complet : DNS, DHCP, GPO, gestion des utilisateurs et des unités organisationnelles pour un lab d'entreprise.</p>
-              <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+              <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
                 <i class="bi bi-github me-1"></i> Voir le code
               </a>
             </div>
@@ -679,7 +683,7 @@
               <span class="badge text-bg-danger mb-2" style="width:fit-content;">Firewall · VPN · VLAN</span>
               <h3 class="h5">Sécurité – Stormshield</h3>
               <p class="flex-grow-1 small">Configuration de politiques de filtrage avancées, règles NAT, segmentation VLAN et mise en place d'accès VPN sur appliance Stormshield en environnement lab.</p>
-              <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+              <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
                 <i class="bi bi-file-text me-1"></i> Documentation
               </a>
             </div>
@@ -748,14 +752,14 @@
       </p>
 
       <!-- Onglets -->
-      <ul class="nav veille-tabs reveal" id="veilleTabs">
-        <li class="nav-item">
-          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-ingenierie">
+      <ul class="nav veille-tabs" id="veilleTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-ingenierie-btn" data-bs-toggle="tab" data-bs-target="#tab-ingenierie" type="button" role="tab" aria-controls="tab-ingenierie" aria-selected="true">
             <i class="bi bi-person-bounding-box me-2"></i>Ingénierie sociale
           </button>
         </li>
-        <li class="nav-item">
-          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-ia">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-ia-btn" data-bs-toggle="tab" data-bs-target="#tab-ia" type="button" role="tab" aria-controls="tab-ia" aria-selected="false">
             <i class="bi bi-robot me-2"></i>Risques de l'IA
           </button>
         </li>
@@ -764,9 +768,9 @@
       <div class="tab-content veille-tab-content">
 
         <!-- THÈME 1 : INGÉNIERIE SOCIALE -->
-        <div class="tab-pane fade show active" id="tab-ingenierie">
+        <div class="tab-pane" id="tab-ingenierie" role="tabpanel" aria-labelledby="tab-ingenierie-btn">
           <div class="row g-4">
-            <div class="col-lg-5 reveal">
+            <div class="col-lg-5">
               <div class="veille-intro-card">
                 <span class="veille-tag"><i class="bi bi-shield-exclamation me-1"></i>Cybersécurité</span>
                 <h3 class="h4 mb-3">Ingénierie sociale</h3>
@@ -778,7 +782,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-7 reveal">
+            <div class="col-lg-7">
               <h4 class="h6 text-muted text-uppercase mb-3" style="letter-spacing:0.08em; font-size:0.73rem;">Plan de la veille</h4>
               <ol class="veille-plan">
                 <li>
@@ -823,9 +827,9 @@
         </div>
 
         <!-- THÈME 2 : RISQUES DE L'IA -->
-        <div class="tab-pane fade" id="tab-ia">
+        <div class="tab-pane" id="tab-ia" role="tabpanel" aria-labelledby="tab-ia-btn">
           <div class="row g-4">
-            <div class="col-lg-5 reveal">
+            <div class="col-lg-5">
               <div class="veille-intro-card">
                 <span class="veille-tag tag-ai"><i class="bi bi-cpu me-1"></i>Intelligence Artificielle</span>
                 <h3 class="h4 mb-3">Risques & enjeux de l'IA</h3>
@@ -837,7 +841,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-7 reveal">
+            <div class="col-lg-7">
               <h4 class="h6 text-muted text-uppercase mb-3" style="letter-spacing:0.08em; font-size:0.73rem;">Plan de la veille</h4>
               <ol class="veille-plan">
                 <li>
@@ -894,8 +898,8 @@
           <div class="contact-card">
             <h3 class="h5 mb-3"><i class="bi bi-send me-2 text-info"></i>Envoie-moi un message</h3>
             <p class="small opacity-75 mb-4">Tu peux me contacter par e-mail pour toute opportunité, question ou collaboration.</p>
-            <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#057764756d6460692b6d647773606b71456268646c692b666a683a7670676f60667138466a6b71646671203735556a7771636a696c6a">
-              <i class="bi bi-envelope me-2"></i> <span class="__cf_email__" data-cfemail="f28093829a93979edc9a938084979c86b2959f939b9edc919d9f">[email&#160;protected]</span>
+            <a class="btn btn-primary" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;raphael.harvent&#64;gmail.com?subject=Contact%20Portfolio">
+              <i class="bi bi-envelope me-2"></i> raphael.harvent&#64;gmail.com
             </a>
           </div>
         </div>
@@ -912,12 +916,12 @@
               </a>
             </li>
             <li>
-              <a href="https://github.com/RAGUN023" target="_blank" rel="noopener"
+              <a href="https://github.com/raphaelharvent" target="_blank" rel="noopener"
                  class="d-flex align-items-center gap-3 text-decoration-none" style="color:inherit;">
                 <span style="width:42px;height:42px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;">
                   <i class="bi bi-github" style="font-size:1.1rem;"></i>
                 </span>
-                <span><strong>GitHub</strong><br><small class="opacity-60">RAGUN023</small></span>
+                <span><strong>GitHub</strong><br><small class="opacity-60">raphaelharvent</small></span>
               </a>
             </li>
           </ul>
@@ -931,8 +935,29 @@
     <span class="d-block mt-1 opacity-50" style="font-size:0.7rem;">Dernière mise à jour : 2025</span>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Onglets Veille — gestion manuelle pour éviter conflits Bootstrap/reveal
+    const veilleButtons = document.querySelectorAll('#veilleTabs .nav-link');
+    const veillePanes   = document.querySelectorAll('.tab-pane');
+
+    // Afficher le premier onglet par défaut
+    veillePanes[0].classList.add('tab-active');
+    veilleButtons[0].classList.add('active');
+
+    veilleButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-bs-target');
+        // Cacher tous les panneaux
+        veillePanes.forEach(p => p.classList.remove('tab-active'));
+        // Désactiver tous les boutons
+        veilleButtons.forEach(b => b.classList.remove('active'));
+        // Activer le bon panneau et bouton
+        document.querySelector(target).classList.add('tab-active');
+        btn.classList.add('active');
+      });
+    });
+
     // Année dynamique
     document.getElementById('year').textContent = new Date().getFullYear();
 
