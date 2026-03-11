@@ -7,13 +7,13 @@
   <meta name="description" content="Portfolio de Raphaël Harvent – Étudiant BTS SIO SISR. Systèmes, réseaux, virtualisation, sécurité. Projets et expériences en alternance.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <meta property="og:title" content="Portfolio – BTS SIO SISR | Raphaël Harvent">
   <meta property="og:description" content="Projets SISR, alternance, compétences systèmes & réseaux.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://RAGUN023.github.io">
+  <meta property="og:url" content="https://raphaelharvent.github.io">
   <meta property="og:image" content="assets/preview.png">
   <script type="application/ld+json">
   {
@@ -21,331 +21,958 @@
     "@type": "Person",
     "name": "Raphaël Harvent",
     "jobTitle": "Étudiant BTS SIO SISR",
-    "url": "https://RAGUN023.github.io",
+    "url": "https://raphaelharvent.github.io",
     "sameAs": ["https://www.linkedin.com/in/rapha%C3%ABl-harvent-a4008a304/","https://github.com/RAGUN023"]
   }
   </script>
+  <style>
+    :root {
+      --accent: #00e5ff;
+      --accent2: #7c3aed;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-body);
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, .navbar-brand {
+      font-family: var(--font-display);
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: background 0.3s;
+    }
+    .navbar-brand {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      position: relative;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── HERO ── */
+    #accueil {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,229,255,0.08) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 50% at 10% 80%, rgba(124,58,237,0.1) 0%, transparent 60%);
+    }
+    #accueil::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.03) 39px, rgba(255,255,255,0.03) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.03) 39px, rgba(255,255,255,0.03) 40px);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(0,229,255,0.1);
+      border: 1px solid rgba(0,229,255,0.3);
+      color: var(--accent);
+      border-radius: 100px;
+      padding: 0.25rem 0.85rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-title {
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero-title .accent-word {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      opacity: 0.7;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-btns {
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+    .hero-photo {
+      border-radius: 24px;
+      border: 2px solid rgba(0,229,255,0.2);
+      box-shadow: 0 0 60px rgba(0,229,255,0.15), 0 30px 60px rgba(0,0,0,0.4);
+      animation: fadeUp 0.8s 0.2s ease both;
+      max-width: 320px;
+      width: 100%;
+    }
+
+    /* ── SECTION TITLES ── */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 2px;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      border-radius: 16px;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border-color: rgba(0,229,255,0.25);
+    }
+    .card-img-top {
+      border-radius: 16px 16px 0 0;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    /* ── BADGES COMPÉTENCES ── */
+    .skill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      transition: all 0.2s;
+    }
+    .skill-badge:hover {
+      background: rgba(0,229,255,0.1);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── TIMELINE ── */
+    .timeline {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2), transparent);
+      border-radius: 2px;
+    }
+    .t-item {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+    .t-dot {
+      position: absolute;
+      left: -1.3rem;
+      top: 0.35rem;
+      width: 12px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(0,229,255,0.15), 0 0 12px rgba(0,229,255,0.4);
+    }
+    .t-item .t-content {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      transition: border-color 0.2s;
+    }
+    .t-item:hover .t-content {
+      border-color: rgba(0,229,255,0.2);
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .cert-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .cert-item:hover {
+      border-color: rgba(0,229,255,0.25);
+      background: rgba(0,229,255,0.04);
+    }
+    .btn-cert {
+      font-size: 0.78rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+      color: inherit;
+      transition: all 0.2s;
+    }
+    .btn-cert:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(0,229,255,0.08);
+    }
+
+    /* ── CONTACT ── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(0,229,255,0.06), rgba(124,58,237,0.06));
+      border: 1px solid rgba(0,229,255,0.15);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ── LIGHT THEME ── */
+    [data-bs-theme="light"] #accueil {
+      background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,180,210,0.07) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 50% at 10% 80%, rgba(124,58,237,0.06) 0%, transparent 60%);
+    }
+    [data-bs-theme="light"] #accueil::before {
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,0,0,0.025) 39px, rgba(0,0,0,0.025) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,0,0,0.025) 39px, rgba(0,0,0,0.025) 40px);
+    }
+    [data-bs-theme="light"] .card,
+    [data-bs-theme="light"] .t-item .t-content,
+    [data-bs-theme="light"] .cert-item {
+      background: rgba(0,0,0,0.02);
+      border-color: rgba(0,0,0,0.08);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── VEILLE ── */
+    .veille-tabs .nav-link {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 12px !important;
+      border: 1px solid rgba(255,255,255,0.08) !important;
+      color: inherit;
+      opacity: 0.6;
+      padding: 0.6rem 1.2rem;
+      transition: all 0.25s;
+      margin-right: 0.5rem;
+    }
+    .veille-tabs .nav-link.active {
+      background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(124,58,237,0.15)) !important;
+      border-color: rgba(0,229,255,0.35) !important;
+      color: var(--accent) !important;
+      opacity: 1;
+    }
+    .veille-tabs .nav-link:hover:not(.active) { opacity: 1; }
+    .veille-tab-content { margin-top: 2rem; }
+    .veille-plan {
+      counter-reset: veille-counter;
+      list-style: none;
+      padding: 0;
+    }
+    .veille-plan li {
+      counter-increment: veille-counter;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.92rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .veille-plan li:hover {
+      border-color: rgba(0,229,255,0.2);
+      background: rgba(0,229,255,0.04);
+    }
+    .veille-plan li::before {
+      content: counter(veille-counter, decimal-leading-zero);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.75rem;
+      color: var(--accent);
+      background: rgba(0,229,255,0.1);
+      border-radius: 6px;
+      padding: 0.2rem 0.45rem;
+      min-width: 32px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .veille-intro-card {
+      background: linear-gradient(135deg, rgba(0,229,255,0.06), rgba(124,58,237,0.06));
+      border: 1px solid rgba(0,229,255,0.12);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .veille-tag {
+      display: inline-block;
+      background: rgba(0,229,255,0.1);
+      border: 1px solid rgba(0,229,255,0.25);
+      color: var(--accent);
+      border-radius: 100px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .veille-tag.tag-ai {
+      background: rgba(124,58,237,0.1);
+      border-color: rgba(124,58,237,0.25);
+      color: #a78bfa;
+    }
+
+    /* ── MISC ── */
+    section { padding-top: 5rem; padding-bottom: 5rem; }
+    .bg-body-tertiary { background: rgba(255,255,255,0.02) !important; }
+    .btn-primary {
+      background: linear-gradient(135deg, #00b4cc, var(--accent2));
+      border: none;
+      font-weight: 600;
+    }
+    .btn-primary:hover { filter: brightness(1.15); }
+    .btn-outline-light { border-color: rgba(255,255,255,0.2); }
+    .about-info li { padding: 0.35rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .about-info li:last-child { border-bottom: none; }
+    a { color: var(--accent); }
+    a:hover { color: #7df6ff; }
+    [data-bs-theme="light"] a { color: #0070a0; }
+    .stat-box {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 14px;
+      background: rgba(0,229,255,0.06);
+      border: 1px solid rgba(0,229,255,0.12);
+    }
+    .stat-box .stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-box .stat-label { font-size: 0.78rem; opacity: 0.65; font-weight: 500; }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg sticky-top blur bg-body">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-body">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">RH</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <a class="navbar-brand" href="#">RH</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
           <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
           <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
           <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
           <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certifications">Certification</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#veille">Veille</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <button id="themeToggle" class="btn btn-outline-secondary">
+        <button id="themeToggle" class="btn btn-outline-secondary btn-sm">
           <i class="bi bi-moon-stars"></i> <span class="d-none d-sm-inline">Thème</span>
         </button>
       </div>
     </div>
   </nav>
 
-  <header id="accueil" class="py-5 bg-gradient">
-    <div class="container py-4">
-      <div class="row align-items-center g-4">
+  <!-- HERO -->
+  <header id="accueil">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
         <div class="col-lg-7">
-          <h1 class="display-5 fw-800">Raphaël Harvent</h1>
-          <p class="lead mb-4">Étudiant <strong>BTS SIO – SISR</strong> • Systèmes, Réseaux, Virtualisation & Sécurité</p>
-          <div class="d-flex gap-2 flex-wrap">
+          <span class="hero-tag"><i class="bi bi-wifi me-1"></i>BTS SIO — Option SISR</span>
+          <h1 class="hero-title">Raphaël<br><span class="accent-word">Harvent</span></h1>
+          <p class="hero-sub">Technicien Systèmes & Réseaux en alternance chez <strong>AKKODIS</strong><br>Administration, virtualisation, sécurité & automatisation</p>
+          <div class="hero-btns d-flex gap-2 flex-wrap">
             <a href="assets/CV.html" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-arrow-down"></i> Voir mon CV
+              <i class="bi bi-file-earmark-person me-1"></i> Mon CV
             </a>
             <a href="#projets" class="btn btn-outline-light btn-lg">
-              <i class="bi bi-kanban"></i> Voir mes projets
+              <i class="bi bi-kanban me-1"></i> Projets
             </a>
             <a href="#contact" class="btn btn-outline-secondary btn-lg">
-              <i class="bi bi-envelope"></i> Me contacter
+              <i class="bi bi-envelope me-1"></i> Contact
             </a>
           </div>
         </div>
         <div class="col-lg-5 text-center">
-          <img src="assets/photo-raph.jpg" class="rounded-4 shadow img-fluid" alt="Portrait de Raphaël Harvent" width="320">
+          <img src="assets/portrait.jpg" class="hero-photo img-fluid" alt="Portrait de Raphaël Harvent" width="320">
         </div>
       </div>
     </div>
   </header>
 
-  <section id="apropos" class="container py-5">
-    <h2 class="section-title"><span>À propos</span></h2>
-    <div class="row g-4">
-      <div class="col-lg-8">
-        <p>
-          Passionné par l’<strong>administration systèmes et réseaux</strong>, je prépare un BTS SIO option SISR.
-          En alternance chez <strong>AKKODIS</strong>, Je contribue du service desk sur un outil de ticketing, gère l'AD de l'entreprise, gere la migration W11
+  <!-- À PROPOS -->
+  <section id="apropos" class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-8 reveal">
+        <h2 class="section-title">À propos</h2>
+        <p class="mt-4" style="font-size:1.05rem; line-height:1.8;">
+          Passionné par l'<strong>administration systèmes et réseaux</strong>, je prépare un BTS SIO option SISR en alternance chez <strong>AKKODIS</strong>. 
+          Au quotidien, je gère le service desk via un outil de ticketing, administre l'Active Directory de l'entreprise 
+          et participe activement à la migration vers Windows 11.
         </p>
+        <div class="row g-3 mt-2">
+          <div class="col-4"><div class="stat-box"><div class="stat-num">2+</div><div class="stat-label">Ans d'alternance</div></div></div>
+          <div class="col-4"><div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Projets lab</div></div></div>
+          <div class="col-4"><div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Certifications</div></div></div>
+        </div>
       </div>
-      <div class="col-lg-4">
-        <ul class="list-unstyled small">
-          <li><i class="bi bi-mortarboard"></i> Établissement : AFPI Formation</li>
-          <li><i class="bi bi-building"></i> Alternance : AKKODIS</li>
-          <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/rapha%C3%ABl-harvent-a4008a304/" target="_blank">LinkedIn</a></li>
-          <li><i class="bi bi-github"></i> <a href="https://github.com/RAGUN023" target="_blank">GitHub</a></li>
+      <div class="col-lg-4 reveal">
+        <h2 class="section-title mt-lg-0 mt-4">Infos</h2>
+        <ul class="list-unstyled about-info mt-4">
+          <li><i class="bi bi-mortarboard text-info me-2"></i> AFPI Formation</li>
+          <li><i class="bi bi-building text-info me-2"></i> Alternance – AKKODIS</li>
+          <li><i class="bi bi-geo-alt text-info me-2"></i> Valenciennes (59)</li>
+          <li class="pt-2">
+            <a href="https://www.linkedin.com/in/rapha%C3%ABl-harvent-a4008a304/" target="_blank" rel="noopener" class="me-3">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/RAGUN023" target="_blank" rel="noopener">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="competences" class="bg-body-tertiary py-5">
+  <!-- COMPÉTENCES -->
+  <section id="competences" class="bg-body-tertiary">
     <div class="container">
-      <h2 class="section-title"><span>Compétences SISR</span></h2>
-      <div class="row g-4">
-        <div class="col-md-6">
+      <h2 class="section-title reveal">Compétences</h2>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6 reveal">
           <div class="card h-100">
-            <div class="card-body">
-              <h3 class="h5"><i class="bi bi-hdd-network"></i> Systèmes</h3>
-              <ul class="mb-0">
-                <li>Windows Server (AD DS, DNS, DHCP, GPO)</li>
-                <li>Linux (Debian/Ubuntu, services, shell)</li>
-                <li>Virtualisation (VMware/VirtualBox)</li>
+            <div class="card-body p-4">
+              <h3 class="h5 mb-3"><i class="bi bi-hdd-network text-info me-2"></i>Systèmes</h3>
+              <ul class="mb-0" style="line-height: 2;">
+                <li>Windows Server — AD DS, DNS, DHCP, GPO</li>
+                <li>Linux — Debian/Ubuntu, services, scripting shell</li>
+                <li>Virtualisation — VMware / VirtualBox</li>
                 <li>Sauvegardes & supervision (scripts, outils)</li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 reveal">
           <div class="card h-100">
-            <div class="card-body">
-              <h3 class="h5"><i class="bi bi-router"></i> Réseaux & Sécurité</h3>
-              <ul class="mb-0">
+            <div class="card-body p-4">
+              <h3 class="h5 mb-3"><i class="bi bi-shield-lock text-info me-2"></i>Réseaux & Sécurité</h3>
+              <ul class="mb-0" style="line-height: 2;">
                 <li>TCP/IP, VLAN, routage de base</li>
-                <li>Firewalling (Stormshield), VPN</li>
-                <li>Durcissement, mises à jour, bastionnement</li>
-                <li>Automatisation (PowerShell)</li>
+                <li>Firewalling Stormshield, VPN</li>
+                <li>Durcissement, bastionnement, mises à jour</li>
+                <li>Automatisation PowerShell</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="mt-4 d-flex flex-wrap gap-2">
-        <span class="badge text-bg-primary">PowerShell</span>
-        <span class="badge text-bg-secondary">Bash</span>
-        <span class="badge text-bg-success">Docker (bases)</span>
-        <span class="badge text-bg-warning">Git/GitHub</span>
+      <div class="mt-4 d-flex flex-wrap gap-2 reveal">
+        <span class="skill-badge"><i class="bi bi-terminal"></i> PowerShell</span>
+        <span class="skill-badge"><i class="bi bi-terminal-fill"></i> Bash</span>
+        <span class="skill-badge"><i class="bi bi-box"></i> Docker</span>
+        <span class="skill-badge"><i class="bi bi-git"></i> Git / GitHub</span>
+        <span class="skill-badge"><i class="bi bi-windows"></i> Windows Server</span>
+        <span class="skill-badge"><i class="bi bi-ubuntu"></i> Linux</span>
+        <span class="skill-badge"><i class="bi bi-hdd-stack"></i> VMware</span>
+        <span class="skill-badge"><i class="bi bi-shield-check"></i> Stormshield</span>
       </div>
     </div>
   </section>
 
-  <section id="parcours" class="container py-5">
-  <h2 class="section-title"><span>Parcours</span></h2>
+  <!-- PARCOURS -->
+  <section id="parcours" class="container">
+    <h2 class="section-title reveal">Parcours</h2>
+    <div class="timeline mt-4">
 
-  <div class="timeline">
-    <!-- BTS -->
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="t-content">
-        <h3 class="h6 mb-1">BTS SIO – Option SISR</h3>
-        <div class="text-muted small">2024 – 2026 • AFPI Formation</div>
-        <p class="mb-0">Modules : services réseaux, cybersécurité, scripting, virtualisation.</p>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <div class="d-flex justify-content-between flex-wrap gap-1">
+            <h3 class="h6 mb-1">BTS SIO – Option SISR</h3>
+            <span class="badge text-bg-info" style="font-size:0.72rem;">En cours</span>
+          </div>
+          <div class="text-muted small mb-2">2024 – 2026 • AFPI Formation</div>
+          <p class="mb-0 small">Services réseaux, cybersécurité, scripting, virtualisation et administration système.</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Alternance -->
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="t-content">
-        <h3 class="h6 mb-1">Alternance – Technicien Systèmes & Réseaux</h3>
-        <div class="text-muted small">2024 – 2026 • AKKODIS</div>
-        <ul class="mb-0">
-          <li>Déploiement AD/DNS/DHCP, GPO</li>
-          <li>Segmentation VLAN & règles firewall</li>
-          <li>Scripts d’automatisation (PowerShell)</li>
-        </ul>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <div class="d-flex justify-content-between flex-wrap gap-1">
+            <h3 class="h6 mb-1">Alternance – Technicien Systèmes & Réseaux</h3>
+            <span class="badge text-bg-success" style="font-size:0.72rem;">En cours</span>
+          </div>
+          <div class="text-muted small mb-2">2024 – 2026 • AKKODIS</div>
+          <ul class="mb-0 small" style="line-height:1.9;">
+            <li>Déploiement AD / DNS / DHCP, GPO</li>
+            <li>Segmentation VLAN & règles firewall</li>
+            <li>Scripts d'automatisation PowerShell</li>
+            <li>Migration Windows 11 & service desk (ticketing)</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <!-- Terminale -->
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="t-content">
-        <h3 class="h6 mb-1">Terminale STI2D</h3>
-        <div class="text-muted small">Sept 2023 – Aujourd’hui • Lycée du HAINAUT, Valenciennes (59)</div>
-        <p class="mb-0">Option Systèmes d'Information et Numérique</p>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="h6 mb-1">Terminale STI2D</h3>
+          <div class="text-muted small mb-1">2023 – 2024 • Lycée du HAINAUT, Valenciennes (59)</div>
+          <p class="mb-0 small">Option Systèmes d'Information et Numérique</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Première -->
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="t-content">
-        <h3 class="h6 mb-1">Première STI2D</h3>
-        <div class="text-muted small">Sept 2022 – Sept 2023 • Lycée du HAINAUT, Valenciennes (59)</div>
-        <p class="mb-0">Option Ingénierie et Développement Durable – I2D</p>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="h6 mb-1">Première STI2D</h3>
+          <div class="text-muted small mb-1">2022 – 2023 • Lycée du HAINAUT, Valenciennes (59)</div>
+          <p class="mb-0 small">Option Ingénierie et Développement Durable – I2D</p>
+        </div>
       </div>
-    </div>
-    
-    <!-- Stage Optionnel -->
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="t-content">
-        <h3 class="h6 mb-1">Stage Optionnel – Technicien de Proximité</h3>
-        <div class="text-muted small">Février 2021 • Akkodis</div>
-        <p class="mb-0">Découverte de l’entreprise • Technicien Informatique • Modis</p>
-      </div>
-    </div>
-    
-    <!-- Seconde -->
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="t-content">
-        <h3 class="h6 mb-1">Seconde Générale</h3>
-        <div class="text-muted small">Sept 2021 – Sept 2022 • Lycée E. Couteaux, Saint-Amand (59)</div>
-        <p class="mb-0">Option Sciences de l’ingénieur – SI</p>
-      </div>
-    </div>
-  </div>
-</section>
 
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="h6 mb-1">Stage – Technicien de Proximité</h3>
+          <div class="text-muted small mb-1">Février 2021 • AKKODIS (Modis)</div>
+          <p class="mb-0 small">Découverte du métier de technicien informatique de proximité en entreprise.</p>
+        </div>
+      </div>
 
-  <section id="projets" class="bg-body-tertiary py-5">
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="h6 mb-1">Seconde Générale</h3>
+          <div class="text-muted small mb-1">2021 – 2022 • Lycée E. Couteaux, Saint-Amand (59)</div>
+          <p class="mb-0 small">Option Sciences de l'ingénieur – SI</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="bg-body-tertiary">
     <div class="container">
-      <h2 class="section-title"><span>Projets</span></h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 project">
-            <img src="assets/projet-vm-linux.jpg" class="card-img-top" alt="Projet VMs Linux">
-            <div class="card-body d-flex flex-column">
+      <h2 class="section-title reveal">Projets</h2>
+      <div class="row g-4 mt-2">
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card h-100">
+            <img src="assets/projet-vm-linux.jpg" class="card-img-top" alt="Virtualisation Linux">
+            <div class="card-body d-flex flex-column p-4">
+              <span class="badge text-bg-secondary mb-2" style="width:fit-content;">Linux · VMware</span>
               <h3 class="h5">Virtualisation – VMs Linux</h3>
-              <p class="flex-grow-1">Création et administration de VMs Debian/Ubuntu : réseau, services (SSH, Apache/Nginx), snapshots.</p>
-              <div class="d-flex gap-2">
-                <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank">Code</a>
-              </div>
+              <p class="flex-grow-1 small">Création et administration de VMs Debian/Ubuntu : configuration réseau, déploiement de services (SSH, Apache/Nginx), gestion des snapshots et des sauvegardes.</p>
+              <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                <i class="bi bi-github me-1"></i> Voir le code
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 project">
-            <img src="assets/projet-windows-server.jpg" class="card-img-top" alt="Projet Windows Server">
-            <div class="card-body d-flex flex-column">
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card h-100">
+            <img src="assets/projet-windows-server.jpg" class="card-img-top" alt="Windows Server">
+            <div class="card-body d-flex flex-column p-4">
+              <span class="badge text-bg-primary mb-2" style="width:fit-content;">Windows Server · AD</span>
               <h3 class="h5">Services – Windows Server</h3>
-              <p class="flex-grow-1">Mise en place d’AD DS, DNS, DHCP et GPO pour un lab d’entreprise. Documentation et scripts.</p>
-              <div class="d-flex gap-2">
-                <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank">Code</a>
-              </div>
+              <p class="flex-grow-1 small">Mise en place d'un environnement AD DS complet : DNS, DHCP, GPO, gestion des utilisateurs et des unités organisationnelles pour un lab d'entreprise.</p>
+              <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                <i class="bi bi-github me-1"></i> Voir le code
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 project">
-            <img src="assets/projet-stormshield.jpg" class="card-img-top" alt="Projet Stormshield">
-            <div class="card-body d-flex flex-column">
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card h-100">
+            <img src="assets/projet-stormshield.jpg" class="card-img-top" alt="Stormshield">
+            <div class="card-body d-flex flex-column p-4">
+              <span class="badge text-bg-danger mb-2" style="width:fit-content;">Firewall · VPN · VLAN</span>
               <h3 class="h5">Sécurité – Stormshield</h3>
-              <p class="flex-grow-1">Configuration de politiques firewall, NAT, VLAN et accès VPN sur appliance Stormshield (lab).</p>
-              <div class="d-flex gap-2">
-                <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank">Docs</a>
-              </div>
+              <p class="flex-grow-1 small">Configuration de politiques de filtrage avancées, règles NAT, segmentation VLAN et mise en place d'accès VPN sur appliance Stormshield en environnement lab.</p>
+              <a href="https://github.com/RAGUN023?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                <i class="bi bi-file-text me-1"></i> Documentation
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="mt-4 small text-muted">
-        <i class="bi bi-graph-up"></i> Remplace les descriptions par tes résultats, captures et dépôts.
+
       </div>
     </div>
   </section>
 
-  <section id="certifications" class="container py-5">
-  <h2 class="section-title"><span>Certifications</span></h2>
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="container">
+    <h2 class="section-title reveal">Certifications</h2>
+    <div class="d-flex flex-column gap-3 mt-4">
 
-  <div class="row g-4">
-    <div class="col-12">
-      <div class="list-group shadow-sm">
-
-        <!-- CNIL - 6 modules (2025) -->
-        <div class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+      <div class="cert-item reveal">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
           <div>
-            <h3 class="h6 mb-1"><i class="bi bi-award"></i> MOOC de la CNIL – Les fondamentaux du RGPD</h3>
-            <div class="text-muted small">2025 • Modules 1 à 6</div>
+            <h3 class="h6 mb-1"><i class="bi bi-award-fill text-warning me-2"></i>MOOC CNIL – Les fondamentaux du RGPD</h3>
+            <div class="text-muted small">2025 • 6 modules validés</div>
           </div>
-          <!-- Boutons M1..M6 (fonctionnent dès que les PDF existent) -->
-          <div class="d-flex flex-wrap gap-2 mt-3 mt-md-0">
-            <a href="assets/cnil-m1.pdf" target="_blank" class="btn btn-outline-light">
-              <i class="bi bi-file-earmark-pdf"></i> M1
-            </a>
-            <a href="assets/cnil-m2.pdf" target="_blank" class="btn btn-outline-light">
-              <i class="bi bi-file-earmark-pdf"></i> M2
-            </a>
-            <a href="assets/cnil-m3.pdf" target="_blank" class="btn btn-outline-light">
-              <i class="bi bi-file-earmark-pdf"></i> M3
-            </a>
-            <a href="assets/cnil-m4.pdf" target="_blank" class="btn btn-outline-light">
-              <i class="bi bi-file-earmark-pdf"></i> M4
-            </a>
-            <a href="assets/cnil-m5.pdf" target="_blank" class="btn btn-outline-light">
-              <i class="bi bi-file-earmark-pdf"></i> M5
-            </a>
-            <a href="assets/cnil-m6.pdf" target="_blank" class="btn btn-outline-light">
-              <i class="bi bi-file-earmark-pdf"></i> M6
-            </a>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="assets/cnil-m1.pdf" target="_blank" class="btn-cert"><i class="bi bi-file-earmark-pdf me-1"></i>M1</a>
+            <a href="assets/cnil-m2.pdf" target="_blank" class="btn-cert"><i class="bi bi-file-earmark-pdf me-1"></i>M2</a>
+            <a href="assets/cnil-m3.pdf" target="_blank" class="btn-cert"><i class="bi bi-file-earmark-pdf me-1"></i>M3</a>
+            <a href="assets/cnil-m4.pdf" target="_blank" class="btn-cert"><i class="bi bi-file-earmark-pdf me-1"></i>M4</a>
+            <a href="assets/cnil-m5.pdf" target="_blank" class="btn-cert"><i class="bi bi-file-earmark-pdf me-1"></i>M5</a>
+            <a href="assets/cnil-m6.pdf" target="_blank" class="btn-cert"><i class="bi bi-file-earmark-pdf me-1"></i>M6</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-item reveal">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+          <div>
+            <h3 class="h6 mb-1"><i class="bi bi-award-fill text-warning me-2"></i>MOOC de l'ANSSI – SecNumAcadémie</h3>
+            <div class="text-muted small">01/07/2021 • Sécurité numérique</div>
+          </div>
+          <a href="assets/mooc-anssi-2021.pdf" target="_blank" class="btn-cert" style="width:fit-content;">
+            <i class="bi bi-file-earmark-pdf me-1"></i> Voir le PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="cert-item reveal">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+          <div>
+            <h3 class="h6 mb-1"><i class="bi bi-award-fill text-warning me-2"></i>Certification PIX</h3>
+            <div class="text-muted small">23/01/2024 • Compétences numériques</div>
+          </div>
+          <a href="assets/pix-2024-01-23.pdf" target="_blank" class="btn-cert" style="width:fit-content;">
+            <i class="bi bi-file-earmark-pdf me-1"></i> Voir le PDF
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VEILLE -->
+  <section id="veille" class="bg-body-tertiary">
+    <div class="container">
+      <h2 class="section-title reveal">Veille Technologique</h2>
+      <p class="text-muted mt-3 mb-4 reveal" style="max-width:640px;">
+        Dans le cadre de mon BTS SIO SISR, j'ai réalisé une veille technologique sur deux thèmes majeurs de la cybersécurité actuelle.
+      </p>
+
+      <!-- Onglets -->
+      <ul class="nav veille-tabs reveal" id="veilleTabs">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-ingenierie">
+            <i class="bi bi-person-bounding-box me-2"></i>Ingénierie sociale
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-ia">
+            <i class="bi bi-robot me-2"></i>Risques de l'IA
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content veille-tab-content">
+
+        <!-- THÈME 1 : INGÉNIERIE SOCIALE -->
+        <div class="tab-pane fade show active" id="tab-ingenierie">
+          <div class="row g-4">
+            <div class="col-lg-5 reveal">
+              <div class="veille-intro-card">
+                <span class="veille-tag"><i class="bi bi-shield-exclamation me-1"></i>Cybersécurité</span>
+                <h3 class="h4 mb-3">Ingénierie sociale</h3>
+                <p class="small mb-3" style="line-height:1.8;">
+                  L'ingénierie sociale désigne l'ensemble des techniques de manipulation psychologique visant à tromper des individus pour obtenir des informations confidentielles, des accès systèmes ou déclencher des actions non désirées. Contrairement aux attaques techniques, elle exploite la <strong>confiance humaine</strong> plutôt que les failles logicielles.
+                </p>
+                <p class="small mb-0" style="line-height:1.8;">
+                  C'est aujourd'hui l'une des principales portes d'entrée des cyberattaques en entreprise : plus de <strong>90 % des violations de données</strong> débutent par un acte d'ingénierie sociale (phishing, pretexting, vishing…).
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-7 reveal">
+              <h4 class="h6 text-muted text-uppercase mb-3" style="letter-spacing:0.08em; font-size:0.73rem;">Plan de la veille</h4>
+              <ol class="veille-plan">
+                <li>
+                  <div>
+                    <strong>Introduction</strong>
+                    <div class="text-muted small mt-1">Définition, contexte et importance de la menace dans les organisations.</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Les principales techniques</strong>
+                    <div class="text-muted small mt-1">Phishing, spear phishing, vishing, smishing, pretexting, baiting, quid pro quo.</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Exemples concrets</strong>
+                    <div class="text-muted small mt-1">Cas réels d'attaques réussies par ingénierie sociale (entreprises, administrations).</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Les conséquences</strong>
+                    <div class="text-muted small mt-1">Impact financier, fuite de données, atteinte à la réputation, sanctions RGPD.</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Comment s'en protéger ?</strong>
+                    <div class="text-muted small mt-1">Sensibilisation des utilisateurs, procédures internes, MFA, filtrage e-mail.</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Conclusion</strong>
+                    <div class="text-muted small mt-1">Synthèse et perspectives : l'humain comme premier rempart de sécurité.</div>
+                  </div>
+                </li>
+              </ol>
+            </div>
           </div>
         </div>
 
-        <!-- ANSSI - 01/07/2021 -->
-        <div class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-          <div>
-            <h3 class="h6 mb-1"><i class="bi bi-award"></i> MOOC de l’ANSSI</h3>
-            <div class="text-muted small">01/07/2021</div>
+        <!-- THÈME 2 : RISQUES DE L'IA -->
+        <div class="tab-pane fade" id="tab-ia">
+          <div class="row g-4">
+            <div class="col-lg-5 reveal">
+              <div class="veille-intro-card">
+                <span class="veille-tag tag-ai"><i class="bi bi-cpu me-1"></i>Intelligence Artificielle</span>
+                <h3 class="h4 mb-3">Risques & enjeux de l'IA</h3>
+                <p class="small mb-3" style="line-height:1.8;">
+                  L'intelligence artificielle transforme profondément le paysage de la cybersécurité : elle offre de nouveaux outils défensifs mais génère également de nouvelles menaces inédites. Les attaquants utilisent désormais l'IA pour automatiser et sophistiquer leurs attaques.
+                </p>
+                <p class="small mb-0" style="line-height:1.8;">
+                  Face à cette double réalité, les professionnels SISR doivent comprendre à la fois les <strong>apports</strong> de l'IA (détection d'anomalies, SOC augmenté) et ses <strong>risques</strong> (deepfakes, attaques automatisées, biais algorithmiques).
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-7 reveal">
+              <h4 class="h6 text-muted text-uppercase mb-3" style="letter-spacing:0.08em; font-size:0.73rem;">Plan de la veille</h4>
+              <ol class="veille-plan">
+                <li>
+                  <div>
+                    <strong>Introduction</strong>
+                    <div class="text-muted small mt-1">L'essor de l'IA et son impact croissant sur la sécurité informatique.</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Les apports de l'IA en cybersécurité</strong>
+                    <div class="text-muted small mt-1">Détection d'intrusions, analyse comportementale, automatisation des réponses aux incidents.</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Les risques liés à l'IA</strong>
+                    <div class="text-muted small mt-1">Deepfakes, phishing génératif, attaques adversariales, empoisonnement de modèles.</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Enjeux éthiques et sécuritaires</strong>
+                    <div class="text-muted small mt-1">Biais algorithmiques, vie privée, responsabilité juridique, régulation (AI Act).</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Cas concrets / outils</strong>
+                    <div class="text-muted small mt-1">Exemples d'outils IA en cybersécurité : Darktrace, Microsoft Copilot for Security, ChatGPT détourné.</div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <strong>Conclusion</strong>
+                    <div class="text-muted small mt-1">L'IA : opportunité ou menace ? Vers une cybersécurité augmentée et responsable.</div>
+                  </div>
+                </li>
+              </ol>
+            </div>
           </div>
-          
-          <a href="assets/mooc-anssi-2021.pdf" target="_blank" class="btn btn-outline-light">
-            <i class="bi bi-file-earmark-pdf"></i> Voir le PDF
-          </a>
-        </div>
-
-        <!-- PIX - 23/01/2024 -->
-        <div class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-          <div>
-            <h3 class="h6 mb-1"><i class="bi bi-award"></i> Certification PIX</h3>
-            <div class="text-muted small">23/01/2024</div>
-          </div>
-          <a href="assets/pix-2024-01-23.pdf" target="_blank" class="btn btn-outline-light">
-            <i class="bi bi-file-earmark-pdf"></i> Voir le PDF
-          </a>
         </div>
 
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  
-  <section id="contact" class="container py-5">
-    <h2 class="section-title"><span>Contact</span></h2>
-    <div class="row g-4">
-      <div class="col-lg-6">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="h6">Écris‑moi</h3>
-            <p class="mb-3">Sur un site statique, le lien mailto est le plus simple.</p>
-            <a class="btn btn-primary" href="mailto:raphael.harvent@gmail.com?subject=Contact%20Portfolio">Envoyer un e‑mail</a>
-            <p class="mt-3 mb-0 small text-muted">Tu peux plus tard intégrer un service de formulaire (Formspree, Netlify Forms…).</p>
+  <!-- CONTACT -->
+  <section id="contact" class="bg-body-tertiary">
+    <div class="container">
+      <h2 class="section-title reveal">Contact</h2>
+      <div class="row g-4 mt-2 align-items-start">
+        <div class="col-lg-6 reveal">
+          <div class="contact-card">
+            <h3 class="h5 mb-3"><i class="bi bi-send me-2 text-info"></i>Envoie-moi un message</h3>
+            <p class="small opacity-75 mb-4">Tu peux me contacter par e-mail pour toute opportunité, question ou collaboration.</p>
+            <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#057764756d6460692b6d647773606b71456268646c692b666a683a7670676f60667138466a6b71646671203735556a7771636a696c6a">
+              <i class="bi bi-envelope me-2"></i> <span class="__cf_email__" data-cfemail="f28093829a93979edc9a938084979c86b2959f939b9edc919d9f">[email&#160;protected]</span>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6">
-        <ul class="list-unstyled fs-5">
-          <li><i class="bi bi-linkedin text-primary"></i> <a href="https://www.linkedin.com/in/rapha%C3%ABl-harvent-a4008a304/" target="_blank">LinkedIn</a></li>
-          <li><i class="bi bi-github"></i> <a href="https://github.com/RAGUN023" target="_blank">GitHub</a></li>
-          <li><i class="bi bi-envelope"></i> raphael.harvent@gmail.com</li>
-        </ul>
+        <div class="col-lg-6 reveal">
+          <h3 class="h6 text-muted text-uppercase mb-3" style="letter-spacing:0.08em; font-size:0.75rem;">Retrouve-moi sur</h3>
+          <ul class="list-unstyled d-flex flex-column gap-3">
+            <li>
+              <a href="https://www.linkedin.com/in/rapha%C3%ABl-harvent-a4008a304/" target="_blank" rel="noopener"
+                 class="d-flex align-items-center gap-3 text-decoration-none" style="color:inherit;">
+                <span style="width:42px;height:42px;background:rgba(0,119,181,0.15);border:1px solid rgba(0,119,181,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                  <i class="bi bi-linkedin" style="color:#0077b5;font-size:1.1rem;"></i>
+                </span>
+                <span><strong>LinkedIn</strong><br><small class="opacity-60">Raphaël Harvent</small></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/RAGUN023" target="_blank" rel="noopener"
+                 class="d-flex align-items-center gap-3 text-decoration-none" style="color:inherit;">
+                <span style="width:42px;height:42px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                  <i class="bi bi-github" style="font-size:1.1rem;"></i>
+                </span>
+                <span><strong>GitHub</strong><br><small class="opacity-60">RAGUN023</small></span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="py-4 text-center small text-muted">
     © <span id="year"></span> Raphaël Harvent — Portfolio BTS SIO SISR
+    <span class="d-block mt-1 opacity-50" style="font-size:0.7rem;">Dernière mise à jour : 2025</span>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle thème
+    const html = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+
+    function setTheme(mode) {
+      html.setAttribute('data-bs-theme', mode);
+      localStorage.setItem('theme', mode);
+      btn.innerHTML = mode === 'dark'
+        ? '<i class="bi bi-brightness-high"></i> <span class="d-none d-sm-inline">Thème</span>'
+        : '<i class="bi bi-moon-stars"></i> <span class="d-none d-sm-inline">Thème</span>';
+    }
+
+    btn.addEventListener('click', () => {
+      setTheme(html.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark');
+    });
+
+    const saved = localStorage.getItem('theme');
+    if (saved) setTheme(saved);
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          e.target.style.transitionDelay = (i * 0.07) + 's';
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('
