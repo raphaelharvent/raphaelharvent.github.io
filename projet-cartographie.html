@@ -42,6 +42,21 @@
     footer{border-top:1px solid rgba(255,255,255,0.06);}
     a{color:var(--accent);}
     a:hover{color:#7df6ff;}
+    /* ONGLETS style veille/projets */
+    .veille-tabs .nav-link {
+      font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
+      border-radius: 12px !important; border: 1px solid rgba(255,255,255,0.08) !important;
+      color: inherit; opacity: 0.6; padding: 0.6rem 1.2rem;
+      transition: all 0.25s; margin-right: 0.5rem;
+    }
+    .veille-tabs .nav-link.active {
+      background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(124,58,237,0.15)) !important;
+      border-color: rgba(0,229,255,0.35) !important;
+      color: var(--accent) !important; opacity: 1;
+    }
+    .veille-tabs .nav-link:hover:not(.active) { opacity: 1; }
+    .carto-pane { display: none; }
+    .carto-pane.carto-active { display: block; }
     @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
     .fi1{animation:fadeUp 0.6s ease both;}
     .fi2{animation:fadeUp 0.6s 0.15s ease both;}
@@ -88,89 +103,136 @@
   </div>
 
   <main class="container py-5">
-    <div class="row g-5">
 
-      <div class="col-lg-8">
+    <!-- Onglets -->
+    <ul class="nav veille-tabs" id="cartoTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-carto-btn" type="button" role="tab" data-carto-target="#tab-carto">
+          <i class="bi bi-diagram-3 me-2"></i>Cartographie du site
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-inventaire-btn" type="button" role="tab" data-carto-target="#tab-inventaire">
+          <i class="bi bi-clipboard2-check me-2"></i>Inventaire du site
+        </button>
+      </li>
+    </ul>
 
-        <div class="content-card">
-          <h2 class="section-title">Contexte</h2>
-          <p style="line-height:1.9;opacity:0.85;">
-            <!-- ✏️ Décris ici le contexte du projet -->
-            À compléter...
-          </p>
-        </div>
+    <div class="mt-4">
 
-        <div class="content-card">
-          <h2 class="section-title">Objectifs</h2>
-          <ul class="step-list">
-            <li><!-- ✏️ Objectif 1 --> À compléter...</li>
-            <li><!-- ✏️ Objectif 2 --> À compléter...</li>
-            <li><!-- ✏️ Objectif 3 --> À compléter...</li>
-          </ul>
-        </div>
-
-        <div class="content-card">
-          <h2 class="section-title">Réalisation</h2>
-          <p style="line-height:1.9;opacity:0.85;">
-            <!-- ✏️ Décris les étapes, choix techniques, difficultés -->
-            À compléter...
-          </p>
-          <div class="mt-4">
-            <!-- ✏️ Remplace par : <img src="assets/..." class="img-projet" alt="..."> -->
-            <div class="img-placeholder">
-              <i class="bi bi-image"></i>
-              <span>Capture / schéma du projet</span>
+      <!-- CARTOGRAPHIE -->
+      <div class="carto-pane" id="tab-carto">
+        <div class="row g-5">
+          <div class="col-lg-8">
+            <div class="content-card">
+              <h2 class="section-title">Contexte</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
             </div>
-            <p class="img-caption"><!-- ✏️ Légende --></p>
+            <div class="content-card">
+              <h2 class="section-title">Objectifs</h2>
+              <ul class="step-list">
+                <li>Réaliser un schéma de la topologie physique du réseau du site</li>
+                <li>Réaliser un schéma de la topologie logique (adressage IP, VLANs)</li>
+                <li><!-- ✏️ --> À compléter...</li>
+              </ul>
+            </div>
+            <div class="content-card">
+              <h2 class="section-title">Réalisation</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ Outils utilisés, méthode --> À compléter...</p>
+              <div class="mt-4">
+                <div class="img-placeholder"><i class="bi bi-image"></i><span>Schéma physique du réseau</span></div>
+                <p class="img-caption"><!-- ✏️ Légende --></p>
+              </div>
+              <div class="mt-4">
+                <div class="img-placeholder"><i class="bi bi-image"></i><span>Schéma logique / adressage IP</span></div>
+                <p class="img-caption"><!-- ✏️ Légende --></p>
+              </div>
+            </div>
+            <div class="content-card">
+              <h2 class="section-title">Résultats</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+            </div>
+            <div class="content-card">
+              <h2 class="section-title">Compétences mobilisées</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="info-box mb-4">
+              <h3 class="h6 mb-3" style="font-family:var(--font-display);opacity:0.6;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;">Informations</h3>
+              <div class="info-row"><span class="info-label">Type</span><span>Cartographie réseau</span></div>
+              <div class="info-row"><span class="info-label">Contexte</span><span>Alternance AKKODIS</span></div>
+              <div class="info-row"><span class="info-label">Période</span><span><!-- ✏️ --></span></div>
+              <div class="info-row"><span class="info-label">Durée</span><span><!-- ✏️ --></span></div>
+              <div class="info-row"><span class="info-label">Outils</span><span><!-- ✏️ Ex : draw.io, Visio --></span></div>
+            </div>
+            <div class="mb-4">
+              <div class="img-placeholder" style="aspect-ratio:4/3;"><i class="bi bi-image"></i><span>Image secondaire</span></div>
+              <p class="img-caption"><!-- ✏️ --></p>
+            </div>
+            <div>
+              <div class="img-placeholder" style="aspect-ratio:4/3;"><i class="bi bi-image"></i><span>Image secondaire</span></div>
+              <p class="img-caption"><!-- ✏️ --></p>
+            </div>
           </div>
         </div>
-
-        <div class="content-card">
-          <h2 class="section-title">Résultats</h2>
-          <p style="line-height:1.9;opacity:0.85;">
-            <!-- ✏️ Résultats concrets obtenus -->
-            À compléter...
-          </p>
-          <div class="mt-4">
-            <!-- ✏️ Remplace par : <img src="assets/..." class="img-projet" alt="..."> -->
-            <div class="img-placeholder">
-              <i class="bi bi-image"></i>
-              <span>Capture du résultat final</span>
-            </div>
-            <p class="img-caption"><!-- ✏️ Légende --></p>
-          </div>
-        </div>
-
-        <div class="content-card">
-          <h2 class="section-title">Compétences mobilisées</h2>
-          <p style="line-height:1.9;opacity:0.85;">
-            <!-- ✏️ Compétences BTS SIO SISR couvertes -->
-            À compléter...
-          </p>
-        </div>
-
       </div>
 
-      <div class="col-lg-4">
-        <div class="info-box mb-4">
-          <h3 class="h6 mb-3" style="font-family:var(--font-display);opacity:0.6;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;">Informations</h3>
-          <div class="info-row"><span class="info-label">Type</span><span>Projet Professionnel · AKKODIS</span></div>
-          <div class="info-row"><span class="info-label">Contexte</span><span>Savoir reperer les PC manquant et les vols de materiels</span></div>
-          <div class="info-row"><span class="info-label">Période</span><span>2024 · 2025</span></div>
-          <div class="info-row"><span class="info-label">Durée</span><span>3 semaines</span></div>
-          <div class="info-row"><span class="info-label">Outils</span><span>Microsoft 365 · Visio</span></div>
-        </div>
-        <div class="mb-4">
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <i class="bi bi-image"></i><span>Image secondaire</span>
+      <!-- INVENTAIRE -->
+      <div class="carto-pane" id="tab-inventaire">
+        <div class="row g-5">
+          <div class="col-lg-8">
+            <div class="content-card">
+              <h2 class="section-title">Contexte</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+            </div>
+            <div class="content-card">
+              <h2 class="section-title">Objectifs</h2>
+              <ul class="step-list">
+                <li>Recenser tous les équipements matériels du site (PC, serveurs, switches, imprimantes…)</li>
+                <li>Identifier les logiciels installés et leurs licences</li>
+                <li><!-- ✏️ --> À compléter...</li>
+              </ul>
+            </div>
+            <div class="content-card">
+              <h2 class="section-title">Réalisation</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ Méthode, outils (Excel, GLPI...) --> À compléter...</p>
+              <div class="mt-4">
+                <div class="img-placeholder"><i class="bi bi-image"></i><span>Extrait du tableau d'inventaire</span></div>
+                <p class="img-caption"><!-- ✏️ Légende --></p>
+              </div>
+              <div class="mt-4">
+                <div class="img-placeholder"><i class="bi bi-image"></i><span>Outil / logiciel utilisé</span></div>
+                <p class="img-caption"><!-- ✏️ Légende --></p>
+              </div>
+            </div>
+            <div class="content-card">
+              <h2 class="section-title">Résultats</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+            </div>
+            <div class="content-card">
+              <h2 class="section-title">Compétences mobilisées</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+            </div>
           </div>
-          <p class="img-caption"><!-- ✏️ Légende --></p>
-        </div>
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <i class="bi bi-image"></i><span>Image secondaire</span>
+          <div class="col-lg-4">
+            <div class="info-box mb-4">
+              <h3 class="h6 mb-3" style="font-family:var(--font-display);opacity:0.6;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;">Informations</h3>
+              <div class="info-row"><span class="info-label">Type</span><span>Inventaire parc informatique</span></div>
+              <div class="info-row"><span class="info-label">Contexte</span><span>Alternance AKKODIS</span></div>
+              <div class="info-row"><span class="info-label">Période</span><span><!-- ✏️ --></span></div>
+              <div class="info-row"><span class="info-label">Durée</span><span><!-- ✏️ --></span></div>
+              <div class="info-row"><span class="info-label">Outils</span><span><!-- ✏️ Ex : Excel, GLPI --></span></div>
+            </div>
+            <div class="mb-4">
+              <div class="img-placeholder" style="aspect-ratio:4/3;"><i class="bi bi-image"></i><span>Photo équipement</span></div>
+              <p class="img-caption"><!-- ✏️ --></p>
+            </div>
+            <div>
+              <div class="img-placeholder" style="aspect-ratio:4/3;"><i class="bi bi-image"></i><span>Capture logiciel inventaire</span></div>
+              <p class="img-caption"><!-- ✏️ --></p>
+            </div>
           </div>
-          <p class="img-caption"><!-- ✏️ Légende --></p>
         </div>
       </div>
 
@@ -182,6 +244,24 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const cartoButtons = document.querySelectorAll('#cartoTabs .nav-link');
+    const cartoPanes   = document.querySelectorAll('.carto-pane');
+
+    cartoPanes[0].classList.add('carto-active');
+    cartoButtons[0].classList.add('active');
+
+    cartoButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-carto-target');
+        cartoPanes.forEach(p => p.classList.remove('carto-active'));
+        cartoButtons.forEach(b => b.classList.remove('active'));
+        document.querySelector(target).classList.add('carto-active');
+        btn.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
