@@ -316,6 +316,10 @@
       transform: translateY(0);
     }
 
+    /* ── PROJETS TABS ── */
+    .projet-pane { display: none; }
+    .projet-pane.projet-active { display: block; }
+
     /* ── VEILLE TABS OVERRIDE ── */
     .tab-pane { display: none !important; }
     .tab-pane.tab-active { display: block !important; }
@@ -643,47 +647,118 @@
   <section id="projets" class="bg-body-tertiary">
     <div class="container">
       <h2 class="section-title reveal">Projets</h2>
-      <div class="row g-4 mt-2">
 
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="card h-100">
-            <img src="assets/logo-w11.jpg" class="card-img-top" alt="Migration Windows 11">
-            <div class="card-body d-flex flex-column p-4">
-              <span class="badge text-bg-primary mb-2" style="width:fit-content;">Windows 11 · SCCM</span>
-              <h3 class="h5">Migration de Windows 10 à Windows 11</h3>
-              <p class="flex-grow-1 small">Participation à la migration du parc informatique d'AKKODIS vers Windows 11 : préparation des postes, tests de compatibilité, déploiement et suivi des incidents post-migration.</p>
-              <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
-                <i class="bi bi-github me-1"></i> Documentation du projet 
-              </a>
+      <!-- Onglets Projets -->
+      <ul class="nav veille-tabs mt-4" id="projetsTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-pro-btn" type="button" role="tab" data-projet-target="#tab-pro">
+            <i class="bi bi-briefcase me-2"></i>Projets professionnels
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-afpi-btn" type="button" role="tab" data-projet-target="#tab-afpi">
+            <i class="bi bi-mortarboard me-2"></i>Projets AFPI
+          </button>
+        </li>
+      </ul>
+
+      <div class="mt-4">
+
+        <!-- PROJETS PROFESSIONNELS -->
+        <div class="projet-pane" id="tab-pro">
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="card h-100">
+                <img src="assets/logo-w11.jpg" class="card-img-top" alt="Migration Windows 11">
+                <div class="card-body d-flex flex-column p-4">
+                  <span class="badge text-bg-primary mb-2" style="width:fit-content;">Windows 11 · SCCM</span>
+                  <h3 class="h5">Migration de Windows 10 à Windows 11</h3>
+                  <p class="flex-grow-1 small">Participation à la migration du parc informatique d'AKKODIS vers Windows 11 : préparation des postes, tests de compatibilité, déploiement et suivi des incidents post-migration.</p>
+                  <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                    <i class="bi bi-file-text me-1"></i> Documentation du projet
+                  </a>
+                </div>
+              </div>
             </div>
+
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="card h-100">
+                <img src="assets/logo-carte.jpg" class="card-img-top" alt="Cartographie réseau">
+                <div class="card-body d-flex flex-column p-4">
+                  <span class="badge text-bg-success mb-2" style="width:fit-content;">Réseau · Inventaire</span>
+                  <h3 class="h5">Cartographie et Inventaire du site</h3>
+                  <p class="flex-grow-1 small">Réalisation de la cartographie réseau du site et de l'inventaire complet du parc informatique : recensement des équipements, schémas réseau et mise à jour de la documentation technique.</p>
+                  <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                    <i class="bi bi-file-text me-1"></i> Documentation du projet
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="card h-100">
+                <img src="assets/help-desk-ticket.jpg" class="card-img-top" alt="Support informatique">
+                <div class="card-body d-flex flex-column p-4">
+                  <span class="badge text-bg-warning mb-2" style="width:fit-content;">Helpdesk · Ticketing</span>
+                  <h3 class="h5">Support de proximité informatique</h3>
+                  <p class="flex-grow-1 small">Prise en charge des incidents et demandes utilisateurs via l'outil de ticketing : diagnostic, résolution de pannes matérielles et logicielles, assistance sur site et suivi des tickets.</p>
+                  <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                    <i class="bi bi-file-text me-1"></i> Documentation du projet
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="card h-100">
-            <img src="assets/logo-carte.jpg" class="card-img-top" alt="Cartographie réseau">
-            <div class="card-body d-flex flex-column p-4">
-              <span class="badge text-bg-success mb-2" style="width:fit-content;">Réseau · Inventaire</span>
-              <h3 class="h5">Cartographie et Inventaire du site</h3>
-              <p class="flex-grow-1 small">Réalisation de la cartographie réseau du site et de l'inventaire complet du parc informatique : recensement des équipements, schémas réseau et mise à jour de la documentation technique.</p>
-              <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
-                <i class="bi bi-github me-1"></i> Documentation du projet 
-              </a>
-            </div>
-          </div>
-        </div>
+        <!-- PROJETS AFPI -->
+        <div class="projet-pane" id="tab-afpi">
+          <div class="row g-4">
 
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="card h-100">
-            <img src="assets/help-desk-ticket.jpg" class="card-img-top" alt="Support informatique">
-            <div class="card-body d-flex flex-column p-4">
-              <span class="badge text-bg-warning mb-2" style="width:fit-content;">Helpdesk · Ticketing</span>
-              <h3 class="h5">Support de proximité informatique</h3>
-              <p class="flex-grow-1 small">Prise en charge des incidents et demandes utilisateurs via l'outil de ticketing : diagnostic, résolution de pannes matérielles et logicielles, assistance sur site et suivi des tickets.</p>
-              <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
-                <i class="bi bi-file-text me-1"></i> Documentation du projet 
-              </a>
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="card h-100">
+                <img src="assets/projet-windows-server.jpg" class="card-img-top" alt="Création salle baie">
+                <div class="card-body d-flex flex-column p-4">
+                  <span class="badge text-bg-info mb-2" style="width:fit-content;">Infrastructure · Baie</span>
+                  <h3 class="h5">Création d'une salle baie</h3>
+                  <p class="flex-grow-1 small">Conception et mise en place d'une salle baie dans le cadre de la formation AFPI : câblage, organisation des équipements réseau, brassage et documentation de l'infrastructure.</p>
+                  <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                    <i class="bi bi-file-text me-1"></i> Documentation du projet
+                  </a>
+                </div>
+              </div>
             </div>
+
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="card h-100">
+                <img src="assets/projet-stormshield.jpg" class="card-img-top" alt="PPE1">
+                <div class="card-body d-flex flex-column p-4">
+                  <span class="badge text-bg-secondary mb-2" style="width:fit-content;">PPE1</span>
+                  <h3 class="h5">PPE1</h3>
+                  <p class="flex-grow-1 small">Projet Professionnel Encadré 1 réalisé dans le cadre du BTS SIO SISR à l'AFPI.</p>
+                  <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                    <i class="bi bi-file-text me-1"></i> Documentation du projet
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="card h-100">
+                <img src="assets/projet-vm-linux.jpg" class="card-img-top" alt="PPE2 Linux">
+                <div class="card-body d-flex flex-column p-4">
+                  <span class="badge text-bg-danger mb-2" style="width:fit-content;">Linux · PPE2</span>
+                  <h3 class="h5">PPE2 Linux</h3>
+                  <p class="flex-grow-1 small">Projet Professionnel Encadré 2 axé sur l'administration Linux : configuration de services, scripting et gestion de l'environnement système.</p>
+                  <a href="https://github.com/raphaelharvent?tab=repositories" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">
+                    <i class="bi bi-file-text me-1"></i> Documentation du projet
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -934,6 +1009,23 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Onglets Projets
+    const projetButtons = document.querySelectorAll('#projetsTabs .nav-link');
+    const projetPanes   = document.querySelectorAll('.projet-pane');
+
+    projetPanes[0].classList.add('projet-active');
+    projetButtons[0].classList.add('active');
+
+    projetButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-projet-target');
+        projetPanes.forEach(p => p.classList.remove('projet-active'));
+        projetButtons.forEach(b => b.classList.remove('active'));
+        document.querySelector(target).classList.add('projet-active');
+        btn.classList.add('active');
+      });
+    });
+
     // Onglets Veille — gestion manuelle pour éviter conflits Bootstrap/reveal
     const veilleButtons = document.querySelectorAll('#veilleTabs .nav-link');
     const veillePanes   = document.querySelectorAll('.tab-pane');
