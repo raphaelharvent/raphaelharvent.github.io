@@ -46,6 +46,14 @@
     .fi1{animation:fadeUp 0.6s ease both;}
     .fi2{animation:fadeUp 0.6s 0.15s ease both;}
     .fi3{animation:fadeUp 0.6s 0.3s ease both;}
+    /* ÉTAPES */
+    .etape{border-left:2px solid rgba(0,229,255,0.2);padding-left:1.5rem;margin-bottom:2.5rem;position:relative;}
+    .etape:last-child{margin-bottom:0;}
+    .etape::before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px rgba(0,229,255,0.5);}
+    .etape-header{display:flex;align-items:center;gap:0.85rem;margin-bottom:0.6rem;}
+    .etape-num{font-family:var(--font-display);font-size:0.72rem;font-weight:800;color:var(--accent);background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.25);border-radius:8px;padding:0.2rem 0.55rem;letter-spacing:0.05em;flex-shrink:0;}
+    .etape-titre{font-family:var(--font-display);font-size:1rem;font-weight:700;margin:0;letter-spacing:-0.3px;}
+    .etape-desc{font-size:0.9rem;line-height:1.8;opacity:0.75;margin-bottom:1rem;}
   </style>
 </head>
 <body>
@@ -115,14 +123,139 @@
             <!-- ✏️ Décris les étapes, choix techniques, difficultés -->
             À compléter...
           </p>
-          <div class="mt-4">
-            <!-- ✏️ Remplace par : <img src="assets/..." class="img-projet" alt="..."> -->
-            <div class="img-placeholder">
-              <i class="bi bi-image"></i>
-              <span>Capture / schéma du projet</span>
+
+          <!-- ÉTAPE 1 -->
+          <div class="etape mt-4">
+            <div class="etape-header">
+              <span class="etape-num">01</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 1 --> À compléter...</h3>
             </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 1</span><small>assets/w11-etape-01.png</small></div>
             <p class="img-caption"><!-- ✏️ Légende --></p>
           </div>
+
+          <!-- ÉTAPE 2 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">02</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 2 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 2</span><small>assets/w11-etape-02.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 3 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">03</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 3 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 3</span><small>assets/w11-etape-03.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 4 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">04</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 4 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 4</span><small>assets/w11-etape-04.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 5 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">05</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 5 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 5</span><small>assets/w11-etape-05.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 6 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">06</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 6 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 6</span><small>assets/w11-etape-06.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 7 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">07</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 7 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 7</span><small>assets/w11-etape-07.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 8 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">08</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 8 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 8</span><small>assets/w11-etape-08.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 9 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">09</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 9 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 9</span><small>assets/w11-etape-09.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 10 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">10</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 10 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 10</span><small>assets/w11-etape-10.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 11 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">11</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 11 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 11</span><small>assets/w11-etape-11.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
+          <!-- ÉTAPE 12 -->
+          <div class="etape">
+            <div class="etape-header">
+              <span class="etape-num">12</span>
+              <h3 class="etape-titre"><!-- ✏️ Titre étape 12 --> À compléter...</h3>
+            </div>
+            <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+            <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 12</span><small>assets/w11-etape-12.png</small></div>
+            <p class="img-caption"><!-- ✏️ Légende --></p>
+          </div>
+
         </div>
 
         <div class="content-card">
@@ -160,18 +293,7 @@
           <div class="info-row"><span class="info-label">Durée</span><span><!-- ✏️ Ex : 3 semaines --></span></div>
           <div class="info-row"><span class="info-label">Outils</span><span><!-- ✏️ Ex : PowerShell, AD --></span></div>
         </div>
-        <div class="mb-4">
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <i class="bi bi-image"></i><span>Image secondaire</span>
-          </div>
-          <p class="img-caption"><!-- ✏️ Légende --></p>
-        </div>
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <i class="bi bi-image"></i><span>Image secondaire</span>
-          </div>
-          <p class="img-caption"><!-- ✏️ Légende --></p>
-        </div>
+
       </div>
 
     </div>
