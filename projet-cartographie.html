@@ -61,6 +61,14 @@
     .fi1{animation:fadeUp 0.6s ease both;}
     .fi2{animation:fadeUp 0.6s 0.15s ease both;}
     .fi3{animation:fadeUp 0.6s 0.3s ease both;}
+    /* ÉTAPES */
+    .etape{border-left:2px solid rgba(0,229,255,0.2);padding-left:1.5rem;margin-bottom:2.5rem;position:relative;}
+    .etape:last-child{margin-bottom:0;}
+    .etape::before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px rgba(0,229,255,0.5);}
+    .etape-header{display:flex;align-items:center;gap:0.85rem;margin-bottom:0.6rem;}
+    .etape-num{font-family:var(--font-display);font-size:0.72rem;font-weight:800;color:var(--accent);background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.25);border-radius:8px;padding:0.2rem 0.55rem;letter-spacing:0.05em;flex-shrink:0;}
+    .etape-titre{font-family:var(--font-display);font-size:1rem;font-weight:700;margin:0;letter-spacing:-0.3px;}
+    .etape-desc{font-size:0.9rem;line-height:1.8;opacity:0.75;margin-bottom:1rem;}
   </style>
 </head>
 <body>
@@ -120,7 +128,7 @@
           <div class="col-lg-8">
             <div class="content-card">
               <h2 class="section-title">Contexte</h2>
-              <p style="line-height:1.9;opacity:0.85;">J'ai crée un schema qui permet de voir les numero AK d'écrans et base rapidement et facilement pour empecher les vols de materiels.</p>
+              <p style="line-height:1.9;opacity:0.85;">Crée un schema qui permet de controler les PC rapidement et facilement pour empecher les vols de materiels.</p>
             </div>
             <div class="content-card">
               <h2 class="section-title">Objectifs</h2>
@@ -133,14 +141,29 @@
             <div class="content-card">
               <h2 class="section-title">Réalisation</h2>
               <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ Outils utilisés, méthode --> À compléter...</p>
-              <div class="mt-4">
-                <img src="assets/visio.png" class="img-projet" alt="Cartographie du site">
-                <p class="img-caption">Cartographie du site — Microsoft Visio</p>
+
+              <!-- ÉTAPE 1 -->
+              <div class="etape mt-4">
+                <div class="etape-header">
+                  <span class="etape-num">01</span>
+                  <h3 class="etape-titre"><!-- ✏️ Titre étape 1 --> À compléter...</h3>
+                </div>
+                <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+                <img src="assets/visio.png" class="img-projet" alt="Schéma physique du réseau">
+                <p class="img-caption">Schéma physique du réseau — Microsoft Visio</p>
               </div>
-              <div class="mt-4">
-                <img src="assets/visiozoom.png" class="img-projet" alt="Vue plus precise du schema">
-                <p class="img-caption">Vue plus precise du schema  — Microsoft Visio</p>
+
+              <!-- ÉTAPE 2 -->
+              <div class="etape">
+                <div class="etape-header">
+                  <span class="etape-num">02</span>
+                  <h3 class="etape-titre"><!-- ✏️ Titre étape 2 --> À compléter...</h3>
+                </div>
+                <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
+                <img src="assets/visiozoom.png" class="img-projet" alt="Schéma logique / adressage IP">
+                <p class="img-caption">Schéma logique / adressage IP — Microsoft Visio</p>
               </div>
+
             </div>
             <div class="content-card">
               <h2 class="section-title">Résultats</h2>
