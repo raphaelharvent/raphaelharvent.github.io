@@ -83,6 +83,15 @@
     .conclu-hl{color:var(--accent);font-weight:600;}
     footer{border-top:1px solid rgba(255,255,255,0.06);}
     a{color:var(--accent);}a:hover{color:#7df6ff;}
+    /* SOURCES */
+    .sources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
+    .source-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:1.25rem;transition:border-color .2s;}
+    .source-card:hover{border-color:rgba(0,229,255,0.25);}
+    .source-cat{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);opacity:.8;margin-bottom:6px;}
+    .source-title{font-size:.88rem;font-weight:700;margin-bottom:8px;line-height:1.4;}
+    .source-desc{font-size:.78rem;opacity:.55;line-height:1.6;margin-bottom:10px;}
+    .source-link{display:inline-flex;align-items:center;font-size:.75rem;color:var(--accent);text-decoration:none;opacity:.7;transition:opacity .2s;}
+    .source-link:hover{opacity:1;color:var(--accent);}
     @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
     .fi1{animation:fadeUp .6s ease both;}.fi2{animation:fadeUp .6s .1s ease both;}.fi3{animation:fadeUp .6s .2s ease both;}
   </style>
@@ -100,6 +109,7 @@
           <a href="#consequences" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Conséquences</a>
           <a href="#protection" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Protection</a>
           <a href="#conclusion" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Conclusion</a>
+          <a href="#sources" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Sources</a>
         </div>
         <a href="index.html#veille" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i> Retour au portfolio</a>
       </div>
@@ -243,6 +253,76 @@
         <p>L'ingénierie sociale illustre une réalité fondamentale de la cybersécurité : <span class="conclu-hl">aucune technologie ne peut compenser un manque de culture de sécurité</span>. Les attaquants n'ont pas besoin de briser un chiffrement ou d'exploiter une CVE s'ils peuvent simplement convaincre un employé de leur ouvrir la porte.</p>
         <p>Face à l'essor de l'IA générative, les attaques d'ingénierie sociale deviennent de plus en plus sophistiquées : deepfakes vocaux, e-mails parfaitement rédigés dans n'importe quelle langue, usurpation d'identité ultra-ciblée basée sur les réseaux sociaux. La frontière entre le vrai et le faux s'estompe de plus en plus.</p>
         <p>La réponse doit être à la hauteur : <span class="conclu-hl">former, sensibiliser, procédurer</span>. L'humain reste à la fois le maillon le plus faible et, bien préparé, le <span class="conclu-hl">premier rempart de sécurité</span> de toute organisation. La cybersécurité n'est pas seulement un enjeu technique — c'est avant tout un défi humain, organisationnel et culturel.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="v-section" id="sources">
+    <div class="container">
+      <div class="section-header">
+        <div class="s-num"><i class="bi bi-bookmark"></i></div>
+        <div><div class="s-title">Sources</div><div class="s-sub">Références utilisées pour la réalisation de cette veille technologique.</div></div>
+      </div>
+      <div class="sources-grid">
+
+        <div class="source-card">
+          <div class="source-cat">Rapport officiel</div>
+          <div class="source-title">Verizon — Data Breach Investigations Report (DBIR) 2024</div>
+          <div class="source-desc">Rapport annuel de référence sur les violations de données. Source des statistiques sur les 90 % d'attaques impliquant l'ingénierie sociale.</div>
+          <a href="https://www.verizon.com/business/resources/reports/dbir/" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>verizon.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Organisme gouvernemental</div>
+          <div class="source-title">ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information</div>
+          <div class="source-desc">Guides et recommandations officiels sur la sensibilisation aux attaques par ingénierie sociale, le phishing et les bonnes pratiques de sécurité.</div>
+          <a href="https://www.ssi.gouv.fr" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>ssi.gouv.fr</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Organisme gouvernemental</div>
+          <div class="source-title">Cybermalveillance.gouv.fr — Fiches réflexes phishing</div>
+          <div class="source-desc">Plateforme nationale d'assistance aux victimes de cybermalveillance. Ressources pédagogiques sur le phishing, le vishing et le smishing.</div>
+          <a href="https://www.cybermalveillance.gouv.fr" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>cybermalveillance.gouv.fr</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Presse spécialisée</div>
+          <div class="source-title">Krebs on Security — Twitter Hack Coverage (2020)</div>
+          <div class="source-desc">Analyse détaillée du piratage des comptes Twitter de célébrités en juillet 2020, réalisé uniquement par manipulation d'employés (vishing).</div>
+          <a href="https://krebsonsecurity.com" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>krebsonsecurity.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Presse spécialisée</div>
+          <div class="source-title">BleepingComputer — MGM Resorts ransomware attack (2023)</div>
+          <div class="source-desc">Couverture détaillée de l'attaque ALPHV/BlackCat contre MGM Resorts, déclenchée par un simple appel au helpdesk en 10 minutes.</div>
+          <a href="https://www.bleepingcomputer.com" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>bleepingcomputer.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Presse spécialisée</div>
+          <div class="source-title">The Verge — Uber hack social engineering (2022)</div>
+          <div class="source-desc">Récit de la compromission d'Uber par un attaquant de 18 ans via WhatsApp, illustrant le pretexting et l'escalade de privilèges.</div>
+          <a href="https://www.theverge.com" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>theverge.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Étude académique</div>
+          <div class="source-title">University of Illinois — USB Drop Experiment</div>
+          <div class="source-desc">Étude documentant le taux de connexion de clés USB abandonnées dans des espaces publics. Source des statistiques entre 45 % et 98 %.</div>
+          <a href="https://dl.acm.org" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>dl.acm.org</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Organisme professionnel</div>
+          <div class="source-title">CNIL — Guide RGPD et violations de données</div>
+          <div class="source-desc">Documentation officielle sur les obligations RGPD en cas de violation de données personnelles et les sanctions applicables.</div>
+          <a href="https://www.cnil.fr" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>cnil.fr</a>
+        </div>
+
       </div>
     </div>
   </section>

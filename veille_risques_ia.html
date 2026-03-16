@@ -84,6 +84,15 @@
     .conclu-hl{color:var(--accent);font-weight:600;}
     footer{border-top:1px solid rgba(255,255,255,0.06);}
     a{color:var(--accent);}a:hover{color:#c4b5fd;}
+    /* SOURCES */
+    .sources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;}
+    .source-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:1.25rem;transition:border-color .2s;}
+    .source-card:hover{border-color:rgba(167,139,250,0.35);}
+    .source-cat{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);opacity:.8;margin-bottom:6px;}
+    .source-title{font-size:.88rem;font-weight:700;margin-bottom:8px;line-height:1.4;}
+    .source-desc{font-size:.78rem;opacity:.55;line-height:1.6;margin-bottom:10px;}
+    .source-link{display:inline-flex;align-items:center;font-size:.75rem;color:var(--accent);text-decoration:none;opacity:.7;transition:opacity .2s;}
+    .source-link:hover{opacity:1;color:var(--accent);}
     @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
     .fi1{animation:fadeUp .6s ease both;}.fi2{animation:fadeUp .6s .1s ease both;}.fi3{animation:fadeUp .6s .2s ease both;}
   </style>
@@ -101,6 +110,7 @@
           <a href="#enjeux" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Enjeux éthiques</a>
           <a href="#cas" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Cas concrets</a>
           <a href="#conclusion" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Conclusion</a>
+          <a href="#sources" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Sources</a>
         </div>
         <a href="index.html#veille" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i> Retour au portfolio</a>
       </div>
@@ -244,6 +254,76 @@
         <p>L'intelligence artificielle redéfinit les règles du jeu en cybersécurité. Elle n'est ni uniquement un bouclier, ni uniquement une arme : elle est les deux à la fois. <span class="conclu-hl">Ignorer ses apports défensifs serait une erreur stratégique ; sous-estimer ses risques offensifs serait une imprudence dangereuse.</span></p>
         <p>L'avenir de la cybersécurité sera celui d'un <span class="conclu-hl">humain augmenté par l'IA</span> — et non remplacé par elle. Les professionnels SISR devront maîtriser ces outils, comprendre leurs limites, et développer un regard critique face aux décisions algorithmiques. La supervision humaine reste indispensable, notamment pour les cas aux enjeux élevés.</p>
         <p>Sur le plan réglementaire, l'<span class="conclu-hl">AI Act européen</span> pose les premières fondations d'une IA responsable. Mais la régulation seule ne suffira pas : c'est une culture de la <span class="conclu-hl">cybersécurité augmentée et éthique</span> — combinant technologie, formation et vigilance humaine — qui permettra de relever les défis des années à venir.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="v-section" id="sources">
+    <div class="container">
+      <div class="section-header">
+        <div class="s-num"><i class="bi bi-bookmark"></i></div>
+        <div><div class="s-title">Sources</div><div class="s-sub">Références utilisées pour la réalisation de cette veille technologique.</div></div>
+      </div>
+      <div class="sources-grid">
+
+        <div class="source-card">
+          <div class="source-cat">Rapport officiel</div>
+          <div class="source-title">IBM — Cost of a Data Breach Report 2024</div>
+          <div class="source-desc">Rapport annuel d'IBM sur le coût moyen des violations de données et l'impact croissant de l'IA dans les attaques et défenses cyber.</div>
+          <a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>ibm.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Rapport officiel</div>
+          <div class="source-title">Gartner — AI in Cybersecurity Market Forecast 2027</div>
+          <div class="source-desc">Prévisions de marché Gartner sur l'IA en cybersécurité. Source de la statistique de 407 milliards de dollars d'ici 2027.</div>
+          <a href="https://www.gartner.com" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>gartner.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Réglementation</div>
+          <div class="source-title">Parlement Européen — AI Act (2024)</div>
+          <div class="source-desc">Texte officiel du règlement européen sur l'intelligence artificielle, premier cadre réglementaire mondial dédié à l'IA, adopté en 2024.</div>
+          <a href="https://www.europarl.europa.eu/topics/fr/article/20230601STO93804" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>europarl.europa.eu</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Organisme gouvernemental</div>
+          <div class="source-title">ANSSI — Intelligence artificielle et cybersécurité</div>
+          <div class="source-desc">Publications de l'ANSSI sur les enjeux de l'IA pour la sécurité des systèmes d'information français et européens.</div>
+          <a href="https://www.ssi.gouv.fr" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>ssi.gouv.fr</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Éditeur de sécurité</div>
+          <div class="source-title">Darktrace — How AI Detects Unknown Threats</div>
+          <div class="source-desc">Documentation technique et études de cas sur le fonctionnement du machine learning non supervisé appliqué à la détection d'anomalies réseau.</div>
+          <a href="https://darktrace.com" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>darktrace.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Éditeur de sécurité</div>
+          <div class="source-title">Microsoft — Copilot for Security Documentation</div>
+          <div class="source-desc">Documentation officielle de Microsoft sur Copilot for Security, son intégration à Sentinel et Defender, et ses capacités pour les équipes SOC.</div>
+          <a href="https://learn.microsoft.com/fr-fr/copilot/security" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>learn.microsoft.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Recherche en sécurité</div>
+          <div class="source-title">SlashNext — WormGPT & FraudGPT Analysis (2023)</div>
+          <div class="source-desc">Analyse de SlashNext sur les LLM malveillants (WormGPT, FraudGPT) vendus sur le dark web et utilisés pour générer du phishing et des malwares.</div>
+          <a href="https://slashnext.com" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>slashnext.com</a>
+        </div>
+
+        <div class="source-card">
+          <div class="source-cat">Presse spécialisée</div>
+          <div class="source-title">Wired — AI Deepfake Voice Fraud Cases (2024)</div>
+          <div class="source-desc">Reportage sur les premiers cas documentés de fraude au président par deepfake vocal en Europe, avec clonage de voix à partir d'enregistrements publics.</div>
+          <a href="https://www.wired.com" target="_blank" rel="noopener" class="source-link"><i class="bi bi-box-arrow-up-right me-1"></i>wired.com</a>
+        </div>
+
       </div>
     </div>
   </section>
