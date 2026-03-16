@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentions légales – Portfolio Raphaël Harvent</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --accent:#00e5ff; --accent2:#7c3aed; --font-display:'Syne',sans-serif; --font-body:'DM Sans',sans-serif; }
+    *{box-sizing:border-box;}
+    body{font-family:var(--font-body);scroll-behavior:smooth;}
+    h1,h2,h3,h4,.navbar-brand{font-family:var(--font-display);}
+    .navbar{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06);}
+    .navbar-brand{font-size:1.4rem;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .page-hero{position:relative;overflow:hidden;padding:4rem 0 3rem;background:radial-gradient(ellipse 80% 60% at 60% 40%,rgba(0,229,255,0.06) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 10% 80%,rgba(124,58,237,0.08) 0%,transparent 60%);}
+    .page-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.025) 39px,rgba(255,255,255,0.025) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.025) 39px,rgba(255,255,255,0.025) 40px);}
+    .back-btn{display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.04em;margin-bottom:1.5rem;transition:gap 0.2s;}
+    .back-btn:hover{gap:0.8rem;color:var(--accent);}
+    .page-tag{display:inline-block;background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.3);color:var(--accent);border-radius:100px;padding:0.25rem 0.85rem;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem;}
+    .page-title{font-size:clamp(1.8rem,5vw,3rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:0.75rem;}
+    .content-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.75rem;margin-bottom:1.5rem;transition:border-color 0.2s;}
+    .content-card:hover{border-color:rgba(0,229,255,0.15);}
+    .section-title{font-family:var(--font-display);font-size:1.1rem;font-weight:800;letter-spacing:-0.3px;margin-bottom:1rem;position:relative;display:inline-block;}
+    .section-title::after{content:'';position:absolute;bottom:-4px;left:0;width:28px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;}
+    .info-row{display:flex;gap:0.75rem;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.88rem;flex-wrap:wrap;}
+    .info-row:last-child{border-bottom:none;}
+    .info-label{opacity:0.55;min-width:140px;font-weight:600;}
+    p{line-height:1.9;opacity:0.82;font-size:0.92rem;}
+    a{color:var(--accent);}
+    a:hover{color:#7df6ff;}
+    footer{border-top:1px solid rgba(255,255,255,0.06);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+    .fi1{animation:fadeUp 0.6s ease both;}
+    .fi2{animation:fadeUp 0.6s 0.1s ease both;}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar sticky-top bg-body">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">RH</a>
+      <a href="index.html" class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-arrow-left me-1"></i> Retour au portfolio
+      </a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <a href="index.html" class="back-btn fi1">
+        <i class="bi bi-arrow-left"></i> Retour au portfolio
+      </a>
+      <span class="page-tag fi1"><i class="bi bi-shield-check me-1"></i>Légal</span>
+      <h1 class="page-title fi2">Mentions légales</h1>
+      <p class="fi2" style="opacity:0.6;font-size:0.92rem;max-width:520px;">Conformément aux dispositions de la loi n°2004-575 du 21 juin 2004 pour la confiance en l'économie numérique.</p>
+    </div>
+  </div>
+
+  <main class="container py-5" style="max-width:860px;">
+
+    <!-- ÉDITEUR -->
+    <div class="content-card">
+      <h2 class="section-title">Éditeur du site</h2>
+      <div class="mt-3">
+        <div class="info-row"><span class="info-label">Nom</span><span>Raphaël Harvent</span></div>
+        <div class="info-row"><span class="info-label">Statut</span><span>Étudiant BTS SIO SISR — Particulier</span></div>
+        <div class="info-row"><span class="info-label">Formation</span><span>BTS Services Informatiques aux Organisations, option SISR</span></div>
+        <div class="info-row"><span class="info-label">Établissement</span><span>AFPI</span></div>
+        <div class="info-row"><span class="info-label">Alternance</span><span>AKKODIS</span></div>
+        <div class="info-row"><span class="info-label">Contact</span><span><a href="mailto:&#114;&#97;&#112;&#104;&#97;&#101;&#108;&#46;&#104;&#97;&#114;&#118;&#101;&#110;&#116;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">raphael.harvent@gmail.com</a></span></div>
+      </div>
+    </div>
+
+    <!-- HÉBERGEMENT -->
+    <div class="content-card">
+      <h2 class="section-title">Hébergement</h2>
+      <div class="mt-3">
+        <div class="info-row"><span class="info-label">Hébergeur</span><span>GitHub, Inc.</span></div>
+        <div class="info-row"><span class="info-label">Service</span><span>GitHub Pages</span></div>
+        <div class="info-row"><span class="info-label">Adresse</span><span>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</span></div>
+        <div class="info-row"><span class="info-label">Site</span><span><a href="https://pages.github.com" target="_blank" rel="noopener">pages.github.com</a></span></div>
+      </div>
+    </div>
+
+    <!-- PROPRIÉTÉ INTELLECTUELLE -->
+    <div class="content-card">
+      <h2 class="section-title">Propriété intellectuelle</h2>
+      <p>L'ensemble du contenu de ce site (textes, images, schémas, mises en page) est la propriété exclusive de Raphaël Harvent, sauf mention contraire. Toute reproduction, représentation ou diffusion, en tout ou partie, sur quelque support que ce soit, est interdite sans autorisation préalable écrite.</p>
+      <p>Les captures d'écran, logos et marques déposées présents sur ce site appartiennent à leurs propriétaires respectifs (Microsoft, AKKODIS, etc.) et sont utilisés à titre illustratif dans un cadre strictement pédagogique.</p>
+    </div>
+
+    <!-- DONNÉES PERSONNELLES -->
+    <div class="content-card">
+      <h2 class="section-title">Données personnelles</h2>
+      <p>Ce site est un portfolio statique hébergé sur GitHub Pages. Il ne collecte aucune donnée personnelle, n'utilise pas de cookies et ne met en œuvre aucun traitement de données au sens du RGPD (Règlement Général sur la Protection des Données).</p>
+      <p>Aucun formulaire de contact, outil de tracking ou script analytique n'est intégré à ce site. Les seules données échangées sont celles inhérentes à la navigation web standard (adresse IP, navigateur), gérées par l'hébergeur GitHub conformément à sa propre politique de confidentialité.</p>
+    </div>
+
+    <!-- LIENS EXTERNES -->
+    <div class="content-card">
+      <h2 class="section-title">Liens hypertextes</h2>
+      <p>Ce site contient des liens vers des sites tiers (LinkedIn, GitHub). Ces liens sont fournis à titre informatif uniquement. Raphaël Harvent n'exerce aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant à leur contenu ou leur disponibilité.</p>
+    </div>
+
+    <!-- RESPONSABILITÉ -->
+    <div class="content-card">
+      <h2 class="section-title">Limitation de responsabilité</h2>
+      <p>Les informations contenues sur ce site sont fournies à titre purement indicatif et pédagogique. L'éditeur s'efforce de maintenir le site à jour mais ne garantit pas l'exactitude, l'exhaustivité ou l'actualité des informations présentées. L'utilisation de ces informations se fait sous la responsabilité exclusive du visiteur.</p>
+    </div>
+
+    <!-- DROIT APPLICABLE -->
+    <div class="content-card">
+      <h2 class="section-title">Droit applicable</h2>
+      <p>Les présentes mentions légales sont soumises au droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux français seront seuls compétents.</p>
+      <p style="opacity:0.45;font-size:0.8rem;">Dernière mise à jour : mars 2026</p>
+    </div>
+
+  </main>
+
+  <footer class="py-4 text-center small text-muted">
+    © <span id="year"></span> Raphaël Harvent — Portfolio BTS SIO SISR
+    <span class="d-block mt-1 opacity-50" style="font-size:0.7rem;">
+      <a href="mentions-legales.html" class="text-muted">Mentions légales</a>
+    </span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
