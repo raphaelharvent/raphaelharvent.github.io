@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veille — Risques & Enjeux de l'IA · Raphaël Harvent</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#a78bfa;--accent2:#7c3aed;--accent-c:#00e5ff;--font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;}
+    *{box-sizing:border-box;}
+    body{font-family:var(--font-body);scroll-behavior:smooth;}
+    h1,h2,h3,h4,.navbar-brand{font-family:var(--font-display);}
+    .navbar{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06);}
+    .navbar-brand{font-size:1.4rem;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,#00e5ff,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .veille-hero{position:relative;overflow:hidden;padding:5rem 0 4rem;background:radial-gradient(ellipse 80% 60% at 60% 40%,rgba(124,58,237,0.09) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 10% 80%,rgba(167,139,250,0.07) 0%,transparent 60%);}
+    .veille-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.025) 39px,rgba(255,255,255,0.025) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.025) 39px,rgba(255,255,255,0.025) 40px);}
+    .back-btn{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent);text-decoration:none;font-size:.85rem;font-weight:600;margin-bottom:1.5rem;transition:gap .2s;}
+    .back-btn:hover{gap:.8rem;color:var(--accent);}
+    .veille-tag{display:inline-block;background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.3);color:var(--accent);border-radius:100px;padding:.25rem .85rem;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem;}
+    .hero-title{font-size:clamp(2rem,6vw,3.5rem);font-weight:800;letter-spacing:-2px;line-height:1.1;margin-bottom:1rem;}
+    .hero-desc{opacity:.7;font-size:1rem;line-height:1.8;max-width:640px;margin-bottom:2rem;}
+    .stat-row{display:flex;flex-wrap:wrap;gap:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.07);}
+    .stat-num{font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--accent);letter-spacing:-1px;line-height:1;}
+    .stat-label{font-size:.75rem;opacity:.5;margin-top:4px;line-height:1.4;max-width:130px;}
+    .toc-section{padding:3rem 0;}
+    .toc-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.4;margin-bottom:1rem;}
+    .toc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;}
+    .toc-item{display:flex;align-items:center;gap:1rem;padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);text-decoration:none;color:inherit;transition:border-color .2s,background .2s;}
+    .toc-item:hover{border-color:rgba(167,139,250,0.35);background:rgba(167,139,250,0.05);color:inherit;}
+    .toc-num{font-family:var(--font-display);font-size:.72rem;font-weight:800;color:var(--accent);min-width:24px;}
+    .toc-name{font-size:.88rem;font-weight:600;}
+    .toc-desc{font-size:.75rem;opacity:.45;margin-top:1px;}
+    .v-section{padding:3.5rem 0;}
+    .divider{height:1px;background:rgba(255,255,255,0.06);}
+    .section-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:2rem;}
+    .s-num{font-family:var(--font-display);font-size:.72rem;font-weight:800;color:var(--accent);background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.25);border-radius:8px;padding:.25rem .6rem;flex-shrink:0;margin-top:4px;}
+    .s-title{font-family:var(--font-display);font-size:1.6rem;font-weight:800;letter-spacing:-.5px;line-height:1.2;}
+    .s-sub{font-size:.85rem;opacity:.5;margin-top:3px;}
+    .c-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.5rem;margin-bottom:1rem;}
+    .c-card p{font-size:.9rem;line-height:1.85;opacity:.8;}
+    .c-card p+p{margin-top:.75rem;}
+    .c-card-accent{border-left:3px solid var(--accent);background:rgba(167,139,250,0.04);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin-bottom:1rem;}
+    .c-card-accent p{font-size:.9rem;line-height:1.85;opacity:.8;}
+    .hl{color:var(--accent);font-weight:600;}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:1.5rem;}
+    .s-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:1.25rem;text-align:center;}
+    .s-card-num{font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--accent);letter-spacing:-1px;}
+    .s-card-label{font-size:.72rem;opacity:.5;margin-top:6px;line-height:1.4;}
+    .apport-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
+    .apport-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:1.25rem;transition:border-color .2s;}
+    .apport-card:hover{border-color:rgba(167,139,250,0.3);}
+    .apport-icon{font-family:var(--font-display);font-size:.7rem;font-weight:800;color:var(--accent);background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.2);width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;margin-bottom:10px;}
+    .apport-name{font-size:.9rem;font-weight:700;margin-bottom:6px;}
+    .apport-desc{font-size:.78rem;opacity:.6;line-height:1.6;}
+    .risque-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
+    .risque-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-top:2px solid rgba(248,113,113,0.3);border-radius:14px;padding:1.25rem;transition:border-color .2s;}
+    .risque-card:hover{border-color:rgba(248,113,113,0.4);}
+    .risque-tag{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#f87171;margin-bottom:8px;}
+    .risque-name{font-size:.9rem;font-weight:700;margin-bottom:6px;}
+    .risque-desc{font-size:.78rem;opacity:.6;line-height:1.6;}
+    .enjeu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;}
+    .enjeu-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:1.25rem;}
+    .enjeu-num{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.4;margin-bottom:8px;}
+    .enjeu-title{font-size:.88rem;font-weight:700;margin-bottom:6px;}
+    .enjeu-desc{font-size:.78rem;opacity:.6;line-height:1.6;}
+    .cas-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:1.5rem;margin-bottom:1rem;transition:border-color .2s;}
+    .cas-card:hover{border-color:rgba(255,255,255,0.15);}
+    .cas-meta{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.4;margin-bottom:8px;}
+    .cas-title{font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:10px;}
+    .cas-badge{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:6px;background:rgba(167,139,250,0.1);color:var(--accent);border:1px solid rgba(167,139,250,0.25);margin-bottom:10px;}
+    .cas-badge-red{background:rgba(239,68,68,0.1);color:#f87171;border:1px solid rgba(239,68,68,0.25);}
+    .cas-card p{font-size:.85rem;opacity:.7;line-height:1.7;}
+    .tags-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:1.5rem;}
+    .v-tag{font-size:.75rem;padding:4px 12px;border-radius:100px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);opacity:.7;}
+    .conclu{background:rgba(0,0,0,0.3);border:1px solid rgba(167,139,250,0.15);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;}
+    .conclu::after{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.05) 0%,transparent 70%);pointer-events:none;}
+    .conclu-title{font-family:var(--font-display);font-size:1.2rem;font-weight:800;margin-bottom:1.25rem;}
+    .conclu p{font-size:.9rem;opacity:.75;line-height:1.9;}
+    .conclu p+p{margin-top:1rem;}
+    .conclu-hl{color:var(--accent);font-weight:600;}
+    footer{border-top:1px solid rgba(255,255,255,0.06);}
+    a{color:var(--accent);}a:hover{color:#c4b5fd;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    .fi1{animation:fadeUp .6s ease both;}.fi2{animation:fadeUp .6s .1s ease both;}.fi3{animation:fadeUp .6s .2s ease both;}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar sticky-top bg-body">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">RH</a>
+      <div class="d-flex align-items-center gap-2">
+        <div class="d-none d-lg-flex gap-1">
+          <a href="#intro" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Introduction</a>
+          <a href="#apports" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Apports</a>
+          <a href="#risques" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Risques</a>
+          <a href="#enjeux" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Enjeux éthiques</a>
+          <a href="#cas" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Cas concrets</a>
+          <a href="#conclusion" class="btn btn-sm btn-link text-muted text-decoration-none" style="font-size:.78rem;">Conclusion</a>
+        </div>
+        <a href="index.html#veille" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i> Retour au portfolio</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="veille-hero">
+    <div class="container">
+      <a href="index.html#veille" class="back-btn fi1"><i class="bi bi-arrow-left"></i> Retour à la veille</a>
+      <span class="veille-tag fi1"><i class="bi bi-cpu me-1"></i>Intelligence Artificielle · BTS SIO SISR</span>
+      <h1 class="hero-title fi2">Risques &amp;<br>enjeux de l'IA</h1>
+      <p class="hero-desc fi3">L'intelligence artificielle transforme profondément le paysage de la cybersécurité : elle offre de nouveaux outils défensifs mais génère également de <strong>nouvelles menaces inédites</strong>. Les attaquants utilisent désormais l'IA pour automatiser et sophistiquer leurs attaques.</p>
+      <div class="stat-row fi3">
+        <div><div class="stat-num">85%</div><div class="stat-label">des cyberattaques impliqueront l'IA d'ici 2025</div></div>
+        <div><div class="stat-num">4x</div><div class="stat-label">plus rapides, les attaques assistées par IA</div></div>
+        <div><div class="stat-num">$407Md</div><div class="stat-label">marché de l'IA en cybersécurité en 2027</div></div>
+        <div><div class="stat-num">60%</div><div class="stat-label">des entreprises déploient l'IA dans leur SOC</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="toc-section">
+    <div class="container">
+      <div class="toc-label">Plan de la veille</div>
+      <div class="toc-grid">
+        <a href="#intro" class="toc-item"><span class="toc-num">01</span><div><div class="toc-name">Introduction</div><div class="toc-desc">L'essor de l'IA et son impact sur la sécurité</div></div></a>
+        <a href="#apports" class="toc-item"><span class="toc-num">02</span><div><div class="toc-name">Les apports de l'IA en cybersécurité</div><div class="toc-desc">Détection, analyse, automatisation</div></div></a>
+        <a href="#risques" class="toc-item"><span class="toc-num">03</span><div><div class="toc-name">Les risques liés à l'IA</div><div class="toc-desc">Deepfakes, phishing génératif, attaques adversariales</div></div></a>
+        <a href="#enjeux" class="toc-item"><span class="toc-num">04</span><div><div class="toc-name">Enjeux éthiques et sécuritaires</div><div class="toc-desc">Biais, vie privée, régulation, AI Act</div></div></a>
+        <a href="#cas" class="toc-item"><span class="toc-num">05</span><div><div class="toc-name">Cas concrets / outils</div><div class="toc-desc">Darktrace, Copilot for Security, ChatGPT</div></div></a>
+        <a href="#conclusion" class="toc-item"><span class="toc-num">06</span><div><div class="toc-name">Conclusion</div><div class="toc-desc">Opportunité ou menace ? Cybersécurité responsable</div></div></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="v-section" id="intro">
+    <div class="container">
+      <div class="section-header">
+        <div class="s-num">01</div>
+        <div><div class="s-title">Introduction</div><div class="s-sub">L'essor de l'IA et son impact croissant sur la sécurité informatique.</div></div>
+      </div>
+      <div class="c-card"><p>L'intelligence artificielle n'est plus un concept futuriste : elle est désormais au cœur de la cybersécurité. En quelques années, l'IA est devenue un <span class="hl">outil stratégique</span> pour les équipes défensives (détection d'anomalies, automatisation des réponses aux incidents) mais aussi une arme redoutable entre les mains des attaquants.</p><p>Les modèles de langage (LLM), les réseaux de neurones et les algorithmes de machine learning permettent aujourd'hui de <span class="hl">générer des attaques personnalisées à grande échelle</span>, de contourner les défenses traditionnelles et de créer des contenus trompeurs quasi indétectables.</p></div>
+      <div class="c-card-accent"><p>L'IA représente une <span class="hl">révolution à double tranchant</span> : d'un côté, elle démultiplie les capacités des équipes de sécurité sous-dimensionnées ; de l'autre, elle abaisse drastiquement la barrière d'entrée pour les cybercriminels, permettant à des attaquants peu expérimentés de lancer des campagnes sophistiquées.</p></div>
+      <div class="stats-grid">
+        <div class="s-card"><div class="s-card-num">85%</div><div class="s-card-label">des cyberattaques impliqueront l'IA d'ici 2025</div></div>
+        <div class="s-card"><div class="s-card-num">4x</div><div class="s-card-label">plus rapides, les attaques assistées par IA</div></div>
+        <div class="s-card"><div class="s-card-num">$407Md</div><div class="s-card-label">marché IA en cybersécurité d'ici 2027</div></div>
+        <div class="s-card"><div class="s-card-num">60%</div><div class="s-card-label">des SOC déploient déjà des outils IA</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="v-section" id="apports">
+    <div class="container">
+      <div class="section-header">
+        <div class="s-num">02</div>
+        <div><div class="s-title">Les apports de l'IA en cybersécurité</div><div class="s-sub">Détection d'intrusions, analyse comportementale, automatisation des réponses aux incidents.</div></div>
+      </div>
+      <div class="apport-grid">
+        <div class="apport-card"><div class="apport-icon">DI</div><div class="apport-name">Détection d'intrusions</div><div class="apport-desc">Les IDS/IPS basés sur l'IA analysent le trafic réseau en temps réel pour détecter des comportements anormaux, même inédits (zero-day).</div></div>
+        <div class="apport-card"><div class="apport-icon">BA</div><div class="apport-name">Analyse comportementale</div><div class="apport-desc">L'UEBA modélise le comportement normal des utilisateurs pour détecter toute déviation suspecte en temps réel.</div></div>
+        <div class="apport-card"><div class="apport-icon">AR</div><div class="apport-name">Automatisation des réponses</div><div class="apport-desc">Les plateformes SOAR utilisent l'IA pour orchestrer automatiquement la réponse aux incidents : isolation, blocage, remédiation.</div></div>
+        <div class="apport-card"><div class="apport-icon">TH</div><div class="apport-name">Threat Hunting augmenté</div><div class="apport-desc">L'IA assiste les analystes SOC dans la recherche proactive de menaces cachées, corrélant des millions d'événements en quelques secondes.</div></div>
+        <div class="apport-card"><div class="apport-icon">AF</div><div class="apport-name">Anti-fraude & anti-phishing</div><div class="apport-desc">Analyse sémantique des e-mails pour détecter le phishing, classification des URLs malveillantes, détection de documents piégés.</div></div>
+        <div class="apport-card"><div class="apport-icon">VA</div><div class="apport-name">Analyse de vulnérabilités</div><div class="apport-desc">L'IA priorise automatiquement les CVE en fonction du contexte de l'infrastructure pour concentrer les efforts de patching sur les risques réels.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="v-section" id="risques">
+    <div class="container">
+      <div class="section-header">
+        <div class="s-num">03</div>
+        <div><div class="s-title">Les risques liés à l'IA</div><div class="s-sub">Deepfakes, phishing génératif, attaques adversariales, empoisonnement de modèles.</div></div>
+      </div>
+      <div class="risque-grid">
+        <div class="risque-card"><div class="risque-tag">Risque 01</div><div class="risque-name">Deepfakes & usurpation d'identité</div><div class="risque-desc">Génération de vidéos, voix ou images synthétiques pour se faire passer pour un dirigeant. Le "CEO fraud" évolue vers le deepfake vocal en temps réel.</div></div>
+        <div class="risque-card"><div class="risque-tag">Risque 02</div><div class="risque-name">Phishing génératif</div><div class="risque-desc">Les LLM permettent de générer des e-mails de phishing sans fautes, personnalisés, dans n'importe quelle langue, à très grande échelle et à faible coût.</div></div>
+        <div class="risque-card"><div class="risque-tag">Risque 03</div><div class="risque-name">Attaques adversariales</div><div class="risque-desc">Manipulation des entrées d'un modèle d'IA pour provoquer des erreurs de classification : tromper un antivirus IA, contourner la détection de visages.</div></div>
+        <div class="risque-card"><div class="risque-tag">Risque 04</div><div class="risque-name">Empoisonnement de modèles</div><div class="risque-desc">Injection de données corrompues dans le jeu d'entraînement d'un modèle pour créer des backdoors ou biaiser ses prédictions.</div></div>
+        <div class="risque-card"><div class="risque-tag">Risque 05</div><div class="risque-name">Automatisation des attaques</div><div class="risque-desc">L'IA permet de scanner des milliers de cibles, d'identifier des vulnérabilités et de lancer des exploits de façon autonome, 24h/24.</div></div>
+        <div class="risque-card"><div class="risque-tag">Risque 06</div><div class="risque-name">Jailbreak & détournement</div><div class="risque-desc">Contournement des garde-fous des assistants IA pour leur faire produire du code malveillant, des instructions dangereuses ou des contenus manipulatoires.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="v-section" id="enjeux">
+    <div class="container">
+      <div class="section-header">
+        <div class="s-num">04</div>
+        <div><div class="s-title">Enjeux éthiques et sécuritaires</div><div class="s-sub">Biais algorithmiques, vie privée, responsabilité juridique, régulation (AI Act).</div></div>
+      </div>
+      <div class="c-card" style="margin-bottom:1.5rem;"><p>Au-delà des risques techniques, l'IA soulève des questions fondamentales sur la <span class="hl">gouvernance, la responsabilité et les droits fondamentaux</span>. L'Union européenne a adopté en 2024 l'<span class="hl">AI Act</span>, premier cadre réglementaire mondial dédié à l'IA, classant les systèmes selon leur niveau de risque et imposant des obligations strictes aux développeurs et déployeurs.</p></div>
+      <div class="enjeu-grid">
+        <div class="enjeu-item"><div class="enjeu-num">01 / Biais</div><div class="enjeu-title">Biais algorithmiques</div><div class="enjeu-desc">Un modèle entraîné sur des données biaisées peut discriminer certains groupes. En cybersécurité, cela peut mener à des faux positifs injustes ou des angles morts dans la détection.</div></div>
+        <div class="enjeu-item"><div class="enjeu-num">02 / Privacy</div><div class="enjeu-title">Vie privée et RGPD</div><div class="enjeu-desc">L'IA analyse souvent des données personnelles sensibles. L'utilisation de ces données pour entraîner des modèles doit être conforme au RGPD, ce qui pose des défis opérationnels majeurs.</div></div>
+        <div class="enjeu-item"><div class="enjeu-num">03 / Responsabilité</div><div class="enjeu-title">Responsabilité juridique</div><div class="enjeu-desc">Quand un système IA commet une erreur (faux positif, faux négatif), qui est responsable ? L'éditeur, l'intégrateur ou l'utilisateur ?</div></div>
+        <div class="enjeu-item"><div class="enjeu-num">04 / AI Act</div><div class="enjeu-title">Régulation — AI Act UE</div><div class="enjeu-desc">Adopté en 2024, l'AI Act classe les systèmes IA par niveau de risque et impose transparence, auditabilité et contrôle humain, avec des amendes jusqu'à 35 M€.</div></div>
+        <div class="enjeu-item"><div class="enjeu-num">05 / Opacité</div><div class="enjeu-title">Boîte noire & explicabilité</div><div class="enjeu-desc">Les modèles de deep learning sont souvent inexplicables (black box). En cybersécurité, l'incapacité à justifier une décision automatisée peut poser des problèmes légaux.</div></div>
+        <div class="enjeu-item"><div class="enjeu-num">06 / Dépendance</div><div class="enjeu-title">Dépendance technologique</div><div class="enjeu-desc">Une trop grande confiance dans les systèmes IA peut atrophier l'expertise humaine. Si le modèle échoue ou est manipulé, les équipes peuvent se retrouver démunies.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="v-section" id="cas">
+    <div class="container">
+      <div class="section-header">
+        <div class="s-num">05</div>
+        <div><div class="s-title">Cas concrets / outils</div><div class="s-sub">Exemples d'outils IA en cybersécurité : Darktrace, Microsoft Copilot for Security, ChatGPT détourné.</div></div>
+      </div>
+      <div class="cas-card"><div class="cas-meta">Outil défensif — IA / NDR</div><div class="cas-title">Darktrace — IA autonome de cyberdéfense</div><span class="cas-badge">DÉFENSIF — Déployé en production</span><p>Darktrace utilise le machine learning non supervisé pour modéliser le comportement normal de chaque entité du réseau. En cas d'anomalie, il peut répondre de façon autonome en quelques secondes — isoler un poste, bloquer une connexion — sans règle prédéfinie. Utilisé par plus de 9 000 organisations dans le monde.</p></div>
+      <div class="cas-card"><div class="cas-meta">Outil défensif — LLM / SOC</div><div class="cas-title">Microsoft Copilot for Security</div><span class="cas-badge">DÉFENSIF — Disponible depuis 2024</span><p>Assistant IA intégré à l'écosystème Microsoft Sentinel et Defender. Il permet aux analystes SOC d'interroger en langage naturel leurs logs de sécurité, de générer des rapports d'incidents, d'obtenir des recommandations de remédiation et de simuler des scénarios d'attaque.</p></div>
+      <div class="cas-card"><div class="cas-meta">Détournement — LLM / Offensif — 2023-2024</div><div class="cas-title">ChatGPT & LLM détournés pour générer des malwares</div><span class="cas-badge cas-badge-red">OFFENSIF — Menace active</span><p>Des chercheurs en sécurité ont démontré qu'il était possible, via des techniques de jailbreak, d'utiliser des LLM pour générer du code malveillant, des scripts d'exploitation, des e-mails de phishing convaincants. Des variantes non censurées (WormGPT, FraudGPT) sont vendues sur le dark web.</p></div>
+      <div class="cas-card"><div class="cas-meta">Menace — Deepfake vocal — 2024</div><div class="cas-title">Deepfake vocal — Fraude au virement en entreprise</div><span class="cas-badge cas-badge-red">OFFENSIF — Cas documentés</span><p>En 2024, plusieurs cas documentés de fraude au président utilisant le deepfake vocal ont été recensés en Europe. Des attaquants ont cloné la voix d'un dirigeant avec seulement quelques secondes d'enregistrement audio public pour convaincre un comptable d'effectuer un virement frauduleux.</p></div>
+      <div class="tags-row">
+        <span class="v-tag">Darktrace</span><span class="v-tag">Microsoft Sentinel</span><span class="v-tag">Copilot for Security</span><span class="v-tag">CrowdStrike Charlotte AI</span><span class="v-tag">WormGPT</span><span class="v-tag">UEBA</span><span class="v-tag">SOAR</span><span class="v-tag">XDR / NDR</span><span class="v-tag">LLM offensif</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="v-section" id="conclusion">
+    <div class="container">
+      <div class="section-header">
+        <div class="s-num">06</div>
+        <div><div class="s-title">Conclusion</div><div class="s-sub">L'IA : opportunité ou menace ? Vers une cybersécurité augmentée et responsable.</div></div>
+      </div>
+      <div class="conclu">
+        <div class="conclu-title">L'IA : opportunité ou menace ? Les deux, simultanément.</div>
+        <p>L'intelligence artificielle redéfinit les règles du jeu en cybersécurité. Elle n'est ni uniquement un bouclier, ni uniquement une arme : elle est les deux à la fois. <span class="conclu-hl">Ignorer ses apports défensifs serait une erreur stratégique ; sous-estimer ses risques offensifs serait une imprudence dangereuse.</span></p>
+        <p>L'avenir de la cybersécurité sera celui d'un <span class="conclu-hl">humain augmenté par l'IA</span> — et non remplacé par elle. Les professionnels SISR devront maîtriser ces outils, comprendre leurs limites, et développer un regard critique face aux décisions algorithmiques. La supervision humaine reste indispensable, notamment pour les cas aux enjeux élevés.</p>
+        <p>Sur le plan réglementaire, l'<span class="conclu-hl">AI Act européen</span> pose les premières fondations d'une IA responsable. Mais la régulation seule ne suffira pas : c'est une culture de la <span class="conclu-hl">cybersécurité augmentée et éthique</span> — combinant technologie, formation et vigilance humaine — qui permettra de relever les défis des années à venir.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 text-center small text-muted mt-5">
+    © <span id="year"></span> Raphaël Harvent — Veille Technologique BTS SIO SISR · Risques & Enjeux de l'IA
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
