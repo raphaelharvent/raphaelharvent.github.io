@@ -1,4 +1,4 @@
-<<!doctype html>
+<!doctype html>
 <html lang="fr" data-bs-theme="dark">
 <head>
   <meta charset="utf-8">
@@ -324,6 +324,52 @@
     .tab-pane { display: none !important; }
     .tab-pane.tab-active { display: block !important; }
 
+    /* ── TABLEAU DE COMPÉTENCES ── */
+    #tableau-competences { padding: 5rem 0; }
+    .tableau-comp-card {
+      display: flex; gap: 2rem; align-items: flex-start;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px; padding: 2rem;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      max-width: 700px;
+    }
+    .tableau-comp-card:hover {
+      border-color: rgba(0,229,255,0.25);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    }
+    .tableau-comp-icon {
+      width: 56px; height: 56px; border-radius: 14px; flex-shrink: 0;
+      background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; color: var(--accent);
+    }
+    .tableau-comp-title {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 800;
+      letter-spacing: -0.3px; margin-bottom: 0.4rem;
+    }
+    .tableau-comp-meta {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      font-size: 0.78rem; opacity: 0.5; margin-bottom: 0.85rem;
+    }
+    .tableau-comp-desc {
+      font-size: 0.88rem; line-height: 1.75; opacity: 0.65; margin-bottom: 1.25rem;
+    }
+    .btn-tableau {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: linear-gradient(135deg, rgba(0,229,255,0.12), rgba(124,58,237,0.12));
+      border: 1px solid rgba(0,229,255,0.3); border-radius: 10px;
+      padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600;
+      color: var(--accent); text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-tableau:hover {
+      background: linear-gradient(135deg, rgba(0,229,255,0.2), rgba(124,58,237,0.2));
+      border-color: rgba(0,229,255,0.5); color: var(--accent);
+    }
+    @media (max-width: 576px) {
+      .tableau-comp-card { flex-direction: column; }
+    }
+
     /* ── VEILLE ── */
     .veille-tabs .nav-link {
       font-family: var(--font-display);
@@ -456,6 +502,7 @@
           <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
           <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
           <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tableau-competences">Tableau de compétences</a></li>
           <li class="nav-item"><a class="nav-link" href="#veille">Veille</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -812,6 +859,30 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- TABLEAU DE COMPÉTENCES -->
+  <section id="tableau-competences" class="container">
+    <h2 class="section-title reveal">Tableau de compétences</h2>
+    <p class="text-muted mt-3 mb-5 reveal" style="max-width:640px;">
+      Récapitulatif de l'ensemble des compétences acquises au cours de ma formation BTS SIO SISR, en alternance chez AKKODIS et à l'AFPI.
+    </p>
+    <div class="tableau-comp-card reveal">
+      <div class="tableau-comp-icon">
+        <i class="bi bi-table"></i>
+      </div>
+      <div class="tableau-comp-body">
+        <div class="tableau-comp-title">Tableau de compétences — BTS SIO 2025</div>
+        <div class="tableau-comp-meta">
+          <span><i class="bi bi-file-earmark-excel me-1"></i>Fichier Excel (.xlsx)</span>
+          <span><i class="bi bi-calendar3 me-1"></i>BTS SIO · 2025</span>
+        </div>
+        <p class="tableau-comp-desc">Document de synthèse listant toutes les compétences du référentiel BTS SIO SISR, avec le niveau atteint et les projets associés pour chaque compétence.</p>
+        <a href="assets/Tableau de compétence - BTS SIO 2025.xlsx" download class="btn-tableau">
+          <i class="bi bi-download me-2"></i>Télécharger le tableau
+        </a>
+      </div>
     </div>
   </section>
 
