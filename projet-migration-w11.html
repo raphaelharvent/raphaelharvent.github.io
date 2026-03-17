@@ -54,6 +54,14 @@
     .etape-num{font-family:var(--font-display);font-size:0.72rem;font-weight:800;color:var(--accent);background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.25);border-radius:8px;padding:0.2rem 0.55rem;letter-spacing:0.05em;flex-shrink:0;}
     .etape-titre{font-family:var(--font-display);font-size:1rem;font-weight:700;margin:0;letter-spacing:-0.3px;}
     .etape-desc{font-size:0.9rem;line-height:1.8;opacity:0.75;margin-bottom:1rem;}
+    /* COMPÉTENCES */
+    .comp-item{display:flex;flex-direction:column;gap:0.4rem;padding:1rem;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);margin-bottom:0.75rem;transition:border-color 0.2s;}
+    .comp-item:last-child{margin-bottom:0;}
+    .comp-item:hover{border-color:rgba(0,229,255,0.2);}
+    .comp-header{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}
+    .comp-code{font-family:var(--font-display);font-size:0.75rem;font-weight:800;color:var(--accent);background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.25);border-radius:6px;padding:0.15rem 0.5rem;flex-shrink:0;}
+    .comp-label{font-size:0.88rem;font-weight:600;opacity:0.8;}
+    .comp-desc{font-size:0.85rem;line-height:1.75;opacity:0.65;margin:0;}
   </style>
 </head>
 <body>
@@ -103,10 +111,47 @@
 
         <div class="content-card">
           <h2 class="section-title">Compétences mobilisées</h2>
-          <p style="line-height:1.9;opacity:0.85;">
-            <!-- ✏️ Compétences BTS SIO SISR couvertes -->
-            À compléter...
-          </p>
+
+          <div class="comp-item">
+            <div class="comp-header">
+              <span class="comp-code">B1.1</span>
+              <span class="comp-label">Gérer le patrimoine informatique</span>
+            </div>
+            <p class="comp-desc">Inventaire préalable du parc informatique (450 postes) pour identifier les machines compatibles Windows 11. Mise à jour de la CMDB avec les nouvelles configurations. Suivi des licences Microsoft 365.</p>
+          </div>
+
+          <div class="comp-item">
+            <div class="comp-header">
+              <span class="comp-code">B1.2</span>
+              <span class="comp-label">Répondre aux incidents</span>
+            </div>
+            <p class="comp-desc">Prise en charge des incidents post-migration via ServiceNow : problèmes de drivers (imprimantes, périphériques), incompatibilités logicielles, restauration de profils utilisateurs. Résolution de 85 tickets en 3 semaines.</p>
+          </div>
+
+          <div class="comp-item">
+            <div class="comp-header">
+              <span class="comp-code">B1.4</span>
+              <span class="comp-label">Travailler en mode projet</span>
+            </div>
+            <p class="comp-desc">Suivi de l'avancement via tableau de bord Excel. Coordination avec l'équipe N2 pour les cas complexes. Respect du planning de déploiement par vagues (services pilotes → déploiement massif).</p>
+          </div>
+
+          <div class="comp-item">
+            <div class="comp-header">
+              <span class="comp-code">B2.1</span>
+              <span class="comp-label">Administrer les systèmes</span>
+            </div>
+            <p class="comp-desc">Création et personnalisation du master Windows 11 via SCCM. Configuration des séquences de tâches de déploiement. Intégration au domaine Active Directory. Déploiement des GPO spécifiques Windows 11 (paramètres de sécurité, restrictions).</p>
+          </div>
+
+          <div class="comp-item">
+            <div class="comp-header">
+              <span class="comp-code">B3.2</span>
+              <span class="comp-label">Préserver l'identité numérique</span>
+            </div>
+            <p class="comp-desc">Vérification de la jonction Azure AD pour l'authentification MFA. Migration des profils utilisateurs avec préservation des données OneDrive. Application des politiques de sécurité Windows Hello for Business.</p>
+          </div>
+
         </div>
 
         <div class="content-card">
@@ -265,14 +310,6 @@
             <!-- ✏️ Résultats concrets obtenus -->
             À compléter...
           </p>
-          <div class="mt-4">
-            <!-- ✏️ Remplace par : <img src="assets/..." class="img-projet" alt="..."> -->
-            <div class="img-placeholder">
-              <i class="bi bi-image"></i>
-              <span>Capture du résultat final</span>
-            </div>
-            <p class="img-caption"><!-- ✏️ Légende --></p>
-          </div>
         </div>
 
 
