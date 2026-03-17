@@ -298,9 +298,12 @@
           <div class="content-card">
             <h2 class="section-title">Résultats — Préparation</h2>
             <p style="line-height:1.9;opacity:0.85;">Maintenant notre PC va se masteriser en environ 2h, pour voir si il est bien fait sans erreur nous allons le voir dans l'étape finale.</p>
-            <div class="mt-3">
+            <div class="mt-3 d-flex flex-wrap gap-2">
               <button onclick="switchToFinal()" class="btn-next-tab">
                 Voir l'étape finale <i class="bi bi-arrow-right ms-2"></i>
+              </button>
+              <button onclick="scrollToTop()" class="btn-back-top">
+                <i class="bi bi-arrow-up me-2"></i>Retour au début du projet
               </button>
             </div>
           </div>
@@ -367,7 +370,10 @@
           <div class="content-card">
             <h2 class="section-title">Résultats — Étape finale</h2>
             <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
-            <div class="mt-3">
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <button onclick="switchToPrep()" class="btn-back-top">
+                <i class="bi bi-arrow-left me-2"></i>Revenir vers la préparation du PC
+              </button>
               <button onclick="scrollToTop()" class="btn-back-top">
                 <i class="bi bi-arrow-up me-2"></i>Retour au début du projet
               </button>
@@ -421,6 +427,14 @@
       migBtns.forEach(b => b.classList.remove('active'));
       document.querySelector('#tab-final').classList.add('mig-active');
       document.querySelector('[data-mig-target="#tab-final"]').classList.add('active');
+      document.querySelector('#migTabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function switchToPrep() {
+      migPanes.forEach(p => p.classList.remove('mig-active'));
+      migBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('#tab-prep').classList.add('mig-active');
+      document.querySelector('[data-mig-target="#tab-prep"]').classList.add('active');
       document.querySelector('#migTabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
