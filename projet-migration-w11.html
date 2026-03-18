@@ -63,12 +63,26 @@
     .comp-label{font-size:0.88rem;font-weight:600;opacity:0.8;}
     .comp-desc{font-size:0.85rem;line-height:1.75;opacity:0.65;margin:0;}
     /* ONGLETS MIGRATION */
-    .projet-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+    .projet-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem;}
     .projet-tabs .nav-link{font-family:var(--font-display);font-weight:700;font-size:0.9rem;border-radius:12px !important;border:1px solid rgba(255,255,255,0.08) !important;color:inherit;opacity:0.6;padding:0.6rem 1.2rem;transition:all 0.25s;}
     .projet-tabs .nav-link.active{background:linear-gradient(135deg,rgba(0,229,255,0.15),rgba(124,58,237,0.15)) !important;border-color:rgba(0,229,255,0.35) !important;color:var(--accent) !important;opacity:1;}
     .projet-tabs .nav-link:hover:not(.active){opacity:1;}
     .mig-pane{display:none;}
     .mig-pane.mig-active{display:block;}
+    /* MENU DÉROULANT ÉTAPES */
+    .etapes-nav{position:relative;margin-bottom:1.5rem;}
+    .etapes-nav-toggle{width:100%;display:flex;align-items:center;gap:0.75rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:0.75rem 1.1rem;font-family:var(--font-display);font-size:0.88rem;font-weight:700;color:inherit;cursor:pointer;transition:border-color 0.2s,background 0.2s;}
+    .etapes-nav-toggle:hover{border-color:rgba(0,229,255,0.3);background:rgba(0,229,255,0.04);}
+    .etapes-nav-toggle.open{border-color:rgba(0,229,255,0.35);background:rgba(0,229,255,0.06);border-radius:12px 12px 0 0;}
+    #etapesChevron{transition:transform 0.25s;margin-left:auto;}
+    .etapes-nav-toggle.open #etapesChevron{transform:rotate(180deg);}
+    .etapes-nav-dropdown{display:none;position:absolute;top:100%;left:0;right:0;z-index:50;background:#0f1117;border:1px solid rgba(0,229,255,0.25);border-top:none;border-radius:0 0 14px 14px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.5);}
+    .etapes-nav-dropdown.open{display:block;}
+    .etapes-group{padding:0.5rem 0;}
+    .etapes-group+.etapes-group{border-top:1px solid rgba(255,255,255,0.06);}
+    .etapes-group-label{font-family:var(--font-display);font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);opacity:0.7;padding:0.6rem 1.1rem 0.3rem;}
+    .etapes-item{display:block;padding:0.5rem 1.1rem 0.5rem 1.5rem;font-size:0.83rem;color:inherit;opacity:0.65;cursor:pointer;transition:background 0.15s,opacity 0.15s;text-decoration:none;}
+    .etapes-item:hover{background:rgba(0,229,255,0.07);opacity:1;color:var(--accent);}
     /* BOUTON VERS ÉTAPE FINALE */
     .btn-next-tab{display:inline-flex;align-items:center;gap:0.4rem;background:linear-gradient(135deg,rgba(0,229,255,0.12),rgba(124,58,237,0.12));border:1px solid rgba(0,229,255,0.3);border-radius:10px;padding:0.6rem 1.3rem;font-size:0.88rem;font-weight:700;font-family:var(--font-display);color:var(--accent);cursor:pointer;transition:background 0.2s,border-color 0.2s;}
     .btn-next-tab:hover{background:linear-gradient(135deg,rgba(0,229,255,0.22),rgba(124,58,237,0.22));border-color:rgba(0,229,255,0.5);}
@@ -190,6 +204,46 @@
           </li>
         </ul>
 
+        <!-- MENU DÉROULANT ÉTAPES -->
+        <div class="etapes-nav" id="etapesNav">
+          <button class="etapes-nav-toggle" id="etapesToggle" onclick="toggleEtapesMenu()">
+            <i class="bi bi-list-ol me-2"></i>
+            <span id="etapesToggleLabel">Aller à une étape</span>
+            <i class="bi bi-chevron-down ms-auto" id="etapesChevron"></i>
+          </button>
+          <div class="etapes-nav-dropdown" id="etapesDropdown">
+
+            <!-- Étapes Préparation -->
+            <div class="etapes-group" id="group-prep">
+              <div class="etapes-group-label"><i class="bi bi-tools me-1"></i>Préparation du PC</div>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-1')">01 — Entrer dans le BIOS</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-2')">02 — Le menu de démarrage</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-3')">03 — Chargement du démarrage</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-4')">04 — Sélection de la langue du clavier</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-5')">05 — Menu du master</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-6')">06 — Connexion au compte administrateur</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-7')">07 — Sélection du master</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-8')">08 — Lancement du master</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-9')">09 — Menu d'attribution du numéro AK</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-10')">10 — Étiquette AK</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-11')">11 — Lancement de l'installation</a>
+              <a class="etapes-item" onclick="goToEtape('tab-prep', 'etape-prep-12')">12 — Confirmation du numéro AK</a>
+            </div>
+
+            <!-- Étapes Finale -->
+            <div class="etapes-group" id="group-final">
+              <div class="etapes-group-label"><i class="bi bi-check2-circle me-1"></i>Étape finale</div>
+              <a class="etapes-item" onclick="goToEtape('tab-final', 'etape-final-1')">01 — Étape finale 1</a>
+              <a class="etapes-item" onclick="goToEtape('tab-final', 'etape-final-2')">02 — Étape finale 2</a>
+              <a class="etapes-item" onclick="goToEtape('tab-final', 'etape-final-3')">03 — Étape finale 3</a>
+              <a class="etapes-item" onclick="goToEtape('tab-final', 'etape-final-4')">04 — Étape finale 4</a>
+              <a class="etapes-item" onclick="goToEtape('tab-final', 'etape-final-5')">05 — Étape finale 5</a>
+              <a class="etapes-item" onclick="goToEtape('tab-final', 'etape-final-6')">06 — Étape finale 6</a>
+            </div>
+
+          </div>
+        </div>
+
         <!-- ONGLET 1 : PRÉPARATION DU PC -->
         <div class="mig-pane" id="tab-prep">
 
@@ -198,7 +252,7 @@
             <p style="line-height:1.9;opacity:0.85;">Voici les étapes selon lesquelles nous allons procéder pour préparer le PC avant la migration.</p>
 
             <!-- ÉTAPE 1 -->
-            <div class="etape mt-4">
+            <div class="etape mt-4" id="etape-prep-1">
               <div class="etape-header"><span class="etape-num">01</span><h3 class="etape-titre">Entrer dans le BIOS</h3></div>
               <p class="etape-desc">Appuyez frénétiquement sur F12 pour accéder au menu de démarrage.</p>
               <img src="assets/w11-etape-1.jpg" class="img-projet" alt="Étape 1">
@@ -206,7 +260,7 @@
             </div>
 
             <!-- ÉTAPE 2 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-2">
               <div class="etape-header"><span class="etape-num">02</span><h3 class="etape-titre">Le menu de démarrage</h3></div>
               <p class="etape-desc">Chercher le bon périphérique de démarrage à sélectionner puis appuyer sur Entrée (dans notre cas, c'est le réseau IPV4).</p>
               <img src="assets/w11-etape-2.jpg" class="img-projet" alt="Étape 2">
@@ -214,7 +268,7 @@
             </div>
 
             <!-- ÉTAPE 3 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-3">
               <div class="etape-header"><span class="etape-num">03</span><h3 class="etape-titre">Chargement du démarrage</h3></div>
               <p class="etape-desc">Attendre que le démarrage réseau se charge.</p>
               <img src="assets/W11-etape-3.jpg" class="img-projet" alt="Étape 3">
@@ -222,7 +276,7 @@
             </div>
 
             <!-- ÉTAPE 4 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-4">
               <div class="etape-header"><span class="etape-num">04</span><h3 class="etape-titre">Sélection de la langue du clavier</h3></div>
               <p class="etape-desc">On sélectionne la bonne langue pour avoir notre clavier dans la langue souhaitée.</p>
               <img src="assets/w11-etape-4.jpg" class="img-projet" alt="Étape 4">
@@ -230,7 +284,7 @@
             </div>
 
             <!-- ÉTAPE 5 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-5">
               <div class="etape-header"><span class="etape-num">05</span><h3 class="etape-titre">Menu du master</h3></div>
               <p class="etape-desc">On arrive sur le menu où l'on va pouvoir choisir notre master.</p>
               <img src="assets/w11-etape-5.jpg" class="img-projet" alt="Étape 5">
@@ -238,7 +292,7 @@
             </div>
 
             <!-- ÉTAPE 6 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-6">
               <div class="etape-header"><span class="etape-num">06</span><h3 class="etape-titre">Connexion au compte administrateur</h3></div>
               <p class="etape-desc">On clique sur le bouton de connexion de l'étape précédente et on renseigne les identifiants administrateur.</p>
               <img src="assets/w11-etape-6.jpg" class="img-projet" alt="Étape 6">
@@ -246,7 +300,7 @@
             </div>
 
             <!-- ÉTAPE 7 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-7">
               <div class="etape-header"><span class="etape-num">07</span><h3 class="etape-titre">Sélection du master</h3></div>
               <p class="etape-desc">On arrive sur le menu avec tous les masters disponibles, nous sélectionnons le bon.</p>
               <img src="assets/w11-etape-7.jpg" class="img-projet" alt="Étape 7">
@@ -254,7 +308,7 @@
             </div>
 
             <!-- ÉTAPE 8 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-8">
               <div class="etape-header"><span class="etape-num">08</span><h3 class="etape-titre">Lancement du master</h3></div>
               <p class="etape-desc">On remarque dans la console que le master est en train de se lancer.</p>
               <img src="assets/w11-etape-8.jpg" class="img-projet" alt="Étape 8">
@@ -262,7 +316,7 @@
             </div>
 
             <!-- ÉTAPE 9 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-9">
               <div class="etape-header"><span class="etape-num">09</span><h3 class="etape-titre">Menu d'attribution du numéro AK</h3></div>
               <p class="etape-desc">Une fenêtre contextuelle s'affiche pour l'attribution du numéro AK.</p>
               <img src="assets/w11-etape-9.jpg" class="img-projet" alt="Étape 9">
@@ -270,7 +324,7 @@
             </div>
 
             <!-- ÉTAPE 10 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-10">
               <div class="etape-header"><span class="etape-num">10</span><h3 class="etape-titre">Étiquette AK</h3></div>
               <p class="etape-desc">On saisit le numéro inscrit sur l'étiquette située sous le PC.</p>
               <img src="assets/w11-etape-10.jpg" class="img-projet" alt="Étape 10">
@@ -278,7 +332,7 @@
             </div>
 
             <!-- ÉTAPE 11 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-11">
               <div class="etape-header"><span class="etape-num">11</span><h3 class="etape-titre">Lancement de l'installation</h3></div>
               <p class="etape-desc">L'installation se lance correctement et les étapes ainsi que la progression s'affichent.</p>
               <img src="assets/w11-etape-11.jpg" class="img-projet" alt="Étape 11">
@@ -286,7 +340,7 @@
             </div>
 
             <!-- ÉTAPE 12 -->
-            <div class="etape">
+            <div class="etape" id="etape-prep-12">
               <div class="etape-header"><span class="etape-num">12</span><h3 class="etape-titre">Confirmation du numéro AK</h3></div>
               <p class="etape-desc">Une dernière fenêtre contextuelle s'affiche avec une confirmation du numéro AK indiquant qu'il va être remplacé dans le domaine. On prend le temps de vérifier puis on valide.</p>
               <img src="assets/w11-etape-12.jpg" class="img-projet" alt="Étape 12">
@@ -318,7 +372,7 @@
             <p style="line-height:1.9;opacity:0.85;">Voici les étapes finales de la migration après la préparation du PC.</p>
 
             <!-- ÉTAPE 1 -->
-            <div class="etape mt-4">
+            <div class="etape mt-4" id="etape-final-1">
               <div class="etape-header"><span class="etape-num">01</span><h3 class="etape-titre"><!-- ✏️ Titre --> À compléter...</h3></div>
               <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
               <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 1</span><small>assets/w11-final-01.png</small></div>
@@ -326,7 +380,7 @@
             </div>
 
             <!-- ÉTAPE 2 -->
-            <div class="etape">
+            <div class="etape" id="etape-final-2">
               <div class="etape-header"><span class="etape-num">02</span><h3 class="etape-titre"><!-- ✏️ Titre --> À compléter...</h3></div>
               <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
               <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 2</span><small>assets/w11-final-02.png</small></div>
@@ -334,7 +388,7 @@
             </div>
 
             <!-- ÉTAPE 3 -->
-            <div class="etape">
+            <div class="etape" id="etape-final-3">
               <div class="etape-header"><span class="etape-num">03</span><h3 class="etape-titre"><!-- ✏️ Titre --> À compléter...</h3></div>
               <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
               <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 3</span><small>assets/w11-final-03.png</small></div>
@@ -342,7 +396,7 @@
             </div>
 
             <!-- ÉTAPE 4 -->
-            <div class="etape">
+            <div class="etape" id="etape-final-4">
               <div class="etape-header"><span class="etape-num">04</span><h3 class="etape-titre"><!-- ✏️ Titre --> À compléter...</h3></div>
               <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
               <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 4</span><small>assets/w11-final-04.png</small></div>
@@ -350,7 +404,7 @@
             </div>
 
             <!-- ÉTAPE 5 -->
-            <div class="etape">
+            <div class="etape" id="etape-final-5">
               <div class="etape-header"><span class="etape-num">05</span><h3 class="etape-titre"><!-- ✏️ Titre --> À compléter...</h3></div>
               <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
               <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 5</span><small>assets/w11-final-05.png</small></div>
@@ -358,7 +412,7 @@
             </div>
 
             <!-- ÉTAPE 6 -->
-            <div class="etape">
+            <div class="etape" id="etape-final-6">
               <div class="etape-header"><span class="etape-num">06</span><h3 class="etape-titre"><!-- ✏️ Titre --> À compléter...</h3></div>
               <p class="etape-desc"><!-- ✏️ Description --> À compléter...</p>
               <div class="img-placeholder"><i class="bi bi-image"></i><span>Capture étape 6</span><small>assets/w11-final-06.png</small></div>
@@ -419,6 +473,8 @@
         migBtns.forEach(b => b.classList.remove('active'));
         document.querySelector(target).classList.add('mig-active');
         btn.classList.add('active');
+        closeEtapesMenu();
+        updateDropdownGroups(target);
       });
     });
 
@@ -428,6 +484,7 @@
       document.querySelector('#tab-final').classList.add('mig-active');
       document.querySelector('[data-mig-target="#tab-final"]').classList.add('active');
       document.querySelector('#migTabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateDropdownGroups('#tab-final');
     }
 
     function switchToPrep() {
@@ -436,11 +493,60 @@
       document.querySelector('#tab-prep').classList.add('mig-active');
       document.querySelector('[data-mig-target="#tab-prep"]').classList.add('active');
       document.querySelector('#migTabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateDropdownGroups('#tab-prep');
     }
 
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Menu déroulant étapes
+    function toggleEtapesMenu() {
+      const toggle = document.getElementById('etapesToggle');
+      const dropdown = document.getElementById('etapesDropdown');
+      toggle.classList.toggle('open');
+      dropdown.classList.toggle('open');
+    }
+
+    function closeEtapesMenu() {
+      document.getElementById('etapesToggle').classList.remove('open');
+      document.getElementById('etapesDropdown').classList.remove('open');
+    }
+
+    function goToEtape(tabId, etapeId) {
+      // Activer le bon onglet
+      migPanes.forEach(p => p.classList.remove('mig-active'));
+      migBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('#' + tabId).classList.add('mig-active');
+      document.querySelector('[data-mig-target="#' + tabId + '"]').classList.add('active');
+      closeEtapesMenu();
+      updateDropdownGroups('#' + tabId);
+      // Scroller vers l'étape après un court délai
+      setTimeout(() => {
+        const el = document.getElementById(etapeId);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+
+    function updateDropdownGroups(activeTab) {
+      const groupPrep  = document.getElementById('group-prep');
+      const groupFinal = document.getElementById('group-final');
+      if (activeTab === '#tab-prep') {
+        groupPrep.style.opacity  = '1';
+        groupFinal.style.opacity = '0.45';
+      } else {
+        groupPrep.style.opacity  = '0.45';
+        groupFinal.style.opacity = '1';
+      }
+    }
+
+    // Fermer le menu si clic en dehors
+    document.addEventListener('click', (e) => {
+      if (!document.getElementById('etapesNav').contains(e.target)) closeEtapesMenu();
+    });
+
+    // Init : opacité groupe actif
+    updateDropdownGroups('#tab-prep');
   </script>
 </body>
 </html>
