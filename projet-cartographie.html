@@ -26,7 +26,7 @@
     .section-title::after{content:'';position:absolute;bottom:-5px;left:0;width:36px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;}
     .content-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.75rem;margin-bottom:1.5rem;transition:border-color 0.2s;}
     .content-card:hover{border-color:rgba(0,229,255,0.2);}
-    .img-projet{width:100%;border-radius:14px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.4);object-fit:cover;}
+    .img-projet{display:block;width:100%;max-width:600px;max-height:420px;margin:0 auto;border-radius:14px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.4);object-fit:cover;}
     .img-caption{text-align:center;font-size:0.78rem;opacity:0.5;margin-top:0.6rem;}
     .img-placeholder{width:100%;border-radius:14px;aspect-ratio:16/9;background:rgba(255,255,255,0.04);border:2px dashed rgba(255,255,255,0.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;color:rgba(255,255,255,0.3);font-size:0.82rem;}
     .img-placeholder i{font-size:2rem;}
@@ -62,13 +62,37 @@
     .fi2{animation:fadeUp 0.6s 0.15s ease both;}
     .fi3{animation:fadeUp 0.6s 0.3s ease both;}
     /* ÉTAPES */
-    .etape{border-left:2px solid rgba(0,229,255,0.2);padding-left:1.5rem;margin-bottom:2.5rem;position:relative;}
+    .etape{border-left:2px solid rgba(0,229,255,0.2);padding-left:1.5rem;margin-bottom:2.5rem;position:relative;scroll-margin-top:80px;}
     .etape:last-child{margin-bottom:0;}
     .etape::before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px rgba(0,229,255,0.5);}
     .etape-header{display:flex;align-items:center;gap:0.85rem;margin-bottom:0.6rem;}
     .etape-num{font-family:var(--font-display);font-size:0.72rem;font-weight:800;color:var(--accent);background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.25);border-radius:8px;padding:0.2rem 0.55rem;letter-spacing:0.05em;flex-shrink:0;}
     .etape-titre{font-family:var(--font-display);font-size:1rem;font-weight:700;margin:0;letter-spacing:-0.3px;}
     .etape-desc{font-size:0.9rem;line-height:1.8;opacity:0.75;margin-bottom:1rem;}
+    /* COMPÉTENCES */
+    .comp-item{display:flex;flex-direction:column;gap:0.4rem;padding:1rem;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);margin-bottom:0.75rem;transition:border-color 0.2s;}
+    .comp-item:last-child{margin-bottom:0;}
+    .comp-item:hover{border-color:rgba(0,229,255,0.2);}
+    .comp-header{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}
+    .comp-code{font-family:var(--font-display);font-size:0.75rem;font-weight:800;color:var(--accent);background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.25);border-radius:6px;padding:0.15rem 0.5rem;flex-shrink:0;}
+    .comp-label{font-size:0.88rem;font-weight:600;opacity:0.8;}
+    .comp-desc{font-size:0.85rem;line-height:1.75;opacity:0.65;margin:0;}
+    /* MENU DÉROULANT */
+    .etapes-nav{position:relative;margin-bottom:1.5rem;}
+    .etapes-nav-toggle{width:100%;display:flex;align-items:center;gap:0.75rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:0.75rem 1.1rem;font-family:var(--font-display);font-size:0.88rem;font-weight:700;color:inherit;cursor:pointer;transition:border-color 0.2s,background 0.2s;}
+    .etapes-nav-toggle:hover{border-color:rgba(0,229,255,0.3);background:rgba(0,229,255,0.04);}
+    .etapes-nav-toggle.open{border-color:rgba(0,229,255,0.35);background:rgba(0,229,255,0.06);border-radius:12px 12px 0 0;}
+    .etapes-chevron{transition:transform 0.25s;margin-left:auto;}
+    .etapes-nav-toggle.open .etapes-chevron{transform:rotate(180deg);}
+    .etapes-nav-dropdown{display:none;position:absolute;top:100%;left:0;right:0;z-index:50;background:#0f1117;border:1px solid rgba(0,229,255,0.25);border-top:none;border-radius:0 0 14px 14px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.5);}
+    .etapes-nav-dropdown.open{display:block;}
+    .etapes-group{padding:0.5rem 0;}
+    .etapes-group-label{font-family:var(--font-display);font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);opacity:0.7;padding:0.6rem 1.1rem 0.3rem;}
+    .etapes-item{display:block;padding:0.5rem 1.1rem 0.5rem 1.5rem;font-size:0.83rem;color:inherit;opacity:0.65;cursor:pointer;transition:background 0.15s,opacity 0.15s;text-decoration:none;}
+    .etapes-item:hover{background:rgba(0,229,255,0.07);opacity:1;color:var(--accent);}
+    /* BOUTON RETOUR */
+    .btn-back-top{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:0.6rem 1.3rem;font-size:0.88rem;font-weight:700;font-family:var(--font-display);color:inherit;opacity:0.7;cursor:pointer;transition:background 0.2s,border-color 0.2s,opacity 0.2s;}
+    .btn-back-top:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.25);opacity:1;}
   </style>
 </head>
 <body>
@@ -131,6 +155,10 @@
               <p style="line-height:1.9;opacity:0.85;">Crée un schema qui permet de controler les PC rapidement et facilement pour empecher les vols de materiels.</p>
             </div>
             <div class="content-card">
+              <h2 class="section-title">Compétences mobilisées</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+            </div>
+            <div class="content-card">
               <h2 class="section-title">Objectifs</h2>
               <ul class="step-list">
                 <li>Reperer tout les numéros AK sur les écrans et bases du site ansi que les codes de cadenas.</li>
@@ -142,8 +170,23 @@
               <h2 class="section-title">Réalisation</h2>
               <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ Outils utilisés, méthode --> À compléter...</p>
 
+              <!-- MENU DÉROULANT ÉTAPES -->
+              <div class="etapes-nav mt-4" id="etapesNavCarto">
+                <button class="etapes-nav-toggle" id="etapesToggleCarto" onclick="toggleMenu('etapesToggleCarto','etapesDropdownCarto')">
+                  <i class="bi bi-list-ol me-2"></i><span>Aller à une étape</span>
+                  <i class="bi bi-chevron-down etapes-chevron"></i>
+                </button>
+                <div class="etapes-nav-dropdown" id="etapesDropdownCarto">
+                  <div class="etapes-group">
+                    <div class="etapes-group-label">Étapes</div>
+                    <a class="etapes-item" onclick="goToEtapeId('etape-carto-1','etapesToggleCarto','etapesDropdownCarto')">01 — Créer une carte de l'intégralité du site</a>
+                    <a class="etapes-item" onclick="goToEtapeId('etape-carto-2','etapesToggleCarto','etapesDropdownCarto')">02 — Compléter toute la carte</a>
+                  </div>
+                </div>
+              </div>
+
               <!-- ÉTAPE 1 -->
-              <div class="etape mt-4">
+              <div class="etape mt-3" id="etape-carto-1">
                 <div class="etape-header">
                   <span class="etape-num">01</span>
                   <h3 class="etape-titre">Crée une carte de l'entierté du site</h3>
@@ -154,7 +197,7 @@
               </div>
 
               <!-- ÉTAPE 2 -->
-              <div class="etape">
+              <div class="etape" id="etape-carto-2">
                 <div class="etape-header">
                   <span class="etape-num">02</span>
                   <h3 class="etape-titre">Completer toute la carte</h3>
@@ -168,10 +211,11 @@
             <div class="content-card">
               <h2 class="section-title">Résultats</h2>
               <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
-            </div>
-            <div class="content-card">
-              <h2 class="section-title">Compétences mobilisées</h2>
-              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+              <div class="mt-3">
+                <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="btn-back-top">
+                  <i class="bi bi-arrow-up me-2"></i>Retour au début du projet
+                </button>
+              </div>
             </div>
           </div>
           <div class="col-lg-4">
@@ -196,6 +240,10 @@
               <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
             </div>
             <div class="content-card">
+              <h2 class="section-title">Compétences mobilisées</h2>
+              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+            </div>
+            <div class="content-card">
               <h2 class="section-title">Objectifs</h2>
               <ul class="step-list">
                 <li>Recenser tous les équipements matériels du site (PC, serveurs, switches, imprimantes…)</li>
@@ -206,22 +254,45 @@
             <div class="content-card">
               <h2 class="section-title">Réalisation</h2>
               <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ Méthode, outils (Excel, GLPI...) --> À compléter...</p>
-              <div class="mt-4">
+
+              <!-- MENU DÉROULANT ÉTAPES -->
+              <div class="etapes-nav mt-4" id="etapesNavInv">
+                <button class="etapes-nav-toggle" id="etapesToggleInv" onclick="toggleMenu('etapesToggleInv','etapesDropdownInv')">
+                  <i class="bi bi-list-ol me-2"></i><span>Aller à une étape</span>
+                  <i class="bi bi-chevron-down etapes-chevron"></i>
+                </button>
+                <div class="etapes-nav-dropdown" id="etapesDropdownInv">
+                  <div class="etapes-group">
+                    <div class="etapes-group-label">Étapes</div>
+                    <a class="etapes-item" onclick="goToEtapeId('etape-inv-1','etapesToggleInv','etapesDropdownInv')">01 — <!-- ✏️ Titre étape 1 --></a>
+                    <a class="etapes-item" onclick="goToEtapeId('etape-inv-2','etapesToggleInv','etapesDropdownInv')">02 — <!-- ✏️ Titre étape 2 --></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="etape mt-3" id="etape-inv-1">
+                <div class="etape-header"><span class="etape-num">01</span><h3 class="etape-titre"><!-- ✏️ --> À compléter...</h3></div>
+                <p class="etape-desc"><!-- ✏️ --> À compléter...</p>
                 <div class="img-placeholder"><i class="bi bi-image"></i><span>Extrait du tableau d'inventaire</span></div>
                 <p class="img-caption"><!-- ✏️ Légende --></p>
               </div>
-              <div class="mt-4">
+
+              <div class="etape" id="etape-inv-2">
+                <div class="etape-header"><span class="etape-num">02</span><h3 class="etape-titre"><!-- ✏️ --> À compléter...</h3></div>
+                <p class="etape-desc"><!-- ✏️ --> À compléter...</p>
                 <div class="img-placeholder"><i class="bi bi-image"></i><span>Outil / logiciel utilisé</span></div>
                 <p class="img-caption"><!-- ✏️ Légende --></p>
               </div>
+
             </div>
             <div class="content-card">
               <h2 class="section-title">Résultats</h2>
               <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
-            </div>
-            <div class="content-card">
-              <h2 class="section-title">Compétences mobilisées</h2>
-              <p style="line-height:1.9;opacity:0.85;"><!-- ✏️ --> À compléter...</p>
+              <div class="mt-3">
+                <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="btn-back-top">
+                  <i class="bi bi-arrow-up me-2"></i>Retour au début du projet
+                </button>
+              </div>
             </div>
           </div>
           <div class="col-lg-4">
@@ -269,6 +340,30 @@
         cartoButtons.forEach(b => b.classList.remove('active'));
         document.querySelector(target).classList.add('carto-active');
         btn.classList.add('active');
+      });
+    });
+
+    function toggleMenu(toggleId, dropdownId) {
+      document.getElementById(toggleId).classList.toggle('open');
+      document.getElementById(dropdownId).classList.toggle('open');
+    }
+
+    function goToEtapeId(etapeId, toggleId, dropdownId) {
+      document.getElementById(toggleId).classList.remove('open');
+      document.getElementById(dropdownId).classList.remove('open');
+      setTimeout(() => {
+        const el = document.getElementById(etapeId);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+
+    document.addEventListener('click', (e) => {
+      ['etapesNavCarto','etapesNavInv'].forEach(id => {
+        const nav = document.getElementById(id);
+        if (nav && !nav.contains(e.target)) {
+          nav.querySelector('.etapes-nav-toggle').classList.remove('open');
+          nav.querySelector('.etapes-nav-dropdown').classList.remove('open');
+        }
       });
     });
   </script>
