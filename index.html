@@ -499,6 +499,18 @@
       background-clip: text;
     }
     .stat-box .stat-label { font-size: 0.78rem; opacity: 0.65; font-weight: 500; }
+    /* MODAL APERÇU TABLEAU */
+    .modal-apercu{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.25s;padding:1rem;}
+    .modal-apercu.active{opacity:1;pointer-events:all;}
+    .modal-apercu-inner{width:100%;max-width:1050px;height:82vh;background:#13151e;border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transform:scale(0.94);transition:transform 0.25s;}
+    .modal-apercu.active .modal-apercu-inner{transform:scale(1);}
+    .modal-apercu-header{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.08);flex-shrink:0;}
+    .modal-apercu-title{font-family:var(--font-display);font-weight:700;font-size:0.9rem;opacity:0.85;}
+    .modal-apercu-close{background:none;border:none;color:#fff;font-size:1.3rem;cursor:pointer;opacity:0.6;transition:opacity 0.2s;line-height:1;}
+    .modal-apercu-close:hover{opacity:1;}
+    .modal-apercu iframe{flex:1;width:100%;border:none;}
+    .btn-tableau-preview{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;color:inherit;opacity:0.75;cursor:pointer;transition:background 0.2s,border-color 0.2s,opacity 0.2s;}
+    .btn-tableau-preview:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.3);opacity:1;}
   </style>
 </head>
 <body>
@@ -895,9 +907,14 @@
           <span><i class="bi bi-calendar3 me-1"></i>BTS SIO · 2025</span>
         </div>
         <p class="tableau-comp-desc">Document de synthèse listant toutes les compétences du référentiel BTS SIO SISR, avec le niveau atteint et les projets associés pour chaque compétence.</p>
-        <a href="assets/Tableau de compétence - BTS SIO 2025.xlsx" download class="btn-tableau">
-          <i class="bi bi-download me-2"></i>Télécharger le tableau
-        </a>
+        <div class="d-flex flex-wrap gap-2 mt-1">
+          <a href="assets/Tableau de compétence - BTS SIO 2025.xlsx" download class="btn-tableau">
+            <i class="bi bi-download me-2"></i>Télécharger
+          </a>
+          <button class="btn-tableau-preview" onclick="openApercu()">
+            <i class="bi bi-eye me-2"></i>Aperçu
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -1176,6 +1193,31 @@
     }, { threshold: 0.4 });
 
     sections.forEach(s => navObserver.observe(s));
+  </script>
+  <!-- MODAL APERÇU TABLEAU -->
+  <div class="modal-apercu" id="modalApercu">
+    <div class="modal-apercu-inner">
+      <div class="modal-apercu-header">
+        <span class="modal-apercu-title"><i class="bi bi-table me-2"></i>Tableau de compétences — BTS SIO 2025</span>
+        <button class="modal-apercu-close" onclick="closeApercu()">&#x2715;</button>
+      </div>
+      <iframe id="apercuFrame" src="" title="Aperçu tableau de compétences"></iframe>
+    </div>
+  </div>
+  <script>
+    var _fileUrl = 'https://raphaelharvent.github.io/assets/Tableau%20de%20comp%C3%A9tence%20-%20BTS%20SIO%202025.xlsx';
+    function openApercu(){
+      document.getElementById('apercuFrame').src = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(_fileUrl);
+      document.getElementById('modalApercu').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeApercu(){
+      document.getElementById('modalApercu').classList.remove('active');
+      document.getElementById('apercuFrame').src = '';
+      document.body.style.overflow = '';
+    }
+    document.getElementById('modalApercu').addEventListener('click', function(e){ if(e.target===this) closeApercu(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeApercu(); });
   </script>
 </body>
 </html>
