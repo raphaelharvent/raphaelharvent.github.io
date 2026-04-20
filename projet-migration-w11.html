@@ -89,6 +89,14 @@
     /* BOUTON RETOUR DÉBUT */
     .btn-back-top{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:0.6rem 1.3rem;font-size:0.88rem;font-weight:700;font-family:var(--font-display);color:inherit;opacity:0.7;cursor:pointer;transition:background 0.2s,border-color 0.2s,opacity 0.2s;}
     .btn-back-top:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.25);opacity:1;}
+    /* LIGHTBOX */
+    .lightbox-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.25s;cursor:zoom-out;}
+    .lightbox-overlay.active{opacity:1;pointer-events:all;}
+    .lightbox-img{max-width:90vw;max-height:88vh;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,0.8);object-fit:contain;transform:scale(0.92);transition:transform 0.25s;cursor:default;}
+    .lightbox-overlay.active .lightbox-img{transform:scale(1);}
+    .lightbox-close{position:fixed;top:1.25rem;right:1.5rem;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.2);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;cursor:pointer;opacity:0.8;transition:opacity 0.2s,background 0.2s;z-index:10000;}
+    .lightbox-close:hover{opacity:1;background:rgba(255,255,255,0.15);}
+    .img-projet{cursor:zoom-in;}
   </style>
 </head>
 <body>
@@ -547,6 +555,23 @@
 
     // Init : opacité groupe actif
     updateDropdownGroups('#tab-prep');
+  </script>
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&#x2715;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  </div>
+  <script>
+    (function(){
+      var ov=document.getElementById('lightbox'),li=document.getElementById('lightboxImg');
+      document.querySelectorAll('.img-projet').forEach(function(img){
+        img.addEventListener('click',function(){li.src=img.src;li.alt=img.alt;ov.classList.add('active');document.body.style.overflow='hidden';});
+      });
+      function closeLB(){ov.classList.remove('active');document.body.style.overflow='';}
+      ov.addEventListener('click',function(e){if(e.target!==li)closeLB();});
+      document.getElementById('lightboxClose').addEventListener('click',closeLB);
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
+    })();
   </script>
 </body>
 </html>
