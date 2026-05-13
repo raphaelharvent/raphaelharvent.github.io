@@ -1,0 +1,1046 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="https://www.cicar.com/" />
+    
+    <title>CICAR - Alquiler coches Canarias - Rent a car</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" lang="es" content="Cicar es la empresa líder en el sector del Alquiler coches en Tenerife, Lanzarote, Fuerteventura, Gran Canaria y alquiler de coches en Canarias" />
+    <meta name="keywords" lang="es" content="alquiler coches tenerife, alquiler coches lanzarote, alquiler coches fuerteventura, alquiler coches gran canaria, alquiler coches canarias, rent a car tenerife, rent a car lanzarote, rent a car fuerteventura, rent a car gran canaria, rent a car canarias" />
+    <meta name="description" lang="en" content="Cicar is a regional car rental company with more than 40 offices across the Canary Islands. Car hire Tenerife, Lanzarote, Fuerteventura, Gran Canaria and car hire Canary Islands" />
+    <meta name="keywords" lang="en" content="tenerife car hire, lanzarote car hire, fuerteventura car hire, gran canaria car hire, canary islands car hire, tenerife car rental, Lanzarote car rental, fuerteventura car rental" />
+    <meta name="description" lang="de" content="CICAR ist eine regionale Autovermietung mit mehr als 40 Büros in den Kanarischen Inseln, erstellen Reservierung mit Echtzeit-Bestätigung für Lanzarote, Fuerteventura, Gran Canaria, Teneriffa, La Palma, La Gomera und El Hierro" />
+    <meta name="keywords" lang="de" content="mietwagen teneriffa, mietwagen fuerteventura, mietwagen gran canaria, mietwagen lanzarote, mietwagen kanarische, autovermietung teneriffa, autovermietung fuerteventura, autovermietung gran canaria, autovermietung lanzarote" />
+	<meta name="author" content="CICAR, Canary Islands Car" />
+	<meta name="robots" content="all" />
+    <meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="Content-Language" content="es" />
+	<meta name="copyright" content="CICAR, Canary Islands Car" />
+	<meta name="Reply-to" content="webmaster@cicar.com" />
+	<meta name="page-topic" content="alquier coches tenerife" />
+	<meta name="audience" content="All" />
+	<meta name="expires" content="NEVER" />
+	<meta name="Revisit" content="30 days" />
+    
+    <link rel="canonical" href="https://www.cicar.com/ES" />
+    <link rel="alternate" hreflang="es" href="https://www.cicar.com/ES" />
+    <link rel="alternate" hreflang="en" href="https://www.cicar.com/EN" />
+    <link rel="alternate" hreflang="de" href="https://www.cicar.com/DE" />
+    <link rel="alternate" hreflang="it" href="https://www.cicar.com/IT" />
+    <link rel="alternate" hreflang="fr" href="https://www.cicar.com/FR" />
+    <link rel="alternate" hreflang="ru" href="https://www.cicar.com/RU" />
+
+    <link rel="icon" type="image/x-icon" href="/html/cicar.ico" />
+    <link rel="shortcut icon" type="image/ico" href="/html/cicar.ico" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--
+    <link type="text/css" href="/html/css/daterangepicker.css" rel="stylesheet" />
+    <link type="text/css" href="/html/css/selectize.bootstrap3.css" rel="stylesheet" />
+    -->
+    <link type="text/css" href="/html/css/combined-dat-sel.css" rel="stylesheet" />
+    <!-- <link type="text/css" href="/html/css/fonts.css" media="none" onload="if(media!='all')media='all'" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link type="text/css" href="/html/css/main.css" rel="stylesheet" />
+    
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        window.open("ES/view/ie8","_self")
+    </script>
+    <![endif]-->
+    
+    
+</head>
+
+<body>
+
+	<script type="application/ld+json">
+	  { 
+		"@context" : "http://schema.org", 
+		"@type" : "AutoRental", 
+		"legalName" : "CICAR - Canary Islands Car, S.L.", 
+		"taxID" : "B35051820",
+		"parentOrganization" : "Grupo Empresarial Cabrera Medina",
+		"description" : "Empresa de alquiler de coches en Lanzarote, Fuerteventura, Gran Canaria, Tenerife, y resto de las Islas Canarias", 
+		"logo": "https://www.cicar.com/html/images/logo-cicar-1.jpg", 
+		"url" : "https://www.cicar.com/ES",
+		"telephone" : "+34 928 82 29 00"
+	  } 
+	</script>
+
+
+	<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+      
+      	<div class="navbar-header pull-left">
+          <a class="navbar-brand" href="es" title="CICAR, su rent a car Canarias"><img src="/html/images/logo-cicar.png" alt="Coches de alquiler en Canarias"/></a>
+        </div>
+        
+        <div class="navbar-header">
+      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        	    MENÚ
+         	</button>
+            
+            <ul class="list-unstyled navbar-toggle" style="border:none">
+                <li class="dropdown">
+                  <a href="es" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="sprite sprite-bandera_espana"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li class="dropdown-header"><a href="es" title="Alquiler coches Canarias"><i class="sprite sprite-bandera_espana"></i> Español</a></li>
+                    <li class="dropdown-header"><a href="en" title="Canary Islands Car Hire"><i class="sprite sprite-bandera_ingles"></i> English</a></li>
+                    <li class="dropdown-header"><a href="de" title="Mietwagen Kanarischen Inslen"><i class="sprite sprite-bandera_aleman"></i> Deutsch</a></li>
+                    <li class="dropdown-header"><a href="it" title="Noleggio Auto Isole Canarie"><i class="sprite sprite-bandera_italia"></i> Italiano</a></li>
+                    <li class="dropdown-header"><a href="fr" title="Location de voitures Îles Canaries"><i class="sprite sprite-bandera_francia"></i> Français</a></li>
+                  </ul>
+                </li>
+            </ul>
+          
+          <a href="tel:928822900"><button class="navbar-toggle btn-default" style="border-radius:20px; margin-top:11px;"><span class="glyphicon glyphicon-earphone"></span></button></a>
+		</div>
+        
+        
+      
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="es" title="Alquiler de coches">Inicio</a></li>
+            <li class="dropdown">
+              <a href="ES/Canarias" title="Oficinas de alquiler de coches en Canarias" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oficinas<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              	<li class="dropdown-header">Oficinas de alquiler en las<br />Islas Canarias</li>
+                <li><a href="ES/alquiler-coches-tenerife" title="Alquiler de coches en Tenerife">Tenerife</a></li> 
+                <li><a href="ES/alquiler-coches-lanzarote" title="Alquiler de coches en Lanzarote" >Lanzarote</a></li>
+                <li><a href="ES/alquiler-coches-fuerteventura" title="Alquiler de coches en Fuerteventura" >Fuerteventura</a></li>
+                <li><a href="ES/alquiler-coches-gran-canaria" title="Alquiler de coches en Gran Canaria" >Gran Canaria</a></li>
+                <li><a href="ES/alquiler-coches-la-palma" title="Alquiler de coches en La Palma" >La Palma</a></li>
+                <li><a href="ES/alquiler-coches-la-gomera" title="Alquiler de coches en La Gomera" >La Gomera</a></li>
+                <li><a href="ES/alquiler-coches-el-hierro" title="Alquiler de coches en El Hierro" >El Hierro</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Oficinas de alquiler en las<br />Península/Baleares</li>
+                <li><a href="ES/view/alquiler-coches-peninsula-baleares" title="Alquiler de coches en España peninsular">España peninsular</a></li>
+                <li><a href="ES/view/alquiler-coches-peninsula-baleares" title="Alquiler de coches en Mallorca, Ibiza, Menorca...islas Baleares">Islas Baleares</a></li>
+              </ul>
+            </li>
+            <li><a href="ES/action/fleetview" title="Flota de coches de rent a car en Canarias">Flota de coches</a></li>
+            <li><a href="ES/action/offerlist" title="Ofertas de coches de alquiler en Canarias">Ofertas</a></li>
+            <li><a href="javascript:setaction('ES/action/booking1');">Reservas</a></li>
+            <li><a href="ES/view/info" title="Coches de alquiler en Lanzarote">Info</a></li>
+            <li><a href="ES/view/contacto" title="Contacto rent a car Canarias">Contacto</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://www.cicar.com/ES/action/startsession"><span class="glyphicon glyphicon-user"></span> Clientes</a></li>
+
+            <li class="hidden-xs"><a href="tel:928822900" style="margin:0; padding:0"><button class="btn btn-inverse" style="margin-top:8px; font-size:110%"><span class="glyphicon glyphicon-earphone"></span><strong> 928 822 900</strong></button></a></li>
+            <li class="dropdown hidden-xs">
+              <a href="es" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="sprite sprite-bandera_espana"></i></a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li class="dropdown-header"><a href="es" title="Alquiler coches Canarias"><i class="sprite sprite-bandera_espana"></i> Español</a></li>
+                <li class="dropdown-header"><a href="en" title="Canary Islands Car Hire"><i class="sprite sprite-bandera_ingles"></i> English</a></li>
+                <li class="dropdown-header"><a href="de" title="Mietwagen Kanarischen Inslen"><i class="sprite sprite-bandera_aleman"></i> Deutsch</a></li>
+                <li class="dropdown-header"><a href="it" title="Noleggio Auto Isole Canarie"><i class="sprite sprite-bandera_italia"></i> Italiano</a></li>
+                <li class="dropdown-header"><a href="fr" title="Location de voitures Îles Canaries"><i class="sprite sprite-bandera_francia"></i> Français</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        
+	 <div class="container-fluid">
+
+        <div class="row row-eq-height">
+        	<div class="col-md-6 col-xs-12" style="background-color:#0c1a1e; color:#666; min-height: 330px;">
+            	<div class="row">
+                	<div class="col-md-10 col-md-offset-1">
+                    	<br />
+                        <div class="hidden-md hidden-lg">
+                            <img src="/html/images/alquiler-coches-mobile.jpg" class="img-responsive" alt="Alquiler de coches en las Islas Canarias"/>
+                        </div>
+                        <h1 class="h1index">Alquiler de coches en las <div class="h1indexislas">Islas Canarias</div></h1>
+                        <a href="javascript:setaction('ES/action/booking1');" class="btn btn-danger btn-lg" style="margin-top:10px" title="Reservar coche de alquiler en Lanzarote, Tenerife, Fuerteventura...">RESERVAR COCHE</a>
+                        <p style="font-weight:normal; color:#ccc; padding-top:10px" class="hidden-xs">Con oficinas en todos los aeropuertos, puertos y zonas turísticas (*). Recorra las islas con nosotros, y benefíciese de la <b>AudioGuía</b>, <strong>seguro 100% todo riesgo sin franquicia</strong>, conductor adicional gratis, kilometraje ilimitado...</p>
+                        <p class="hidden-xs"><br /><small><small>* Coches de alquiler en Lanzarote, alquiler de coches en Fuerteventura, rent a car en Gran Canaria, alquiler coches en Tenerife, La Palma, La Gomera, El Hierro...alquiler de coches en todas las Islas Canarias</small></small></p>
+                        <div class="hidden-md hidden-lg"><br><ul class="listaCheckAzul panel" style="padding:10px 0 10px 10px; font-weight:bolder;"><li><u>Seguro 100% todo riesgo</u>, sin franquicia</li><li>Kilometraje ilimitado</li><li>Sillas y elevadores gratis</li><li><a href="ES/view/audioguias_canarias"><u>Audioguía</u> de las Islas Canarias</a></li></ul></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 hidden-xs hidden-sm" style="background:url(/html/images/cicar2-es.jpg) no-repeat #0c1a1e">
+            </div>
+            
+        </div>
+        
+        <div class="row line-shadow-2"></div>
+        
+        <div class="row zonafecha">
+      		<div class="col-md-6 col-md-offset-4">
+                <h2>RESERVAR COCHE DE ALQUILER</h2>
+                <br />
+                
+                <form name="presupuestarForm" id="presupuestarForm" method="post" action="ES/action/booking1">
+                
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group seleccionzona">
+                                  <label class="control-label" for="inputSuccess2">Oficina de recogida del vehículo </label>
+                                  
+                                  <select class="form-control" id="ofient" name="reservaOficinaEnt">
+                                  </select>
+                                  
+                                  <div class="checkbox paso2" style="display:none">
+                                    <label>
+                                      <input type="checkbox" checked="checked" class="mismaoficina"> Devolución en la misma oficina 
+                                    </label>
+                                  </div>
+                                  
+                                  <div class="checkbox paso2" id="entregaenhotel" style="display:none">
+                                    <label>
+                                      <input type="checkbox" class="checkentregaenhotel" name="entregaHotelEnt" id="entregaHotelEnt"> Recogida<span class="entregadevolucionhotel"> / devolucion</span> en el hotel <a href="" class="itempopover" data-toggle="popover" data-trigger="focus" title="Recogida/devolución del vehículo" data-content="Debe seleccionar una oficina de recogida/devolución, independientemente de que seleccione recogida/devolución en el hotel, ya que dicha oficina gestionará la recogida/devolución en el hotel"><span class="badge">?</span></a>
+                                    </label>
+                                  </div>
+                                  
+                                  <label class="control-label" for="inputSuccess2"><br />Oficina de devolución </label>
+                                  <select class="form-control" id="ofirec" style="display:none">
+                                  </select>
+                                  
+                                  <div class="checkbox" id="devolucionenhotel">
+                                    <label>
+                                      <input type="checkbox" class="checkdevolucionenhotel" name="entregaHotelDev" id="entregaHotelDev"> Devolución en el hotel <a href="" class="itempopover" data-toggle="popover" data-trigger="focus" title="Recogida/devolución del vehículo" data-content="Debe seleccionar una oficina de recogida/devolución, independientemente de que seleccione recogida/devolución en el hotel, ya que dicha oficina gestionará la recogida/devolución en el hotel"><span class="badge">?</span></a>
+                                    </label>
+                                  </div>
+                                  
+                                  <select id="tempSelect" style="display:none"></select>
+                              
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <br />
+                        
+                        <div class="collapsefechas collapse">
+                
+                            <div class="row seleccionzona paso3">
+                              <div class="col-xs-12">
+                                <div class="btn-group">
+                                    <label>Fecha / hora de recogida</label><br />
+                                    <button type="button" class="btn btn-lg btn-default calendar selectorini" id="fhini" style="line-height: auto !important"></button>
+                                    <select id="horaminutoini" name="horaminutoini" class="btn btn-lg btn-default" style="border-radius:0">
+                                    </select>
+                                </div>
+                                
+                                <span class="glyphicon glyphicon-arrow-right btn-group hidden-md hidden-xs" style="margin:20px 20px 0 20px; font-size:30px;line-height:20px" aria-hidden="true"></span>
+                                
+                                <div class="btn-group">
+                                    <label>Fecha / hora de devolución</label><br />
+                                    <button type="button" class="btn btn-lg btn-default calendar selectorfin" id="fhfin"></button>
+                                    <select id="horaminutofin" name="horaminutofin" class="btn btn-lg btn-default" style="border-radius:0">
+                                    </select>
+                                </div>
+                                
+                                <br /><br /><br />
+                                <div id="infoCheckRules" class="alert alert-warning"></div>
+                                <br />
+                                <a href="" class="btn btn-lg btn-danger" id="buscarCoche" title="Buscar coches de alquiler en Canarias">BUSCAR COCHE DE ALQUILER</a>
+                                <br /><br />
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <input type="hidden" value="" id="fecha_ini" name="fecha_ini"/>
+				    <input type="hidden" value="" id="fecha_fin" name="fecha_fin"/>
+                    <input type="hidden" value="" id="fromhome" name="fromhome" /> 
+                    
+                    <input type="hidden" name="zona" id="zona" value="" />
+                    <input type="hidden" name="zonadev" id="zonadev" value="" />
+                    <input type="hidden" name="reservaIsla" id="reservaIsla" value=""/>
+                    <input type="hidden" name="reservaOficinaDev" id="reservaOficinaDev" value=""/>
+                    <input type="hidden" name="fechaIni" id="fechaIni" value=""/>
+                    <input type="hidden" name="horaIni" id="horaIni" value=""/>
+                    <input type="hidden" name="minutoIni" id="minutoIni" value=""/>
+                    <input type="hidden" name="fechaFin" id="fechaFin" value=""/>
+                    <input type="hidden" name="horaFin" id="horaFin" value=""/>
+                    <input type="hidden" name="minutoFin" id="minutoFin" value=""/>
+                    
+                    
+            	
+                </form>    
+                
+      		</div>
+        </div>
+        
+        <div class="cookielopd">
+			<script type="text/javascript">
+                function createCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}function readCookie(a){for(var b=a+"=",c=document.cookie.split(";"),d=0;d<c.length;d++){for(var e=c[d];" "==e.charAt(0);)e=e.substring(1,e.length);if(0==e.indexOf(b))return e.substring(b.length,e.length)}return null}var x=readCookie("cookielopd");(("denied"==x)||("checked"==x))?document.getElementsByClassName("cookielopd")[0].style.visibility="hidden":(document.getElementsByClassName("cookielopd")[0].style.visibility="visible");
+            </script>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+              Utilizamos cookies propias y de terceros para mejorar la experiencia de usuario, obtener información estadística sobre hábitos de navegación y ofrecer anuncios personalizados. Puedes aceptar o rechazar las cookies de terceros en nuestra <a href="ES/view/cookies" onclick="window.open(this.href, '_blank', 'width=1050,height=575,scrollbars=yes'); return false;">política de cookies</a>. <a href="" onclick="javascript:createCookie('cookielopd','denied',365); document.getElementsByClassName('cookielopd')[0].style.visibility = 'hidden'; localStorage.option = 'none'; runConsent(); return false;" class="btn btn-default denegarCookie">Denegar</a> <a href="" onclick="javascript:createCookie('cookielopd','checked',365); document.getElementsByClassName('cookielopd')[0].style.visibility = 'hidden'; localStorage.option = 'all'; runConsent(); return false;" class="btn btn-info aceptarCookie">Aceptar</a>
+            </div>
+        </div>        
+                
+
+		<div class="row line-shadow"></div>
+        
+        <div class="row" style="padding-top:30px; padding-bottom:100px; background-color:#fff;" >
+        	<div class="col-xs-12">
+            	<div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="hidden" style="display: none">
+                        <div class="columnaBanner"><a href="ES/action/offerView/nuevo-opel-astra"><img src="../html/images/oferta-alquiler-coches-tenerife-astra-0.jpg" width="245" height="150" /><span class="textoBreve"> ¿Quiere comprar el coche que alquiló?</span><img src="/html/images/flechitasAmarillas.jpg" class="flechitaAmarilla" width="15" height="10" /></a></div><div class="separacionColumnaBlanca"></div><div class="columnaBanner"><a href="ES/action/offerView/oferta-fiat-500c"><img src="../html/images/oferta-alquiler-coches-tenerife-zafira-0.jpg" width="245" height="150" /><span class="textoBreve"> Fiat 500 C</span><img src="/html/images/flechitasAmarillas.jpg" class="flechitaAmarilla" width="15" height="10" /></a></div><div class="separacionColumnaCentral"></div><div class="columnaBanner"><a href="ES/action/offerView/seat-ibiza-cesar-manrique"><img src="../html/images/seat-ibiza-cesar-manrique-es-0.jpg" width="245" height="150" /><span class="textoBreve"> Conduce un César Manrique -Art Car-</span><img src="/html/images/flechitasAmarillas.jpg" class="flechitaAmarilla" width="15" height="10" /></a></div><div class="separacionColumnaBlanca"></div><div class="columnaBanner"><a href="ES/action/offerView/oferta-nuevo-opel-corsa"><img src="../html/images/oferta-alquiler-coches-lanzarote-corsa-0.jpg" width="245" height="150" /><span class="textoBreve"> Ahora Opel Corsa con iLink a precio inmejorable</span><img src="/html/images/flechitasAmarillas.jpg" class="flechitaAmarilla" width="15" height="10" /></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row line-shadow hidden-xs"></div>
+        	
+		<div class="row hidden-xs">
+        	<div class="col-md-12 tirador" >
+            	<div class="row">
+                	<div class="col-md-6 col-md-offset-3 text-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row line-shadow-2"></div>
+        
+        
+       	<div class="row seccionblanca" >
+        	<div class="col-md-12">
+            	<div class="row">
+                	<div class="col-md-6 col-md-offset-3">
+                    	<h2>Su compañía de coches de alquiler en Canarias</h2>
+                    	<p>Canary Islands Car (CICAR) ofrece la más amplia red de alquiler de vehículos en las Islas Canarias. El Grupo cuenta con una <strong>flota de más de 15000 vehículos</strong> y crea más de 1100 empleos directos.</p>
+                        <p>Podemos decir <span class="edad"></span> años después, que estamos orgullosos del trabajo realizado y agradecemos a nuestros clientes que nos hagan mejorar diariamente.</p>
+                        <p><a href="ES/view/info" title="Amplia red de vehiculos de alquiler en las Islas Canarias"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span> <span class="edad"></span> años de experiencia</a></p>
+                        <p style="padding-bottom:40px"></p>
+                    </div>
+                	<div class="col-md-8 col-md-offset-2 hidden-xs hidden-sm">
+                    	<img src="/html/images/variedad-coches-alquiler.jpg" class="img-responsive" alt="Rent a car en las Islas Canarias"/>
+                    </div>
+                </div>
+            </div>
+        	
+        </div>
+        
+       <div class="row line-shadow-2"></div>
+       
+       <div class="row row-eq-height">
+        	<div class="col-xs-12 col-md-6" style="background-color:#fbfbfb; min-height: 400px;">
+            	<div class="row">
+                	<div class="col-md-8 col-md-offset-2">
+                    	<h2>Una flota moderna y variada</h2>
+                        <p style="font-weight:normal; padding-top:10px;">Una moderna <a href="ES/action/fleetview" title="Flota de coches de alquiler en Tenerife, Gran Canaria, Lanzarote, Fuerteventura...">flota de vehículos</a> nuevos, a la vez que una extensa red de áreas de servicio, aseguran a nuestros clientes una confortable y segura conducción.</p><br>
+  <p style="font-weight:normal;">Nuestros clientes pueden elegir entre una amplia gama de prestigiosas marcas y modelos de vehículos. La <a href="ES/view/calidad" title="Calidad y servicio en rent a car">seguridad y la satisfacción</a> son nuestra prioridad y el mejor reclamo publicitario de CICAR.</p>
+  <p style="font-weight:normal; padding-top:10px;">Además, ofrecemos <a href="ES/view/coches-alquiler-electricos" title="Alquiler de coches eléctricos e híbridos en Tenerife, Gran Canaria, Lanzarote, Fuerteventura...">alquiler de coches eléctricos e híbridos</a> en nuestra gama de vehículos.</p>
+  <p style="font-weight:normal; padding-top:10px;">También disponemos de <a href="ES/view/vehiculosAdaptados" title="Alquiler de coches adaptados PMR en Tenerife, Gran Canaria, Lanzarote, Fuerteventura...">vehículos adaptados</a> a personas con movilidad reducida (PMR).</p>
+                        <a href="ES/action/fleetview" class="btn btn-lg btn-info" title="Consultar flota de coches de alquiler">VER COCHES DE ALQUILER</a>
+                        <p><small><small><br>...coches eléctricos, híbridos, económicos, descapotables, 4x4, ejecutivo, furgonetas, etc.</small></small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 hidden-sm hidden-xs" style="background:url(/html/images/opel-adam.jpg) center left; background-size: cover;">
+            
+            </div>
+        </div>
+        
+        
+        
+        <div class="row seccionblanca" style="border-top:1px solid #ddd;" >
+        	<div class="col-md-12">
+            	<div class="row">
+                	<div class="col-lg-6 col-sm-6 separador-horizontal hidden-xs">
+                    	<div class="text-center">
+	                    	<img src="/html/images/oficinas-alquiler-coches-canarias.jpg" class="img-responsive" alt="Oficinas de alquiler de coches en Canarias"/>
+                            <br />
+                        </div>
+                    </div>
+                	<div class="col-lg-3 col-lg-offset-1 col-sm-6 ">
+                        <h2>Oficinas en Canarias</h2>
+                        <br />
+                        <p style="font-weight:normal">Con oficinas en todos los aeropuertos, puertos y zonas turísticas. Recorra las islas con nosotros, y benefíciese de la <b>AudioGuía</b>, seguro 100% todo riesgo sin franquicia, conductor adiciónal gratis, kilometraje ilimitado...</p>
+                        <br />
+                        <a href="ES/canarias" title="Oficinas de rent a car en Lanzarote, Fuerteventura, Gran Canaria, Tenerife, y resto de Canarias" class="btn btn-lg btn-default">OFICINAS DE ALQUILER</a>
+                        <br /><br />
+                        
+                    </div>
+                </div>
+            </div>
+        	
+        </div>
+        
+        
+        <div class="row line-shadow-2"></div>
+        
+        <div class="row" id="ventajas">
+        	<div class="col-md-12">
+            	<div class="row">
+                	<div class="col-md-6 text-center">
+                    	<h2>CICAR: ventajas y servicios gratuitos</h2>
+                      	<p class="hidden-xs">¿Sabías que CICAR ha incluido todos los servicios, seguros, tasas y muchos más en las tarifas?. Evita sorpresas desagradables...</p>
+                        <br>
+                        <div class="col-md-8 col-md-offset-1 col-sm-6 col-sm-offset-2">
+                          <ul style="text-align: left; font-size:160%" class="dl-horizontal">
+                            <li><a href="ES/view/audioguias_canarias" title="Audioguía de las Islas Canarias, gratis con su alquiler de coches">Audioguía de las Islas Canarias <small><small><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></small></small></a></li>
+                            <li>Seguro 100% a todo riesgo SIN franquicia</li>
+                            <li>Pago en destino y cancelación gratuita</li>
+                            <li>Kilometraje ilimitado</li>
+                            <li>Conductor adicional gratis</li>
+                            <li>Sillas y elevadores incluidos</li>
+                            <li>Recogida/devolución en hotel (*)</li>
+                            <li>Mapas gratuitos</li>
+                            <br>
+                          </ul>
+                        </div>
+                        <div class="col-xs-12">
+                          <a href="ES/view/condiciones" title="Condiciones de rent a car con Cicar"><small><small>(*) Consulte las condiciones de alquiler de coches</small></small></a>
+                        </div>
+                    </div>
+                	<div class="col-md-6 text-center">
+                    	<h2>¡Ahora en Península y Baleares!</h2>
+                    	<p class="col-md-6 col-md-offset-3">Disfrute del alquiler de vehículos con la garantía de CICAR, también en <strong>Península y Baleares</strong>.</p>
+                        <img src="html/images/alquiler-coches-peninsula-baleares.png" alt="Alquiler de coches en España peninsular y las Islas Baleares" class="img-responsive col-md-4 col-md-offset-4 hidden-xs hidden-sm"/>
+                      	<p class="col-md-6 col-md-offset-3">En Cicar le ofrecemos la posibilidad de <strong>alquiler coches</strong> en ciudades de la península, como <strong><a href="ES/alquiler-coches-madrid" title="Alquiler de coches en Madrid">Madrid</a>, <a href="ES/alquiler-coches-barcelona" title="Alquiler de coches en Barcelona">Barcelona</a>, <a href="ES/alquiler-coches-alicante" title="Alquiler de coches en Alicante">Alicante</a>, <a href="ES/alquiler-coches-sevilla" title="Alquiler de coches en Sevilla">Sevilla</a>, <a href="ES/alquiler-coches-malaga" title="Alquiler de coches en Málaga">Málaga</a></strong>, así como en las islas Baleares, <strong><a href="ES/alquiler-coches-mallorca" title="Alquiler de coches en Mallorca">Mallorca</a>, <a href="ES/alquiler-coches-ibiza" title="Alquiler de coches en Ibiza">Ibiza</a> y <a href="ES/alquiler-coches-menorca" title="Alquiler de coches en Menorca">Menorca</a></strong></p>
+                    	<span class="clearfix"></span><br><br>
+                    	<a href="ES/view/alquiler-coches-peninsula-baleares" title="Rent a car en Madrid, Barcelona, Alicante, Málaga, Mallorca, Ibiza..." class="btn btn-inverse">Más info <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                	</div>
+                
+                	
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-md-4" style="padding:30px 30px 0 30px">
+                <h3>Nuestras Apps</h3>
+                <p style="font-weight:normal; padding-top:10px;">Descargue ya nuestras aplicaciones. Tiene disponibles la <strong>App para alquiler de coches</strong>, así como la <strong>Audioguía de las Islas Canarias</strong> que le permitirá recorrer las islas escuchando las locuciones de los puntos de interés de cada lugar.</p><br>
+                <p>
+                	<a href="ES/view/app_cicar" title="Ver App Cicar"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span><strong>App CICAR</strong> para alquiler de coches</a><br />
+                	<a href="ES/view/audioguias_canarias" title="Ver App Audioguía"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span><strong>App Audioguía</strong> de Canarias</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4" style="padding:30px">
+            	<a href="ES/view/app_cicar"><img src="html/images/appstore-cicarapp.png" class="img-responsive" /></a>
+                <br />
+                <p>Descargue la <strong>APP Cicar</strong> para Android / iOs:</p>
+                <a href="https://apps.apple.com/es/app/cicar/id6443504013" target="_blank"><img src="html/images/appstore.png"/></a>
+                <a href="https://play.google.com/store/apps/details?id=com.cicar.cicar" target="_blank"><img src="html/images/google-play.png"/></a>
+            </div>
+            <div class="col-xs-12 col-md-4" style="padding:30px">
+            	<a href="ES/view/audioguias_canarias"><img src="html/images/appstore-audioguia.png" class="img-responsive" /></a>
+                <br />
+                <p>Descargue la <strong>Audioguía de Canarias</strong> para Android / iOs:</p>
+                <a href="https://apps.apple.com/es/app/id1502455919" target="_blank"><img src="html/images/appstore.png"/></a>
+                <a href="https://play.google.com/store/apps/details?id=com.cicar.audioguia&gl=ES" target="_blank"><img src="html/images/google-play.png"/></a>
+                <br /><br />
+            </div>
+        </div>
+        
+        <div class="row line-shadow-2"></div>
+        
+        <div class="row row-eq-height">
+        	<div class="col-md-4 hidden-sm hidden-xs" style="background:url(/html/images/coches-de-segunda-mano-cicarocasion.jpg) right top">
+            </div>
+            <div class="col-xs-12 col-md-8" style="background-color:#fbfbfb; min-height: 400px;">
+            	<div class="row">
+                	<div class="col-md-8 col-md-offset-2">
+                    	<h2>¿Quiere comprar un coche de ocasión?</h2>
+                        <p style="font-weight:normal; padding-top:10px;">En <a href="https://www.cicarocasion.com" title="Cicar Ocasión, coches de ocasión, segunda mano,..." target="_blank">Cicar Ocasión</a> le ofrecemos la posibilidad de adquirir cualquiera de los coches de ocasión de nuestra flota de vehículos, en condiciones de garantía y calidad inmejorables.</p><br>
+  <p style="font-weight:normal;">CICAR Ocasión le ofrece <strong>1 año de garantía</strong> en todos nuestros coches de segunda mano, y la preparación de nuestros vehículos de ocasión se realiza en <strong>talleres especializados y mecánicos oficiales de la marca</strong> del coche, garantizando así una correcta reparación del mismo en caso de algún problema, y utilizando repuestos originales.</p>
+  <p style="font-weight:normal; padding-top:10px;">Su satisfacción está garantizada gracias a los niveles calidad, servicio al cliente y experiencia del personal.</p>
+                        <a href="https://www.cicarocasion.com" class="btn btn-lg btn-info" title="Consultar coches de segunda mano" target="_blank">VER COCHES DE OCASIÓN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row line-shadow-2"></div>
+        
+        <div class="row secciongris" >
+        	<div class="col-md-10 col-md-offset-1">
+                <div class="row well text-center">
+                
+                	<div class="col-md-12  text-center">
+                    	<h2 style="text-align: center">OPINIONES DE NUESTROS CLIENTES</h2>
+                        <p class="hidden-xs">Últimas opiniones de nuestros clientes sobre el servicio de alquiler de coches con Cicar, realizadas por la empresa independiente <a href="https://es.trustpilot.com/review/cicar.com/es" target="_blank" title="Opiniones de nuestros clientes">Trustpilot</a>.</p>
+                        <br><br>
+                        
+						<div class="trustpilot-widget" data-locale="es-ES" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="51b9e58000006400053b2afa" data-style-height="300px" data-style-width="100%" data-theme="light" data-stars="4,5"> 
+                        	<a href="https://es.trustpilot.com/review/cicar.com/es" target="_blank">Trustpilot</a> 
+                        </div>
+                        <br />
+                    </div>
+
+					<div class="col-md-12  text-center">
+                        <h2>PREMIOS</h2>
+                        <p>Algunos premios recibidos en nuestra trayectoria empresarial. <a href="ES/view/premios" title="Información de premios como empresa de Rent a Car" >Más info <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a></p>
+                        <br /><br />
+                        <div class="col-xs-6 col-md-3"><a href="ES/view/premios" title="Premio mejor red de expansión 2009" ><img src="/html/images/premioislalanzarote2007_th.png" alt="Premio mejor red de expansión 2009" class="img-responsive"/></a></div>
+                        <div class="col-xs-6 col-md-3"><a href="ES/view/premios" title="Premio Excelencia Turística 2008" ><img src="/html/images/regionalizacion_th.png" alt="Premio Excelencia Turística 2008" class="img-responsive"/></a></div>
+                        <div class="col-xs-6 col-md-3"><a href="ES/view/premios" title="Premio del turismo -Isla de Lanzarote-" ><img src="/html/images/excelencia-turistica_th.png" alt="Premio del turismo -Isla de Lanzarote-" class="img-responsive"/></a></div>
+                        <div class="col-xs-6 col-md-3"><a href="ES/view/premios" title="Medalla de Oro del Gobierno de Canarias 2014" ><img src="/html/images/medalla-oro_th.png" alt="Medalla de Oro del Gobierno de Canarias 2014" class="img-responsive"/></a></div>
+                    </div>
+                    
+                    <div class="col-md-12 text-center">
+                    	<br /><br />
+                        <h2>GARANTÍA DE CALIDAD</h2>
+                        <p>Certificados de calidad que avalan nuestro servicio. <a href="ES/view/calidad" title="Ver información de nuestros Certificados de Calidad en Rent a Car" >Más info <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a></p>
+                        <br /><br />
+                        <div class="col-xs-6 col-md-3"><a href="ES/view/calidad" title="Certificado Aenor de alquiler de coches" ><img src="/html/images/aenor.png" alt="Certificado Aenor de alquiler de coches" class="img-responsive" /></a></div>
+                        <div class="col-xs-6 col-md-3"><a href="ES/view/calidad" title="Certificado seguridad laboral" ><img src="/html/images/logo-ohsas.png" alt="Certificado seguridad laboral" class="img-responsive" /></a></div>
+                        <div class="col-xs-6 col-md-3"><a href="ES/view/calidad" title="Certificado gestión medioambiental en el rent a car" ><img src="/html/images/logo-accm.png" alt="Certificado gestión medioambiental en el rent a car" class="img-responsive"/></a></div>
+                        <div class="col-xs-6 col-md-3"><a href="ES/view/calidad" title="Certificado iQnet coches de alquiler" ><img src="/html/images/iqnet.png" alt="Certificado iQnet coches de alquiler" class="img-responsive"/></a></div>
+                    </div>
+                    
+                    <div class="col-md-12 text-center">
+                    	<br /><br />
+                        <h2>ACTUALIDAD</h2>
+                        <p>Noticias relacionadas con CICAR. <a href="https://www.cicar.com/es/noticias" title="Ver noticias relacionadas con el alquiler de coches Cicar" >Ver noticias de CICAR <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a></p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="row line-shadow-2"></div>
+        
+     </div>
+        
+
+
+
+	<footer>
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-2 col-sm-6 paddingtop-bottom">
+            <h6 class="heading7">MENU <br />PRINCIPAL</h6>
+            <ul class="footer-ul">
+              <li><a href="ES" title="Alquiler de coches Tenerife, Gran Canaria, Lanzarote, Fuerteventura, ... Canarias"> Inicio</a></li>
+              <li><a href="ES/Canarias" title="Oficinas de rent a car"> Oficinas de alquiler</a></li>
+              <li><a href="ES/action/fleetview" title="Flota de coches de alquiler"> Flota de coches</a></li>
+              <li><a href="ES/action/offerlist" title="Ofertas de alquiler de coches"> Ofertas</a></li>
+              <li><a href="ES/action/booking1" title="Reservar coche de alquiler en Canarias"> Reservas</a></li>
+              <li><a href="ES/view/info" title="Información corporativa de Cicar - Alquiler de coches - Rent a Car"> Información corporativa</a></li>
+              <li><a href="ES/view/contacto" title="Contactar para alquilar un coche"> Contacto</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 paddingtop-bottom">
+            <h6 class="heading7">ALQUILER COCHES<br />EN CANARIAS</h6>
+            <div class="footer-ul">
+            	<li><a href="ES/alquiler-coches-lanzarote" title="Coches de alquiler en Lanzarote"> Alquiler de coches en Lanzarote</a></li>
+                <li><a href="ES/alquiler-coches-fuerteventura" title="Coches de alquiler en Fuerteventura"> Alquiler de coches en Fuerteventura</a></li>
+                <li><a href="ES/alquiler-coches-gran-canaria" title="Coches de alquiler en Gran Canaria"> Alquiler de coches en Gran Canaria</a></li>
+                <li><a href="ES/alquiler-coches-tenerife" title="Coches de alquiler en Tenerife"> Alquiler de coches en Tenerife</a></li>
+                <li><a href="ES/alquiler-coches-la-gomera" title="Coches de alquiler en La Gomera"> Alquiler de coches en La Gomera</a></li>
+                <li><a href="ES/alquiler-coches-el-hierro" title="Coches de alquiler en El Hierro"> Alquiler de coches en El Hierro</a></li>
+                <li><a href="ES/alquiler-coches-la-palma" title="Coches de alquiler en La Palma"> Alquiler de coches en La Palma</a></li>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 paddingtop-bottom">
+            <div class="fb-page" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <div class="fb-xfbml-parse-ignore">
+                <blockquote class="post">
+                	<p>Calidad Certificada</p>
+                    <a href="ES/view/calidad" title="Certificado de calidad Aenor en alquiler de coches">Certificado Aenor</a>
+                    <a href="ES/view/calidad" title="Certificado IQNet de rent a car">Certificado IQNet</a>
+                    
+                    <p class="posttitle" title="">Legal</p>
+                    <a href="ES/view/legal" title="Información legal">Información legal</a>
+                    <a href="ES/view/privacidad" title="Política de protección de datos personales">Protección de datos</a>
+                    <a href="ES/view/condiciones" title="Condiciones de alquiler de coches en Cicar">Condiciones</a>
+                    
+                    <p class="posttitle">Premios</p>
+                    <a href="ES/view/premios" title="Medalla de Oro 2014 del Gobierno de Canarias">Medalla Oro Gobierno de Canarias</a>
+                    <a href="ES/view/premios" title="Premio a la Excelencia Turística 2008">Excelencia turística</a>
+                    <a href="ES/view/premios" title="Premio del turismo -Isla de Lanzarote-">Premio Turismo "Isla de Lanzarote"</a>
+                    
+                    <p class="posttitle">Links</p>
+                    <a href="ES/view/links" title="Enlaces relacionados con el sector de rent a car">Enlaces de interés</a>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-6 footerleft ">
+            <div class="logofooter"><img src="/html/images/logo-bn.png"/></div>
+            <p>Alquiler de coches en Canarias, en todos los aeropuertos, puertos y principales zonas turísticas de las islas.</p>
+            <p><i class="glyphicon glyphicon-map-marker"></i> Avda. Mamerto Cabrera, s/n<br /><i class="glyphicon"></i>35509 - San Bartolomé<br /><i class="glyphicon"></i>Lanzarote - Islas Canarias</p>
+            <p><i class="glyphicon glyphicon-earphone"></i> Reservas: <a href="tel:928822900">928 822 900</a></p>
+            <p><i class="glyphicon glyphicon-envelope"></i> E-mail : <a href="mailto:reservas@cicar.com">reservas@cicar.com</a></p>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+    
+    <div class="copyright">
+      <div class="container">
+        <div class="col-md-8">
+          <p>© 2018 - Todos los derechos reservados. &nbsp;&nbsp;<a href="ES/view/condiciones">Condiciones</a> - <a href="ES/view/legal">Información Legal y Transparencia</a> - <a href="ES/view/cookies" onclick="window.open(this.href, '_blank', 'width=1050,height=575,scrollbars=yes'); return false;">Cookies</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <!--
+    <script type="text/javascript" src="/html/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/html/js/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/html/js/daterangepicker.js"></script>
+    <script type="text/javascript" src="/html/js/selectize.js"></script>
+    <script type="text/javascript" src="/html/js/main.js"  ></script>  
+    -->
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/html/js/combined-sel-dat-mom.js"></script> 
+    <script type="text/javascript" src="/html/js/main.js"  ></script>
+    
+    <script type="text/javascript" language="JavaScript" >
+		var json = {"regiones":[{"codigo":"CAN","nombre":"Islas Canarias","oneway":"N","zonas":[{"codigo":"TFE","nombre":"Tenerife","subzonas":[{"codigo":"TFS","nombre":"Tenerife Sur","oficinas":[{"codigo":"T3","nombre":"Tenerife Sur Aeropuerto"},{"codigo":"T4","nombre":"Los Cristianos"},{"codigo":"T7","nombre":"Los Gigantes"},{"codigo":"T3B","nombre":"Tenerife Sur Aeropuerto (insulares)"},{"codigo":"T11","nombre":"Costa Adeje"}]},{"codigo":"TFN","nombre":"Tenerife Norte","oficinas":[{"codigo":"T2","nombre":"Tenerife Norte Aeropuerto"},{"codigo":"T5","nombre":"Puerto de la Cruz"}]},{"codigo":"SCR","nombre":"Santa Cruz de Tenerife","oficinas":[{"codigo":"T8","nombre":"Muelle Ribera"},{"codigo":"T10","nombre":"Puerto Cruceros de Tenerife"}]}]},{"codigo":"ACE","nombre":"Lanzarote","subzonas":[{"codigo":"AER","nombre":"Aeropuerto de Lanzarote","oficinas":[{"codigo":"L1","nombre":"Lanzarote Aeropuerto T1"},{"codigo":"L3","nombre":"Lanzarote Aeropuerto T2 (insulares)"}]},{"codigo":"CAR","nombre":"Puerto del Carmen","oficinas":[{"codigo":"1H","nombre":"Puerto del Carmen"}]},{"codigo":"CTG","nombre":"Costa Teguise","oficinas":[{"codigo":"2W","nombre":"Costa Teguise"}]},{"codigo":"PBL","nombre":"Playa Blanca","oficinas":[{"codigo":"L2","nombre":"Muelle Playa Blanca"},{"codigo":"3K","nombre":"Playa Blanca"}]},{"codigo":"ARR","nombre":"Arrecife","oficinas":[{"codigo":"4F","nombre":"Arrecife"},{"codigo":"L4","nombre":"Puerto Cruceros Arrecife"},{"codigo":"L6","nombre":"Marina Lanzarote"}]},{"codigo":"PCL","nombre":"Puerto Calero","oficinas":[{"codigo":"6A","nombre":"Puerto Calero"}]},{"codigo":"LSN","nombre":"La Santa","oficinas":[{"codigo":"7A","nombre":"Club La Santa"}]}]},{"codigo":"FUE","nombre":"Fuerteventura","subzonas":[{"codigo":"FAE","nombre":"Aeropuerto Fuerteventura","oficinas":[{"codigo":"F3","nombre":"Fuerteventura Aeropuerto"}]},{"codigo":"COR","nombre":"Corralejo","oficinas":[{"codigo":"F1","nombre":"Corralejo"},{"codigo":"F7","nombre":"Muelle Corralejo"}]},{"codigo":"JAN","nombre":"Jandía","oficinas":[{"codigo":"F5","nombre":"Jandía"},{"codigo":"F8","nombre":"Muelle de Jandía"}]},{"codigo":"CAS","nombre":"Caleta Fuste","oficinas":[{"codigo":"F4","nombre":"Caleta Fuste"}]},{"codigo":"GTJ","nombre":"Gran Tarajal","oficinas":[{"codigo":"F9","nombre":"Las Playitas"}]},{"codigo":"CCA","nombre":"Costa Calma","oficinas":[{"codigo":"F6","nombre":"Costa Calma"}]},{"codigo":"ROS","nombre":"Puerto del Rosario","oficinas":[{"codigo":"FA","nombre":"Muelle Cruceros Pto Rosario"}]}]},{"codigo":"LPA","nombre":"Gran Canaria","subzonas":[{"codigo":"LAE","nombre":"Aeropuerto Gran Canaria","oficinas":[{"codigo":"G3","nombre":"Gran Canaria Aeropuerto (internacional)"},{"codigo":"G8","nombre":"Gran Canaria Aeropuerto"}]},{"codigo":"GCS","nombre":"Maspalomas","oficinas":[{"codigo":"G4","nombre":"Playa del Ingles"},{"codigo":"G10","nombre":"Anfi del Mar"},{"codigo":"G11","nombre":"Mogan Mall"}]},{"codigo":"AGA","nombre":"Agaete","oficinas":[{"codigo":"G6","nombre":"Muelle Agaete"}]},{"codigo":"LPA","nombre":"Las Palmas","oficinas":[{"codigo":"G1","nombre":"Las Palmas ciudad"},{"codigo":"G2","nombre":"Muelle Cruceros Las Palmas"},{"codigo":"G2B","nombre":"Muelle Naviera Armas"}]}]},{"codigo":"LPM","nombre":"La Palma","subzonas":[{"codigo":"PAE","nombre":"Aeropuerto La Palma","oficinas":[{"codigo":"P1","nombre":"Aeropuerto La Palma"}]},{"codigo":"SCP","nombre":"Santa Cruz de La Palma","oficinas":[{"codigo":"P2","nombre":"Muelle S/C de La Palma"},{"codigo":"P4","nombre":"Puerto Cruceros de La Palma"}]}]},{"codigo":"GOM","nombre":"La Gomera","subzonas":[{"codigo":"GOA","nombre":"Aeropuerto de La Gomera","oficinas":[{"codigo":"X1","nombre":"Aeropuerto de La Gomera"}]},{"codigo":"VGR","nombre":"Valle Gran Rey","oficinas":[{"codigo":"X3","nombre":"Muelle Valle Gran Rey"}]},{"codigo":"SSG","nombre":"San Sebastian de La Gomera","oficinas":[{"codigo":"X5","nombre":"Muelle San Sebastian"},{"codigo":"X6","nombre":"Puerto de cruceros de La Gomera"}]}]},{"codigo":"HIE","nombre":"El Hierro","subzonas":[{"codigo":"HAE","nombre":"Aeropuerto El Hierro","oficinas":[{"codigo":"H1","nombre":"Aeropuerto El Hierro"}]},{"codigo":"VAV","nombre":"Valverde","oficinas":[{"codigo":"H2","nombre":"Puerto Cruceros de El Hierro"}]}]}]},{"codigo":"PEN","nombre":"Península","oneway":"S","zonas":[{"codigo":"ALB","nombre":"Albacete","subzonas":[{"codigo":"ALB","nombre":"Albacete","oficinas":[{"codigo":"406","nombre":"AVE Estación Albacete"}]}]},{"codigo":"ALI","nombre":"Alicante","subzonas":[{"codigo":"ALI","nombre":"Alicante","oficinas":[{"codigo":"400","nombre":"Aeropuerto Alicante"},{"codigo":"410","nombre":"Estación Alicante"},{"codigo":"414","nombre":"Benidorm"}]}]},{"codigo":"ALM","nombre":"Almería","subzonas":[{"codigo":"ALM","nombre":"Almería","oficinas":[{"codigo":"534","nombre":"Avda. Monserrat, 141"}]}]},{"codigo":"AST","nombre":"Asturias","subzonas":[{"codigo":"AST","nombre":"Asturias","oficinas":[{"codigo":"608","nombre":"Aeropuerto Oviedo"},{"codigo":"606","nombre":"Oviedo"}]},{"codigo":"AVI","nombre":"Avilés","oficinas":[{"codigo":"621","nombre":"Est. Autobuses Avilés"}]},{"codigo":"GIJ","nombre":"Gijón","oficinas":[{"codigo":"607","nombre":"Estación Tren Gijón"}]}]},{"codigo":"AVI","nombre":"Avila","subzonas":[{"codigo":"AVL","nombre":"Avila"}]},{"codigo":"BAD","nombre":"Badajoz","subzonas":[{"codigo":"AVD","nombre":"Avda.de Elvas"},{"codigo":"MER","nombre":"Mérida","oficinas":[{"codigo":"511","nombre":"Mérida"}]}]},{"codigo":"BAR","nombre":"Barcelona","subzonas":[{"codigo":"BAR","nombre":"Barcelona","oficinas":[{"codigo":"201","nombre":"Aeropuerto Barcelona"},{"codigo":"226","nombre":"Estación Sants"},{"codigo":"198","nombre":"Sant Boi"},{"codigo":"199","nombre":"Glories"},{"codigo":"219","nombre":"Granollers"},{"codigo":"220","nombre":"Badalona"},{"codigo":"222","nombre":"Sabadell"},{"codigo":"224","nombre":"Mataró"},{"codigo":"225","nombre":"Terrassa"},{"codigo":"227","nombre":"Manresa"},{"codigo":"231","nombre":"La Rambla"}]}]},{"codigo":"BIL","nombre":"Bilbao","subzonas":[{"codigo":"BIL","nombre":"Bilbao","oficinas":[{"codigo":"307","nombre":"Aeropuerto Bilbao"},{"codigo":"300","nombre":"Estación de tren de Abando"},{"codigo":"321","nombre":"Baracaldo"}]}]},{"codigo":"BUR","nombre":"Burgos","subzonas":[{"codigo":"BUR","nombre":"Burgos","oficinas":[{"codigo":"313","nombre":"Estación Burgos"}]}]},{"codigo":"CAC","nombre":"Caceres","subzonas":[{"codigo":"CAC","nombre":"Caceres","oficinas":[{"codigo":"527","nombre":"Estación Caceres"}]}]},{"codigo":"CAD","nombre":"Cadiz","subzonas":[{"codigo":"ALG","nombre":"Algeciras","oficinas":[{"codigo":"531","nombre":"Puerto Algeciras"}]},{"codigo":"CAD","nombre":"Cadiz"},{"codigo":"JER","nombre":"Jerez","oficinas":[{"codigo":"514","nombre":"Aeropuerto Jerez"},{"codigo":"539","nombre":"Jerez"}]}]},{"codigo":"CAS","nombre":"Castellón","subzonas":[{"codigo":"CAL","nombre":"Castellón","oficinas":[{"codigo":"407","nombre":"Estación Castellón"}]}]},{"codigo":"CIU","nombre":"Ciudad Real","subzonas":[{"codigo":"CIU","nombre":"Ciudad Real","oficinas":[{"codigo":"113","nombre":"AVE Estación Ciudad Real"}]},{"codigo":"PUE","nombre":"Puerto Llano"}]},{"codigo":"COR","nombre":"Córdoba","subzonas":[{"codigo":"COA","nombre":"Córdoba","oficinas":[{"codigo":"530","nombre":"Ave Estación Córdoba"}]}]},{"codigo":"GER","nombre":"Gerona","subzonas":[{"codigo":"GER","nombre":"Gerona","oficinas":[{"codigo":"218","nombre":"Estación Gerona"}]}]},{"codigo":"GRA","nombre":"Granada","subzonas":[{"codigo":"GRA","nombre":"Granada","oficinas":[{"codigo":"502","nombre":"Serv. Aeropuerto Granada"},{"codigo":"503","nombre":"Granada"}]}]},{"codigo":"HUE","nombre":"Huelva","subzonas":[{"codigo":"HUE","nombre":"Huelva","oficinas":[{"codigo":"535","nombre":"Estación Huelva"}]}]},{"codigo":"JAE","nombre":"Jaen","subzonas":[{"codigo":"JAE","nombre":"Jaen","oficinas":[{"codigo":"516","nombre":"Ubeda"},{"codigo":"522","nombre":"Estación Jaen"}]}]},{"codigo":"LAC","nombre":"La Coruña","subzonas":[{"codigo":"FER","nombre":"Ferrol","oficinas":[{"codigo":"610","nombre":"Ferrol-Narón"}]},{"codigo":"LAC","nombre":"La Coruña","oficinas":[{"codigo":"601","nombre":"Aeropuerto La Coruña"},{"codigo":"600","nombre":"Estación La Coruña"}]},{"codigo":"STG","nombre":"Santiago","oficinas":[{"codigo":"605","nombre":"Aeropuerto Santiago"},{"codigo":"613","nombre":"Estación Santiago"}]}]},{"codigo":"LAR","nombre":"La Rioja","subzonas":[{"codigo":"LOG","nombre":"Logroño"}]},{"codigo":"LEO","nombre":"Leon","subzonas":[{"codigo":"LEO","nombre":"Leon","oficinas":[{"codigo":"306","nombre":"Pza. San Marcos"},{"codigo":"314","nombre":"Ponferrada Estación"}]}]},{"codigo":"LER","nombre":"Lérida","subzonas":[{"codigo":"LER","nombre":"Lérida","oficinas":[{"codigo":"229","nombre":"AVE Estación Lérida"}]}]},{"codigo":"LUG","nombre":"Lugo","subzonas":[{"codigo":"LUG","nombre":"Lugo"}]},{"codigo":"MAD","nombre":"Madrid","subzonas":[{"codigo":"MAD","nombre":"Madrid","oficinas":[{"codigo":"103","nombre":"Aeropuerto Madrid-Barajas"},{"codigo":"105","nombre":"Estación Chamartín"},{"codigo":"124","nombre":"AVE Estación Atocha"},{"codigo":"101","nombre":"Plaza de España"},{"codigo":"112","nombre":"Alcalá de Henares"},{"codigo":"114","nombre":"Pinto"}]}]},{"codigo":"MAL","nombre":"Malaga","subzonas":[{"codigo":"MAL","nombre":"Malaga","oficinas":[{"codigo":"507","nombre":"Aeropuerto Málaga (Bus)"},{"codigo":"506","nombre":"Avda. García Morato"},{"codigo":"521","nombre":"Marbella"},{"codigo":"524","nombre":"Marea Baja 11"},{"codigo":"526","nombre":"Ave Estación Malaga"}]},{"codigo":"ANT","nombre":"Antequera"}]},{"codigo":"MUR","nombre":"Murcia","subzonas":[{"codigo":"CAT","nombre":"Cartegena","oficinas":[{"codigo":"411","nombre":"Estación Cartegena"}]},{"codigo":"MUR","nombre":"Murcia","oficinas":[{"codigo":"404","nombre":"Ciudad Murcia"}]}]},{"codigo":"NAV","nombre":"Navarra","subzonas":[{"codigo":"PAM","nombre":"Pamplona","oficinas":[{"codigo":"302","nombre":"Estación Renfe Pamplona"}]}]},{"codigo":"ORE","nombre":"Orense","subzonas":[{"codigo":"ORE","nombre":"Orense","oficinas":[{"codigo":"619","nombre":"Estación Orense"}]}]},{"codigo":"PON","nombre":"Pontevedra","subzonas":[{"codigo":"PON","nombre":"Pontevedra","oficinas":[{"codigo":"620","nombre":"Estación Pontevedra"}]},{"codigo":"VIG","nombre":"Vigo","oficinas":[{"codigo":"603","nombre":"Aeropuerto Vigo"},{"codigo":"602","nombre":"Estación Tren Vigo"},{"codigo":"622","nombre":"Estación Urzaiz"}]}]},{"codigo":"SAL","nombre":"Salamanca","subzonas":[{"codigo":"SAL","nombre":"Salamanca","oficinas":[{"codigo":"312","nombre":"Pº de la Estación"}]}]},{"codigo":"SAN","nombre":"San Sebastian","subzonas":[{"codigo":"SSB","nombre":"San Sebastián","oficinas":[{"codigo":"301","nombre":"Gregorio Ordoñez"}]}]},{"codigo":"SEV","nombre":"Sevilla","subzonas":[{"codigo":"SEV","nombre":"Sevilla","oficinas":[{"codigo":"501","nombre":"Aeropuerto Sevilla"},{"codigo":"523","nombre":"AVE Estación Santa Justa"},{"codigo":"525","nombre":"Parque Ind. La Negrilla"},{"codigo":"532","nombre":"Mairena de Aljarafe"}]}]},{"codigo":"STD","nombre":"Santander","subzonas":[{"codigo":"STD","nombre":"Santander","oficinas":[{"codigo":"304","nombre":"Aeropuerto Santander"},{"codigo":"303","nombre":"Estación Santander"}]}]},{"codigo":"TAR","nombre":"Tarragona","subzonas":[{"codigo":"REU","nombre":"Reus","oficinas":[{"codigo":"215","nombre":"Estación Reus-Tarragona"}]},{"codigo":"TAR","nombre":"Tarragona","oficinas":[{"codigo":"228","nombre":"Concesionario SEAT Baycar"}]}]},{"codigo":"TOL","nombre":"Toledo","subzonas":[{"codigo":"TOL","nombre":"Toledo","oficinas":[{"codigo":"126","nombre":"Pol. Ind."}]}]},{"codigo":"VAD","nombre":"Valladolid","subzonas":[{"codigo":"VAD","nombre":"Valladolid"}]},{"codigo":"VAL","nombre":"Valencia","subzonas":[{"codigo":"VAL","nombre":"Valencia","oficinas":[{"codigo":"402","nombre":"Aeropuerto Valencia"},{"codigo":"413","nombre":"AVE Estación Valencia"}]}]},{"codigo":"VIT","nombre":"Vitoria","subzonas":[{"codigo":"VIT","nombre":"Vitoria","oficinas":[{"codigo":"315","nombre":"Portal de Betoño s/n"}]}]},{"codigo":"ZAR","nombre":"Zaragoza","subzonas":[{"codigo":"ZAR","nombre":"Zaragoza","oficinas":[{"codigo":"318","nombre":"AVE Estación Zaragoza"}]}]}]},{"codigo":"BAL","nombre":"Islas Baleares","oneway":"N","zonas":[{"codigo":"MAA","nombre":"Mallorca","subzonas":[{"codigo":"MAA","nombre":"Mallorca","oficinas":[{"codigo":"206","nombre":"Aeropuerto Mallorca"},{"codigo":"205","nombre":"Paseo Marítimo de Palma"}]}]},{"codigo":"IBI","nombre":"Ibiza","subzonas":[{"codigo":"IBI","nombre":"Ibiza","oficinas":[{"codigo":"210","nombre":"Aeropuerto Ibiza"}]}]},{"codigo":"MEN","nombre":"Menorca","subzonas":[{"codigo":"MEN","nombre":"Menorca","oficinas":[{"codigo":"212","nombre":"Aeropuerto Menorca"}]}]}]}]}
+	</script>
+    
+    <script type="text/javascript">
+    $(function() {
+	
+		$('#infoCheckRules').hide();
+	
+		$('#fecha_ini').val(moment().add(1, 'day').format('DD/MM/YYYY'));
+		$('#fecha_fin').val(moment().add(8, 'day').format('DD/MM/YYYY'));
+		$('.selectorini').text(moment().add(1, 'day').format('DD/MM/YYYY'));
+		$('.selectorfin').text(moment().add(8, 'day').format('DD/MM/YYYY'));
+		
+		function showcollapsezonafecha() {
+			$('.collapsefechas').collapse('show');
+			$('.paso2').fadeIn();
+		};
+		
+		$('#buscarCoche').click(function() {
+			if ($('#ofient').val() == '') {
+				selectizeini.focus();
+				return false;
+			};
+			
+			if ($('#ofirec').val() == '') {
+				selectizefin.focus();
+				return false;
+			};
+			
+			$('#fromhome').val('fromhome');
+			
+			var entHotel;
+			var devHotel;
+			if (($('#entregaHotelEnt').prop('checked') == false) || ($('#entregaHotelEnt').prop('disabled') == true)) { entHotel = 'off' } else { entHotel = 'on' };
+			if ($('.mismaoficina').prop('checked') == true) { devHotel = entHotel } else {
+				if (($('#entregaHotelDev').prop('checked') == false) || ($('#entregaHotelDev').prop('disabled') == true)) { devHotel = 'off' } else { devHotel = 'on' };
+			};
+			
+			var oficinaEntrega = $('#ofient').val();
+			var oficinaDevolucion = $('#ofirec').val();
+			var fechaEntrega = $('#fecha_ini').val();
+			var horaminutoEntrega = $('#horaminutoini').val();
+			var horaEntrega = horaminutoEntrega.substr(0,2);
+			var minutoEntrega = horaminutoEntrega.substr(3,2); 
+			var fechaDevolucion = $('#fecha_fin').val();
+			var horaminutoDevolucion = $('#horaminutofin').val();
+			var horaDevolucion = horaminutoDevolucion.substr(0,2);
+			var minutoDevolucion = horaminutoDevolucion.substr(3,2); 
+			var tempZonaCodigo = localizarZona(oficinaEntrega);
+			var tempZonaDevCodigo = localizarZona(oficinaDevolucion);
+			
+			$('#zona').val(tempZonaCodigo);
+			$('#zonadev').val(tempZonaDevCodigo);
+			$('#reservaIsla').val();
+			$('#reservaOficinaDev').val(oficinaDevolucion);
+			$('#fechaIni').val(fechaEntrega);
+			$('#horaIni').val(horaEntrega);
+			$('#minutoIni').val(minutoEntrega);
+			$('#fechaFin').val(fechaDevolucion);
+			$('#horaFin').val(horaDevolucion);
+			$('#minutoFin').val(minutoDevolucion);
+			
+			$('#infoCheckRules').hide();	
+			if ((fechaEntrega == fechaDevolucion) && (horaminutoEntrega == horaminutoDevolucion)) {
+				$('#infoCheckRules').html("Las fechas/horas de recogida y devolución deben ser distintas").show();
+				return false;
+			};
+			
+			fParams = { zona: tempZonaCodigo, fechaIni: fechaEntrega, horaIni: horaEntrega, minutoIni: minutoEntrega, fechaFin: fechaDevolucion, horaFin: horaDevolucion, minutoFin: minutoDevolucion, reservaOficinaEnt: oficinaEntrega, reservaOficinaDev: oficinaDevolucion, entregaHotelEnt: entHotel, entregaHotelDev: devHotel};
+			
+			$.post("ES/action/ajaxBooking1", fParams, function(data){
+				  if (data != 'OK') {
+					$('#infoCheckRules').html(data).show();
+					return false;
+				  } else {
+				    $('#infoCheckRules').hide();
+					if (devHotel == 'on') { $('<input />').attr('type', 'hidden').attr('name', "entregaHotelDev").attr('value', "on").appendTo('form'); };
+					setaction('ES/action/booking2');
+				  };
+		   	});
+			return false;
+		});
+		
+		$('.zonafecha').click(function() {
+			showcollapsezonafecha();
+		});
+		
+		$('#ofient').html(generarOficinas('ES', '', '', false));
+
+		var $ofient = $('#ofient').selectize({
+						placeholder : 'isla, ciudad, oficina...',
+						persist: true,
+						createOnBlur: false,
+						create: false,
+						lockOptgroupOrder: false,
+						render: {
+							option: function(item, escape) {
+								showcollapsezonafecha();
+								if (item.text.indexOf('Aero') != -1) {
+									return '<div><img src="/html/images/icono-aeropuerto.png" >  ' + escape(item.text) + '</div>';
+								} else if ((item.text.indexOf('uerto de la') != -1) || (item.text.indexOf('uerto del') != -1)) {
+									return '<div><span class="iconitem"></span> ' + escape(item.text) + '</div>';
+								} else if ((item.text.indexOf('uerto') != -1) || (item.text.indexOf('uelle') != -1)) {
+									return '<div><img src="/html/images/icono-puerto.png"> ' + escape(item.text) + '</div>';
+								} else if ((item.text.indexOf('stación') != -1) || (item.text.indexOf('ave') != -1)) {
+									return '<div><img src="/html/images/icono-estacion-tren.png"> ' + escape(item.text) + '</div>';
+								} else if (item.text.indexOf('bus') != -1) {
+									return '<div><img src="/html/images/icono-estacion-bus.png"> ' + escape(item.text) + '</div>';
+								} else {
+									return '<div><span class="iconitem"></span> ' + escape(item.text) + '</div>';
+								}
+							}
+						}
+					});
+		
+		var $ofirec = $('#ofirec').selectize({
+							placeholder : 'isla, ciudad, oficina...',
+							persist: true,
+							createOnBlur: false,
+							create: false,
+							lockOptgroupOrder: false,
+							render: {
+								option: function(item, escape) {
+									if (item.text.indexOf('Aero') != -1) {
+										return '<div><img src="/html/images/icono-aeropuerto.png" >  ' + escape(item.text) + '</div>';
+									} else if ((item.text.indexOf('uerto') != -1) || (item.text.indexOf('uelle') != -1)) {
+										return '<div><img src="/html/images/icono-puerto.png"> ' + escape(item.text) + '</div>';
+									} else if ((item.text.indexOf('stación') != -1) || (item.text.indexOf('ave') != -1)) {
+										return '<div><img src="/html/images/icono-estacion-tren.png"> ' + escape(item.text) + '</div>';
+									} else if (item.text.indexOf('bus') != -1) {
+										return '<div><img src="/html/images/icono-estacion-bus.png"> ' + escape(item.text) + '</div>';
+									} else {
+										return '<div><span class="iconitem"></span> ' + escape(item.text) + '</div>';
+									}
+								}
+							}
+						});
+		var selectizeini = $ofient[0].selectize;
+		var selectizefin = $ofirec[0].selectize;
+		
+		$('#ofirec').next().hide().end().prev().hide();
+		$('#devolucionenhotel').hide();
+		
+		$('#ofient').change(function() {
+			var oficinaSeleccionada = $(this).val();
+			var tempZonaCodigo = localizarZona(oficinaSeleccionada);
+			var tempZonaNombre = localizarNombreZona(oficinaSeleccionada);
+			var tempRegionCodigo = localizarRegionByID(tempZonaCodigo, '', '');	
+			$('#reservaIsla').val(tempZonaNombre);
+				
+			$('#tempSelect').html(generarOficinas('ES', tempRegionCodigo, tempZonaCodigo, true));
+			
+			selectizefin.clearOptions();
+			if (oficinaSeleccionada == '') {
+				return false;
+			};
+			
+			var selectJson = {};
+			selectJson.select = new Array();
+			var select = document.getElementById("tempSelect");
+			for(var i = 0; i <select.options.length; i++) {
+			   var option = select.options[i];
+			   var optionJson = {};
+			   optionJson = {value: option.value, text: option.text};
+			   selectizefin.addOption(optionJson);
+			};
+			
+			selectizefin.setValue($(this).val());
+			
+			var tempOffice = $('#ofient option:selected').text();
+			if (tempOffice.indexOf("Aero") > -1) { 
+				$('.checkentregaenhotel').attr("disabled", true);
+			} else {
+				$('.checkentregaenhotel').attr("disabled", false);
+			};
+			
+			if (tempRegionCodigo != 'CAN') {
+				$('.checkentregaenhotel').attr("disabled", true);
+				$('.checkdevolucionenhotel').attr("disabled", true);
+			};
+			
+		});
+		
+		$('#ofirec').change(function() {
+			var oficinaSeleccionada = $(this).val();
+			var tempZonaCodigo = localizarZona(oficinaSeleccionada);
+			var tempRegionCodigo = localizarRegionByID(tempZonaCodigo, '', '');	
+			
+			var tempOffice = $('#ofirec option:selected').text();
+			if (tempOffice.indexOf("Aero") > -1) { 
+				$('.checkdevolucionenhotel').attr("disabled", true);
+			} else {
+				$('.checkdevolucionenhotel').attr("disabled", false);
+			};
+			
+			if (tempRegionCodigo != 'CAN') {
+				$('.checkentregaenhotel').attr("disabled", true);
+				$('.checkdevolucionenhotel').attr("disabled", true);
+			};
+		});
+
+		$('.mismaoficina').change(function() {
+			 if ($(this).prop('checked') == false) {
+			 	selectizefin.enable();
+				$('#ofirec').next().show().end().prev().show();
+				selectizefin.clear();
+				 if ($('#ofient').val() != '') { selectizefin.focus(); };
+				$('#devolucionenhotel').show();
+				$('.entregadevolucionhotel').html('');
+				$('.checkdevolucionenhotel').prop('checked', $('.checkentregaenhotel').prop('checked'))
+			 } else {
+			 	selectizefin.disable();
+				$('#ofirec').next().hide().end().prev().hide();
+				$('#ofirec').val($('#ofient').val());
+				selectizefin.setValue($('#ofient').val());
+				$('#devolucionenhotel').hide();
+				$('.entregadevolucionhotel').html('/devolución');
+			 } 
+		});
+		
+		var selectorfhini = true;
+	
+		$('#fhini').click(function() {
+			selectorfhini = true;
+		});
+		
+		$('#fhfin').click(function() {
+			selectorfhini = false;
+		});
+		
+		var minDatemoment = moment().format('DD/MM/YYYY');
+		
+		$('.selectorini').daterangepicker({
+            timePicker: false,
+			autoApply: true,
+			startDate: $('#fecha_ini').val(),
+	    	endDate: $('#fecha_ini').val(),
+			minDate: minDatemoment, /*'26/07/2016',*/
+			buttonClasses: "btn btn-lg",
+			applyClass: "btn btn-default",
+			opens: "center",
+			parentEl: "calendar",
+            locale: {
+                format: 'DD/MM/YYYY HH:mm',
+				applyLabel: 'Aplicar',
+				cancelLabel: 'Cancelar',
+				separator: ' ',
+				daysOfWeek: [
+					"Do","Lu","Ma","Mi","Ju","Vi","Sa"],
+		        monthNames: [
+					"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+        		firstDay: 1
+            	}
+        }, 
+		function(start, end, label) {
+			$('#fecha_ini').val(start.format('DD/MM/YYYY'));
+			$('#fhini').html($('#fecha_ini').val());
+			
+			$('#fecha_fin').val(end.format('DD/MM/YYYY'));
+			$('#fhfin').html($('#fecha_fin').val());
+			
+			$('.selectorfin').data('daterangepicker').setStartDate(start);
+			$('.selectorfin').data('daterangepicker').setEndDate(start);
+			
+			diaActual();
+			horaMismoDia();
+			
+		});
+		
+		
+		$('.selectorfin').daterangepicker({
+            timePicker: false,
+			autoApply: true,
+			startDate: $('#fecha_ini').val(),
+	    	endDate: $('#fecha_fin').val(),
+			minDate: minDatemoment,
+			buttonClasses: "btn btn-lg",
+			applyClass: "btn btn-default",
+			opens: "center",
+			parentEl: "calendar",
+            locale: {
+                format: 'DD/MM/YYYY HH:mm',
+				applyLabel: 'Aplicar',
+				cancelLabel: 'Cancelar',
+				separator: ' ',
+				daysOfWeek: [
+					"Do","Lu","Ma","Mi","Ju","Vi","Sa"],
+		        monthNames: [
+					"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+        		firstDay: 1
+            	}
+        }, 
+		function(start, end, label) {
+			$('#fecha_ini').val(start.format('DD/MM/YYYY'));
+			$('#fhini').html($('#fecha_ini').val());
+			
+			$('#fecha_fin').val(end.format('DD/MM/YYYY'));
+			$('#fhfin').html($('#fecha_fin').val());
+			
+			horaMismoDia();
+			
+		});
+		
+		function diaActual()
+		{
+			if ($('#fecha_ini').val() == minDatemoment) {
+				var actualHour = moment().hour();
+				
+				var horaminutoEntrega = actualHour;
+				var nuevaHoraDevolucion = parseInt(horaminutoEntrega) + 1;
+				generateHours('#horaminutoini', nuevaHoraDevolucion + ':00', nuevaHoraDevolucion, 24, false);
+			} else {
+				generateHours('#horaminutoini', '12:00', 0, 24, false);
+				generateHours('#horaminutofin', '12:00', 0, 24, false);
+			}
+		}
+		
+		function horaMismoDia()
+		{
+			if ($('#fecha_ini').val() == $('#fecha_fin').val()) {
+				var horaminutoEntrega = $('#horaminutoini').val();
+				var horaEntrega = horaminutoEntrega.substr(0,2);
+				var nuevaHoraDevolucion = parseInt(horaEntrega);
+				var minutoEntrega = horaminutoEntrega.substr(3,2);
+				var temphalfPast = minutoEntrega == '30';
+				generateHours('#horaminutofin', nuevaHoraDevolucion + ':' + minutoEntrega, nuevaHoraDevolucion, 24, temphalfPast);
+			} else {
+				generateHours('#horaminutofin', nuevaHoraDevolucion + ':' + minutoEntrega, 0, 24, false);
+				$('#horaminutofin').val($('#horaminutoini').val());
+			}
+		}
+		
+		$('#horaminutoini').change(function() {
+			horaMismoDia();
+		});
+		
+		$('[data-toggle="popover"]').popover();
+		$('.itempopover').click(function() {
+			return false;
+		});
+		
+		
+		function generateHours(selector, selectedHourMinute, hourStart, hourEnd, halfPast) 
+		{
+			var selection = "";
+			var selectionSelected = "";
+			var i = 0;
+			var primeraHora = true;
+			
+			for(var i = hourStart; i <hourEnd; i++)
+			{
+				var j = zeroFill(i, 2);
+				
+				if (selector == '#horaminutofin') {
+					if (halfPast == false) { 
+						selection += "<option value='" + j +":00'>" + j + ":00" + "</option>";
+						halfPast = false;
+					};
+					selection += "<option value='" + j +":30'>" + j + ":30" + "</option>";
+				} else {
+					selection += "<option value='" + j +":00'>" + j + ":00" + "</option>";
+					selection += "<option value='" + j +":30'>" + j + ":30" + "</option>";
+				};
+				
+			};
+			$(selector).html(selection);
+			$(selector + ' option[value="' + selectedHourMinute + '"]').attr("selected", true);
+			
+		};
+		
+		generateHours('#horaminutoini', '12:00', 0, 24, false);
+		generateHours('#horaminutofin', '12:00', 0, 24, false);
+		
+		
+		fecha = new Date('01/07/1967');
+		hoy = new Date();
+		ed = parseInt((hoy - fecha)/365/24/60/60/1000);
+		$('.edad').html(ed);
+		
+		var contentIndicator = '';
+		var indicator = 0;
+		var contentBanner = '';
+		var linkBanner = '';
+		var imageBanner = '';
+		var titleBanner = '';
+		$('.columnaBanner').each(function() {
+			contentIndicator += '<li data-target="#carousel-example-generic" data-slide-to="' + indicator + '"></li>'
+			contentBanner += '<div class="item">';
+			
+			linkBanner = $(this).find('a').attr("href");
+			imageBanner = $(this).find('img').attr("src");
+			titleBanner = $(this).find('.textoBreve').html();
+			
+			contentBanner += '<h2>' + titleBanner + '</h2>';
+			contentBanner += '<img src="' + imageBanner + '" class="img-responsive center-block" alt="' + titleBanner + '">';
+			contentBanner += '<a href="' + linkBanner + '" class="btn btn-primary">Ver oferta <span class="glyphicon glyphicon-menu-right"></span></a>';
+			
+			contentBanner += '</div>';
+			indicator++;
+		});
+		if (contentBanner > '') {
+			$('.carousel-indicators').html(contentIndicator);
+			$('.carousel-inner').html(contentBanner);
+			$('.item').first().addClass('active');
+			$('.carousel-indicators > li').first().addClass('active');
+			$('#carousel-example-generic').carousel();
+		};
+		
+    });
+    </script>
+    
+    <script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"item": {
+				"@id":"https://www.cicar.com/ES",
+				"name":"Cicar Alquiler de coches"
+			}
+		}]
+	}
+	</script>
+    
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js" async></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?"></script>
+    <script async src="/html/js/cookieconsent.js"></script>
+
+
+    
+    
+
+</body>
+
+</html>
+
